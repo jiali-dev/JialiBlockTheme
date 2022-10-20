@@ -1,0 +1,43 @@
+@mixin button-bg($bg, $text) {
+    background: $bg;
+    color: $text;
+    &:hover {
+      background:darken($bg,15%);
+      color: $text;
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+      color: $text;
+    } 
+}
+
+@mixin outline-button-bg($bg, $text, $hover_text) {
+    color: $text;
+    border: 1px solid $bg!important;
+    &:hover {
+      background:$bg;
+      color: $hover_text;
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:$bg;
+      color: $hover_text;
+    } 
+}
+
+.jiali-btn-primary {
+    @include button-bg($primary, $gray_1)
+}
+
+.jiali-btn-secondary {
+    @include button-bg($secondary, $gray_1)
+}
+
+.jiali-btn-outline-primary {
+    @include outline-button-bg($primary, $gray_4, $gray_1)
+}
+
+.jiali-btn-outline-secondary {
+    @include outline-button-bg($secondary, $gray_4, $gray_1)
+}
