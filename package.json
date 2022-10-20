@@ -1,5 +1,21 @@
 {
+  "name": "jiali-block-theme",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start src/index.js",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wordpress/icons": "^7.0.1"
+  },
   "devDependencies": {
-    "@wordpress/scripts": "^24.4.0"
+    "@wordpress/scripts": "^24.3.0"
   }
 }
