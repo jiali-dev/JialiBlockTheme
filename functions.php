@@ -182,12 +182,12 @@ class PlaceholderBlock {
 
   function ourRenderCallback($attributes, $content) {
     ob_start();
-    require get_theme_file_path("/our-blocks/{$this->name}.php");
+    require get_theme_file_path("/jiali-blocks/{$this->name}.php");
     return ob_get_clean();
   }
 
   function onInit() {
-    wp_register_script($this->name, get_stylesheet_directory_uri() . "/our-blocks/{$this->name}.js", array('wp-blocks', 'wp-editor'));
+    wp_register_script($this->name, get_stylesheet_directory_uri() . "/jiali-blocks/{$this->name}.js", array('wp-blocks', 'wp-editor'));
     
     register_block_type("ourblocktheme/{$this->name}", array(
       'editor_script' => $this->name,
@@ -225,7 +225,7 @@ class JSXBlock {
 
   function ourRenderCallback($attributes, $content) {
     ob_start();
-    require get_theme_file_path("/our-blocks/{$this->name}.php");
+    require get_theme_file_path("/jiali-blocks/{$this->name}.php");
     return ob_get_clean();
   }
 
