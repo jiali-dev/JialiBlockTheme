@@ -2,11 +2,12 @@
 
 function university_files() {
   wp_enqueue_script('jiali-main-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
-  wp_enqueue_style('font-awesome', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css');
   wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
   wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js');
   wp_enqueue_style('jiali_main_styles', get_theme_file_uri('/build/style-index.css'));
   wp_enqueue_style('jiali_extra_styles', get_theme_file_uri('/build/index.css'));
+  wp_enqueue_script('font-awesome-js', get_theme_file_uri('/assets/font-awesome/all.min.js'));
+  wp_enqueue_style('font-awesome-css', get_theme_file_uri('/assets/font-awesome/all.min.css'));
 }
 
 add_action('wp_enqueue_scripts', 'university_files');

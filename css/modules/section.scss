@@ -1,0 +1,14 @@
+@mixin section($bg, $margin) {
+    background: $bg;
+    @if $margin {
+        margin: auto $margin
+    }
+}
+
+.section-has-margin-transparent {
+    @include section(transparent, 130px);
+}
+
+.section-has-no-margin-gray {
+    @include section($gray_2, null);
+}
