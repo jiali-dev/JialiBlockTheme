@@ -54,6 +54,11 @@ body {
   justify-content: end;
 }
 
+.jiali-login a {
+  -webkit-margin-start: 8px;
+          margin-inline-start: 8px;
+}
+
 .jiali-social-icons {
   justify-content: end;
 }

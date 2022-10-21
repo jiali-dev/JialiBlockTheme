@@ -3,7 +3,7 @@
         <div class="row">
             <div class="d-flex col-lg-4 jiali-search">
                 <div class="input-group">
-                    <span class="input-group-text jilai-search-icon" ><i class="fas fa-search"></i></span>
+                    <a href="<?php echo esc_url(site_url('/search')); ?>" class="input-group-text jilai-search-icon" ><i class="fas fa-search"></i></a>
                     <input type="text" class="form-control jilai-search-input" placeholder="<?php _e("Search", "jiali") ?>" aria-label="Search" aria-describedby="basic-addon1">
                 </div>
             </div>
