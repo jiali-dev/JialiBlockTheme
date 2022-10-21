@@ -8,6 +8,8 @@ function university_files() {
   wp_enqueue_style('jiali_extra_styles', get_theme_file_uri('/build/index.css'));
   wp_enqueue_script('font-awesome-js', get_theme_file_uri('/assets/font-awesome/all.min.js'));
   wp_enqueue_style('font-awesome-css', get_theme_file_uri('/assets/font-awesome/all.min.css'));
+  wp_enqueue_style( 'jiali-rtl-style', get_stylesheet_uri('style-rtl.css') );
+  wp_style_add_data( 'jiali-rtl-style', 'rtl', 'replace' );
 }
 
 add_action('wp_enqueue_scripts', 'university_files');

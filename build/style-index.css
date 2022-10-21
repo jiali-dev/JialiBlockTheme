@@ -27,6 +27,18 @@
           border-inline-end: 0px !important;
 }
 
+.jiali-search {
+  justify-content: end;
+}
+
+.jiali-logo {
+  justify-content: center;
+}
+
+.jiali-login {
+  justify-content: end;
+}
+
 .jilai-search-input {
   text-align: end;
   background-color: transparent !important;
@@ -92,12 +104,12 @@
   color: #F9F9F9;
 }
 
-.section-has-margin-transparent {
+.jiali-section-has-margin-transparent {
   background: transparent;
   margin: auto 130px;
 }
 
-.section-has-no-margin-gray {
+.jiali-section-has-no-margin-gray {
   background: #EDEDED;
 }
 
