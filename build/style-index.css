@@ -7,13 +7,11 @@
   background: #40A7E3;
   color: #F9F9F9;
 }
-
 .jiali-btn-primary:hover {
   background: #1b80bb;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
-
 .jiali-btn-primary:active {
   background: #15628f;
   color: #F9F9F9;
@@ -23,13 +21,11 @@
   background: #E3A540;
   color: #F9F9F9;
 }
-
 .jiali-btn-secondary:hover {
   background: #bb7e1b;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
-
 .jiali-btn-secondary:active {
   background: #8f6015;
   color: #F9F9F9;
@@ -39,13 +35,11 @@
   color: #757575;
   border: 1px solid #40A7E3 !important;
 }
-
 .jiali-btn-outline-primary:hover {
   background: #40A7E3;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
-
 .jiali-btn-outline-primary:active {
   background: #40A7E3;
   color: #F9F9F9;
@@ -55,13 +49,11 @@
   color: #757575;
   border: 1px solid #E3A540 !important;
 }
-
 .jiali-btn-outline-secondary:hover {
   background: #E3A540;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
-
 .jiali-btn-outline-secondary:active {
   background: #E3A540;
   color: #F9F9F9;
