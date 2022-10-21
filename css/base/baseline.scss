@@ -1,23 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.jiali-top-header {
-    margin-top: 8px;
-    margin-bottom: 8px;
+body {
+    font-family: Montserrat;
 }
 
+// TOP HEADER
+.jiali-top-header {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+// AVATAR
 .jiali-avatar {
     margin-inline-start: 8px;
 }
 
 .jiali-avatar img {
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
+// LOGO
 .jiali-topheader-logo {
-    width: 217px!important;
+    width: 200px!important;
 }
 
+.jiali-logo {
+    justify-content: center;
+}
+
+// SEARCH
 .jilai-search-icon {
     background-color: transparent!important;
     border-inline-end: 0px!important;
@@ -27,17 +40,75 @@
     justify-content: end;
 }
 
-.jiali-logo {
- justify-content: center;
-}
-
-.jiali-login {
-    justify-content: end
-}
-
 .jilai-search-input {
     text-align: end;
     background-color: transparent!important;
     border-inline-start: 0px!important;
 }
 
+// LOGIN
+.jiali-login {
+    justify-content: end
+}
+
+// SOCIAL ICONS
+.jiali-social-icons {
+    justify-content:  end;
+}
+
+.jiali-social-icons a {
+    color:#000;
+    font-size: 24px;
+    margin-inline-end: 8px ;
+}
+
+// TOP MENU
+.jiali-top-menu {
+    justify-content: start;
+}
+
+.jiali-top-menu ul li {
+    margin-inline-start: 16px;
+}
+
+.jiali-top-menu ul li a {
+    position: relative;
+    color: #000;
+}
+
+.jiali-top-menu ul li a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    left: 0;
+    bottom: 0px;
+    height: 5px;
+    background-color: #40A7E3;
+    transition: 0.4s;
+}
+
+.jiali-top-menu ul li a:hover:after {
+    width: 100%;
+}
+
+.jiali-top-menu ul li a:hover {
+    color: #40A7E3;
+}
+
+.jiali-top-menu ul li.active a {
+    color: #1C83BE;
+}
+
+.jiali-top-menu ul li.active a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: #1C83BE;
+}
+
+.jiali-navbar {
+    padding: 0px!important;
+}

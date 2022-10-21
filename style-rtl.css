@@ -1,3 +1,186 @@
+/**
+*
+*	Name:			IRANYekan Font
+*	Version:			3.3
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		Sep 17, 2020
+*	Updated on:		Sep 17, 2020
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+IRANYekan fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+--------------------------------------------------------------------------------------
+*	
+**/
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: bold;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebboldfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebboldfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebboldfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebboldfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebboldfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: 100;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebthinfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebthinfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebthinfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebthinfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebthinfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: 300;
+	src: url('assets/fonts/IranYekan/eot/IranYekanweblightfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanweblightfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanweblightfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanweblightfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanweblightfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: normal;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebregularfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebregularfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebregularfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebregularfanumfanum.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebregularfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: 500;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebmediumfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebmediumfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebmediumfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebmediumfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebmediumfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: 800;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebextraboldfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebextraboldfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebextraboldfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebextraboldfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebextraboldfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: 850;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebblackfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebblackfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebblackfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebblackfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebblackfanum.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IranYekan;
+	font-style: normal;
+	font-weight: 900;
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebextrablackfanum.eot');
+	src: url('assets/fonts/IranYekan/eot/IranYekanwebextrablackfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/IranYekan/woff/IranYekanwebextrablackfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/IranYekan/woff2/IranYekanwebextrablackfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/IranYekan/ttf/IranYekanwebextrablackfanum.ttf') format('truetype');
+}
+
+/**
+*
+*	Name:			IRANSans Font
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+IRANYekan fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+--------------------------------------------------------------------------------------
+*	
+**/
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: bold;
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Bold.eot');
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/iransans/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/iransans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/iransans/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: normal;
+	src: url('assets/fonts/iransans/eot/IRANSansWeb.eot');
+	src: url('assets/fonts/iransans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/iransans/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/iransans/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/iransans/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 200;
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_UltraLight.eot');
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/iransans/woff/IRANSansWeb_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/iransans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/iransans/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 300;
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Light.eot');
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/iransans/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/iransans/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/iransans/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 500;
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Medium.eot');
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/iransans/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/iransans/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/iransans/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: IRANSansX;
+	font-style: normal;
+	font-weight: 900;
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Black.eot');
+	src: url('assets/fonts/iransans/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('assets/fonts/iransans/woff/IRANSansWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('assets/fonts/iransans/woff2/IRANSansWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('assets/fonts/iransans/ttf/IRANSansWeb_Black.ttf') format('truetype');
+}
+
 .jiali-search {
     justify-content: start;
     direction: ltr;
@@ -5,4 +188,22 @@
 
 .jiali-login {
     justify-content: end;
+}
+
+.jiali-social-icons {
+    justify-content:  end;
+}
+
+.jiali-top-menu {
+    justify-content: start;
+}
+
+.jiali-top-menu ul li {
+    font-family: IranYekan;
+    font-weight: normal;
+    margin-inline-end: 16px;
+}
+
+.jiali-social-icons a {
+    margin-inline-start: 8px ;
 }

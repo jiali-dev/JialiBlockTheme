@@ -1,9 +1,17 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+body {
+  font-family: Montserrat;
+}
+
 .jiali-top-header {
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .jiali-avatar {
@@ -13,12 +21,16 @@
 
 .jiali-avatar img {
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .jiali-topheader-logo {
-  width: 217px !important;
+  width: 200px !important;
+}
+
+.jiali-logo {
+  justify-content: center;
 }
 
 .jilai-search-icon {
@@ -31,19 +43,77 @@
   justify-content: end;
 }
 
-.jiali-logo {
-  justify-content: center;
+.jilai-search-input {
+  text-align: end;
+  background-color: transparent !important;
+  -webkit-border-start: 0px !important;
+          border-inline-start: 0px !important;
 }
 
 .jiali-login {
   justify-content: end;
 }
 
-.jilai-search-input {
-  text-align: end;
-  background-color: transparent !important;
-  -webkit-border-start: 0px !important;
-          border-inline-start: 0px !important;
+.jiali-social-icons {
+  justify-content: end;
+}
+
+.jiali-social-icons a {
+  color: #000;
+  font-size: 24px;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+
+.jiali-top-menu {
+  justify-content: start;
+}
+
+.jiali-top-menu ul li {
+  -webkit-margin-start: 16px;
+          margin-inline-start: 16px;
+}
+
+.jiali-top-menu ul li a {
+  position: relative;
+  color: #000;
+}
+
+.jiali-top-menu ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  left: 0;
+  bottom: 0px;
+  height: 5px;
+  background-color: #40A7E3;
+  transition: 0.4s;
+}
+
+.jiali-top-menu ul li a:hover:after {
+  width: 100%;
+}
+
+.jiali-top-menu ul li a:hover {
+  color: #40A7E3;
+}
+
+.jiali-top-menu ul li.active a {
+  color: #1C83BE;
+}
+
+.jiali-top-menu ul li.active a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: #1C83BE;
+}
+
+.jiali-navbar {
+  padding: 0px !important;
 }
 
 /* SASS and Global'ish Stuff */

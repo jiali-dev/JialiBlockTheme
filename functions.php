@@ -62,6 +62,23 @@ class PlaceholderBlock {
 new PlaceholderBlock("header");
 new PlaceholderBlock("topheader");
 
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
+register_nav_menus( array(
+  'primary' => __( 'Primary Menu', 'jiali' ),
+) );
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 
+function special_nav_class ($classes, $item) {
+  if (in_array('current-menu-item', $classes) ){
+    $classes[] = 'active ';
+  }
+  return $classes;
+}
