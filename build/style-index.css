@@ -1,6 +1,30 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+.jiali-x-margin {
+  margin: auto 130px;
+}
+
+.jiali-top-header {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.jiali-avatar {
+  -webkit-margin-start: 8px;
+          margin-inline-start: 8px;
+}
+
+.jiali-avatar img {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.jiali-topheader-logo {
+  width: 217px !important;
+}
+
 /* SASS and Global'ish Stuff */
 /* BEM Blocks */
 .jiali-btn-primary {
