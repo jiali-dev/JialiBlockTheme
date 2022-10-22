@@ -61,6 +61,7 @@ class PlaceholderBlock {
 
 new PlaceholderBlock("header");
 new PlaceholderBlock("topheader");
+new PlaceholderBlock("suggestedarticles");
 
 /**
  * Register Custom Navigation Walker
