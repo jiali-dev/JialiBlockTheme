@@ -1,3 +1,6 @@
+<?php
+    $post = get_post( 2642 )
+?>
 <section class="jiali_suggested_articles">
 
     <div class="jiali-section-has-margin-transparent">
@@ -7,27 +10,72 @@
         <div class="row">
 
             <div class="col-md-6">
-
                 <div class="jiali-card jiali-vertical-card">
                     <img class="jiali-card-img-top" src="http://jialibluetheme.local/wp-content/uploads/2018/11/Doctor-baby.jpg" alt="Card image cap">
                     <div class="jiali-card-body">
-                        <h5 class="jiali-card-title">Card title</h5>
-                        <p class="jiali-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="jiali-card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 class="jiali-card-title"><?php echo $post->post_title ?></h5>
+                        <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 35, NULL ) ?></p>
+                        <p class="jiali-card-info">
+                            <span class="jiali-avatar">
+                                <?php echo get_avatar($post->post_author, 60); ?>
+                            </span>
+                            <span class="jiali-card-author"><?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
+                            <span class="text-muted">-</span>
+                            <span class="jiali-card-date"><?php echo $post->post_date ?></span>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-            <div class="card mb-3">
-                <img class="card-img-top" src="http://jialibluetheme.local/wp-content/uploads/2018/11/Doctor-baby.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="jiali-card jiali-horizontal-card">                
+                    <div class="jiali-card-body">
+                        <h5 class="jiali-card-title"><?php echo $post->post_title ?></h5>
+                        <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>
+                        <div class="jiali-card-info">
+                            <span class="jiali-avatar">
+                                <?php echo get_avatar($post->post_author, 60); ?>
+                            </span>
+                            <span class="jiali-card-author"><?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
+                            <span class="text-muted">-</span>
+                            <span class="jiali-card-date"><?php echo $post->post_date ?></span>
+                    </div>
+                    </div>
+                    <img class="jiali-card-img-side" src="http://jialibluetheme.local/wp-content/uploads/2018/11/Doctor-baby.jpg" alt="Card image cap">
+
                 </div>
-            </div>
-                <p>z</p>
-                <p>h</p>
+                <div class="jiali-card jiali-horizontal-card">                
+                    <div class="jiali-card-body">
+                        <h5 class="jiali-card-title"><?php echo $post->post_title ?></h5>
+                        <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>
+                        <div class="jiali-card-info">
+                            <span class="jiali-avatar">
+                                <?php echo get_avatar($post->post_author, 60); ?>
+                            </span>
+                            <span class="jiali-card-author"><?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
+                            <span class="text-muted">-</span>
+                            <span class="jiali-card-date"><?php echo $post->post_date ?></span>
+                    </div>
+                    </div>
+                    <img class="jiali-card-img-side" src="http://jialibluetheme.local/wp-content/uploads/2018/11/Doctor-baby.jpg" alt="Card image cap">
+
+                </div>
+                <div class="jiali-card jiali-horizontal-card">                
+                    <div class="jiali-card-body">
+                        <h5 class="jiali-card-title"><?php echo $post->post_title ?></h5>
+                        <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>
+                        <div class="jiali-card-info">
+                            <span class="jiali-avatar">
+                                <?php echo get_avatar($post->post_author, 60); ?>
+                            </span>
+                            <span class="jiali-card-author"><?php echo get_the_author_meta('display_name', $post->post_author); ?></span>
+                            <span class="text-muted">-</span>
+                            <span class="jiali-card-date"><?php echo $post->post_date ?></span>
+                    </div>
+                    </div>
+                    <img class="jiali-card-img-side" src="http://jialibluetheme.local/wp-content/uploads/2018/11/Doctor-baby.jpg" alt="Card image cap">
+
+                </div>
+
             </div>
         </div>
     </div>

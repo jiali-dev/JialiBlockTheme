@@ -121,32 +121,108 @@ body {
     margin: 40px auto;
 }
 
+.jiali_suggested_articles .jiali-title {
+    margin-bottom: 24px;
+}
+
 .jiali-title {
     font-size: 32px;
 }
 
 // CARD
-.jiali-vertical-card {
-    margin: 1px;
-    border: $gray_3 1px solid;
-    border-radius: 10px;
+.jiali-card {
+    position: relative;
 }
 
 .jiali-card-title {
     color: $black;
 }
 
-.jiali-card-img-top {
+.jiali-card-text {
+    margin-top: 8px;
+    color: $gray_4;
+    font-size: 18px;
+}
+
+.jiali-card-author {
+    color: $black;
+}
+
+.jiali-card-date {
+    color: $gray_4;
+    font-size: 14px;
+}
+
+// VERTICAL CARD
+.jiali-vertical-card {
+    margin: 1px;
+    border: $gray_3 1px solid;
+    border-radius: 10px;
+}
+
+.jiali-vertical-card .jiali-card-img-top {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     vertical-align: middle;
 }
 
-.jiali-card-body {
+.jiali-vertical-card .jiali-card-body {
     padding: 16px;
 }
 
-.jiali-card-text {
-    color: $gray_4;
+.jiali-vertical-card .jiali-card-title {
+    margin-top: 16px;
+    font-size: 24px;
+}
+
+.jiali-vertical-card .jiali-card-author {
+    font-size: 16px;
+}
+
+// HORIZONTAL CARD
+.jiali-horizontal-card {
+    display: flex;
+    border: $gray_3 1px solid;
+    border-radius: 10px;
+}
+
+.jiali-horizontal-card .jiali-card-img-top {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+}
+
+.jiali-horizontal-card .jiali-card-body {
+    padding: 16px;
+}
+
+.jiali-horizontal-card .jiali-card-title {
+    font-size: 20px;
+}
+
+.jiali-horizontal-card .jiali-card-text {
+    font-size: 16px;
+}
+
+.jiali-horizontal-card .jiali-card-author {
+    font-size: 14px;
+}
+
+.jiali-horizontal-card .jiali-card-info {
+    position: absolute;
+    bottom: 2px;
+}
+
+.jiali-horizontal-card .jiali-card-info .jiali-avatar {
+    margin-inline-start: 0;
+}
+
+img.jiali-card-img-side {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-basis: 200px;
+    min-height: 200px;
+    width: 200px;
 }

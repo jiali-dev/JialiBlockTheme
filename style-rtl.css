@@ -217,3 +217,19 @@ This set of fonts are used in this project under the license: (.....)
     font-family: IranSansx;
 	font-weight: bold;
 }
+
+.jiali-card-title {
+    font-family: IranSansx;
+}
+
+.jiali-card-text {
+	font-family: IranYekan;
+}
+
+.jiali-card-author {
+    font-family: IranYekan;
+}
+
+.jiali-card-date {
+    font-family: IranYekan;
+}
