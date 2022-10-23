@@ -23,7 +23,7 @@ body {
 
 // LOGO
 .jiali-topheader-logo {
-    width: 200px!important;
+    width: 138px!important;
 }
 
 .jiali-logo {
@@ -123,4 +123,30 @@ body {
 
 .jiali-title {
     font-size: 32px;
+}
+
+// CARD
+.jiali-vertical-card {
+    margin: 1px;
+    border: $gray_3 1px solid;
+    border-radius: 10px;
+}
+
+.jiali-card-title {
+    color: $black;
+}
+
+.jiali-card-img-top {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+}
+
+.jiali-card-body {
+    padding: 16px;
+}
+
+.jiali-card-text {
+    color: $gray_4;
 }

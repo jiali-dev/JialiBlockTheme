@@ -5,6 +5,7 @@
 /*!*******************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss (1) ***!
   \*******************************************************************************************************************************************************************************************************************************************/
+/* SASS and Global'ish Stuff */
 body {
   font-family: Montserrat;
 }
@@ -26,7 +27,7 @@ body {
 }
 
 .jiali-topheader-logo {
-  width: 200px !important;
+  width: 138px !important;
 }
 
 .jiali-logo {
@@ -129,61 +130,85 @@ body {
   font-size: 32px;
 }
 
-/* SASS and Global'ish Stuff */
+.jiali-vertical-card {
+  margin: 1px;
+  border: #CBCBCB 1px solid;
+  border-radius: 10px;
+}
+
+.jiali-card-title {
+  color: #070707;
+}
+
+.jiali-card-img-top {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  vertical-align: middle;
+}
+
+.jiali-card-body {
+  padding: 16px;
+}
+
+.jiali-card-text {
+  color: #757575;
+}
+
 /* BEM Blocks */
 .jiali-btn-primary {
-  background: #40A7E3;
+  background: #E73F23;
   color: #F9F9F9;
 }
 .jiali-btn-primary:hover {
-  background: #1b80bb;
+  background: #ab2813;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
 .jiali-btn-primary:active {
-  background: #15628f;
+  background: #7d1e0e;
   color: #F9F9F9;
 }
 
 .jiali-btn-secondary {
-  background: #E3A540;
-  color: #F9F9F9;
+  background: #23CBE7;
+  color: #ffffff;
 }
 .jiali-btn-secondary:hover {
-  background: #bb7e1b;
-  color: #F9F9F9;
+  background: #1395ab;
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 .jiali-btn-secondary:active {
-  background: #8f6015;
-  color: #F9F9F9;
+  background: #0e6d7d;
+  color: #ffffff;
 }
 
 .jiali-btn-outline-primary {
   color: #757575;
-  border: 1px solid #40A7E3 !important;
+  border: 1px solid #E73F23 !important;
 }
 .jiali-btn-outline-primary:hover {
-  background: #40A7E3;
+  background: #E73F23;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
 .jiali-btn-outline-primary:active {
-  background: #40A7E3;
+  background: #E73F23;
   color: #F9F9F9;
 }
 
 .jiali-btn-outline-secondary {
   color: #757575;
-  border: 1px solid #E3A540 !important;
+  border: 1px solid #23CBE7 !important;
 }
 .jiali-btn-outline-secondary:hover {
-  background: #E3A540;
+  background: #23CBE7;
   color: #F9F9F9;
   transition: all 0.3s ease;
 }
 .jiali-btn-outline-secondary:active {
-  background: #E3A540;
+  background: #23CBE7;
   color: #F9F9F9;
 }
 

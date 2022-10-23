@@ -31,7 +31,7 @@
 }
 
 .jiali-btn-secondary {
-    @include button-bg($secondary, $gray_1)
+    @include button-bg($secondary, $white)
 }
 
 .jiali-btn-outline-primary {
