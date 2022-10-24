@@ -1,5 +1,5 @@
 <header class="jiali-top-header">
-    <div class="jiali-section-has-margin-transparent">
+    <div class="jiali-section-custom-width-transparent">
         <div class="row">
             <div class="d-flex col-lg-4 jiali-search">
                 <div class="input-group">

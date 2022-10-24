@@ -1,14 +1,16 @@
-@mixin section($bg, $margin) {
+@mixin section($bg, $width) {
     background: $bg;
-    @if $margin {
-        margin: auto $margin
+    @if( $width )
+    {
+        width: $width;
     }
+    margin: auto
 }
 
-.jiali-section-has-margin-transparent {
-    @include section(transparent, 130px);
+.jiali-section-custom-width-transparent {
+    @include section(transparent, 90%);
 }
 
-.jiali-section-has-no-margin-gray {
+.jiali-section-full-width-gray {
     @include section($gray_2, null);
 }

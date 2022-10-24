@@ -136,12 +136,15 @@ body {
 
 .jiali-card-title {
     color: $black;
+    font-weight: 500;
 }
 
 .jiali-card-text {
-    margin-top: 8px;
+    margin-top: 16px;
     color: $gray_4;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2;
 }
 
 .jiali-card-author {
@@ -171,6 +174,12 @@ body {
     padding: 16px;
 }
 
+.jiali-vertical-card .jiali-card-info {
+    margin-bottom: 0 !important;
+    position: absolute;
+    bottom: 2px;
+}
+
 .jiali-vertical-card .jiali-card-title {
     margin-top: 16px;
     font-size: 24px;
@@ -185,6 +194,8 @@ body {
     display: flex;
     border: $gray_3 1px solid;
     border-radius: 10px;
+    margin-block-end: 8px;
+    justify-content: space-between;
 }
 
 .jiali-horizontal-card .jiali-card-img-top {
@@ -219,10 +230,18 @@ body {
     margin-inline-start: 0;
 }
 
-img.jiali-card-img-side {
+.jiali-card-img-side img{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     flex-basis: 200px;
     min-height: 200px;
     width: 200px;
+}
+
+.jiali_suggested_articles .jiali-horizontal-card {
+    min-height: 180px;
+}
+
+.jiali_suggested_articles .jiali-vertical-card {
+    min-height: 620px;
 }

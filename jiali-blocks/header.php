@@ -1,6 +1,6 @@
 <header class="jiali-top-menu-wrapper">
-    <div class="jiali-section-has-no-margin-gray">
-        <div class="jiali-section-has-margin-transparent">
+    <div class="jiali-section-full-width-gray">
+        <div class="jiali-section-custom-width-transparent">
             <nav class="navbar navbar-expand-md jiali-navbar" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jiali-top-menu" aria-controls="jiali-top-menu" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
