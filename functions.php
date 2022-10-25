@@ -28,8 +28,8 @@ function jiali_theme_features() {
   add_theme_support('post-thumbnails');
   add_theme_support('editor-styles');
   add_image_size('horizontal-card', 200, 200, true);
-  add_image_size('vertical-card', 570, 385, true);
-  add_image_size('pageBanner', 1500, 350, true);
+  add_image_size('vertical-card', 580, 455, true);
+  add_image_size('category-card', 360, 500, true);
 }
 
 add_action('after_setup_theme', 'jiali_theme_features');
@@ -63,8 +63,10 @@ class PlaceholderBlock {
 }
 
 new PlaceholderBlock("header");
-new PlaceholderBlock("topheader");
-new PlaceholderBlock("suggestedarticles");
+new PlaceholderBlock("top-header");
+new PlaceholderBlock("suggested-articles");
+new PlaceholderBlock("top-categories");
+new PlaceholderBlock("double-banner");
 
 /**
  * Register Custom Navigation Walker

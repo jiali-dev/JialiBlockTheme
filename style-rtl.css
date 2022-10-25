@@ -218,6 +218,11 @@ This set of fonts are used in this project under the license: (.....)
 	font-weight: bold;
 }
 
+.jiali-sub-title {
+    font-family: IranYekan;
+	font-weight: bold;
+}
+
 .jiali-card-title {
     font-family: IranSansx;
 }
@@ -232,4 +237,8 @@ This set of fonts are used in this project under the license: (.....)
 
 .jiali-card-date {
     font-family: IranYekan;
+}
+
+.jiali-top-categorirs-item .jiali-card-text {
+    font-weight: 400!important;
 }

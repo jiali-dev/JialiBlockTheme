@@ -16,7 +16,7 @@
                     <a href="<?php site_url('/') ?>" >
                         <?php
                             if( has_custom_logo() ) {
-                                echo '<img src="' . esc_url( $logo[0] ) . '" class="jiali-topheader-logo" alt="' . get_bloginfo( 'name' ) . '">';
+                                echo '<img src="' . esc_url( $logo[0] ) . '" class="jiali-top-header-logo" alt="' . get_bloginfo( 'name' ) . '">';
                             } else {
                                 echo '<h1>' . get_bloginfo('name') . '</h1>';
                             }

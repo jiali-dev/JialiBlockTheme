@@ -8,9 +8,17 @@
 }
 
 .jiali-section-custom-width-transparent {
-    @include section(transparent, 90%);
+    @include section(transparent, 85%);
 }
 
 .jiali-section-full-width-gray {
     @include section($gray_2, null);
+}
+
+.jiali-section-full-width-primary-one {
+    @include section($primary_1, null);
+}
+
+.jiali-section-full-width-secondary-one {
+    @include section($secondary_1, null);
 }

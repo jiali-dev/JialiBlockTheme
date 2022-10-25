@@ -10,6 +10,23 @@ body {
   font-family: Montserrat;
 }
 
+.jiali-title {
+  font-size: 32px;
+}
+
+.jiali-sub-title {
+  font-size: 16px;
+}
+
+.jiali-permalink {
+  text-decoration: none;
+}
+
+.jiali-banner-item {
+  border-radius: 15px;
+  min-height: 320px !important;
+}
+
 .jiali-top-header {
   margin-top: 8px;
   margin-bottom: 16px;
@@ -26,7 +43,7 @@ body {
   height: 32px;
 }
 
-.jiali-topheader-logo {
+.jiali-top-header-logo {
   width: 138px !important;
 }
 
@@ -130,10 +147,6 @@ body {
   margin-bottom: 24px;
 }
 
-.jiali-title {
-  font-size: 32px;
-}
-
 .jiali-card {
   position: relative;
 }
@@ -201,13 +214,6 @@ body {
   justify-content: space-between;
 }
 
-.jiali-horizontal-card .jiali-card-img-top {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  vertical-align: middle;
-}
-
 .jiali-horizontal-card .jiali-card-body {
   padding: 16px;
 }
@@ -248,6 +254,37 @@ body {
 
 .jiali_suggested_articles .jiali-vertical-card {
   min-height: 620px;
+}
+
+.jiali-top-categories-wrapper {
+  padding-top: 32px;
+}
+
+.jiali-top-categories-wrapper .jiali-sub-title {
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.jiali-top-categorirs-item {
+  border: 0px !important;
+  border-radius: 0px !important;
+}
+
+.jiali-top-categorirs-item .jiali-card-img-top {
+  border-radius: 10px !important;
+}
+
+.jiali-top-categorirs-item .jiali-card-title {
+  margin-top: 8px !important;
+  font-size: 14px !important;
+}
+
+.jiali-top-categorirs-item .jiali-card-text {
+  margin-top: 8px;
+}
+
+.jiali-top-categorirs-item .jiali-card-body {
+  padding: 0px;
 }
 
 /* BEM Blocks */
@@ -309,12 +346,22 @@ body {
 
 .jiali-section-custom-width-transparent {
   background: transparent;
-  width: 90%;
+  width: 85%;
   margin: auto;
 }
 
 .jiali-section-full-width-gray {
   background: #EDEDED;
+  margin: auto;
+}
+
+.jiali-section-full-width-primary-one {
+  background: #F6B7AD;
+  margin: auto;
+}
+
+.jiali-section-full-width-secondary-one {
+  background: #ADECF6;
   margin: auto;
 }
 

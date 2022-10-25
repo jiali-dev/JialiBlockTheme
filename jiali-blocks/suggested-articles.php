@@ -1,5 +1,4 @@
 <section class="jiali_suggested_articles">
-
     <div class="jiali-section-custom-width-transparent">
         <h1 class="jiali-title">
             <?php _e( "Our suggestions", "jiali" ) ?>

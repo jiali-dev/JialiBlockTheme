@@ -4,6 +4,23 @@ body {
     font-family: Montserrat;
 }
 
+.jiali-title {
+    font-size: 32px;
+}
+
+.jiali-sub-title {
+    font-size: 16px;
+}
+
+.jiali-permalink {
+    text-decoration: none;
+}
+
+.jiali-banner-item {
+    border-radius: 15px;
+    min-height: 320px!important;
+}
+
 // TOP HEADER
 .jiali-top-header {
     margin-top: 8px;
@@ -22,7 +39,7 @@ body {
 }
 
 // LOGO
-.jiali-topheader-logo {
+.jiali-top-header-logo {
     width: 138px!important;
 }
 
@@ -125,10 +142,6 @@ body {
     margin-bottom: 24px;
 }
 
-.jiali-title {
-    font-size: 32px;
-}
-
 // CARD
 .jiali-card {
     position: relative;
@@ -198,13 +211,6 @@ body {
     justify-content: space-between;
 }
 
-.jiali-horizontal-card .jiali-card-img-top {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    vertical-align: middle;
-}
-
 .jiali-horizontal-card .jiali-card-body {
     padding: 16px;
 }
@@ -238,6 +244,7 @@ body {
     width: 200px;
 }
 
+// SUGGESTED ARTICLES
 .jiali_suggested_articles .jiali-horizontal-card {
     min-height: 180px;
 }
@@ -245,3 +252,35 @@ body {
 .jiali_suggested_articles .jiali-vertical-card {
     min-height: 620px;
 }
+
+// TOP CATEGORIES
+.jiali-top-categories-wrapper {
+    padding-top:32px;
+}
+
+.jiali-top-categories-wrapper .jiali-sub-title {
+    margin-top:8px;
+    margin-bottom: 32px
+}
+.jiali-top-categorirs-item {
+    border: 0px!important;
+    border-radius: 0px!important;
+}
+
+.jiali-top-categorirs-item .jiali-card-img-top {
+    border-radius: 10px!important;
+}
+
+.jiali-top-categorirs-item .jiali-card-title {
+    margin-top: 8px!important;
+    font-size: 14px!important;
+}
+
+.jiali-top-categorirs-item .jiali-card-text {
+    margin-top: 8px;
+}
+
+.jiali-top-categorirs-item .jiali-card-body {
+    padding: 0px;
+}
+
