@@ -181,6 +181,9 @@ This set of fonts are used in this project under the license: (.....)
 		 url('assets/fonts/iransans/ttf/IRANSansWeb_Black.ttf') format('truetype');
 }
 
+body {
+	font-family: IranYekan;
+}
 .jiali-search {
     justify-content: start;
     direction: ltr;
@@ -241,4 +244,8 @@ This set of fonts are used in this project under the license: (.....)
 
 .jiali-top-categorirs-item .jiali-card-text {
     font-weight: 400!important;
+}
+
+.jiali-banner-title {
+	font-family: IranSansX;
 }

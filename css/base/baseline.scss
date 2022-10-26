@@ -16,11 +16,6 @@ body {
     text-decoration: none;
 }
 
-.jiali-banner-item {
-    border-radius: 15px;
-    min-height: 320px!important;
-}
-
 // TOP HEADER
 .jiali-top-header {
     margin-top: 8px;
@@ -28,10 +23,6 @@ body {
 }
 
 // AVATAR
-.jiali-avatar {
-    margin-inline-start: 8px;
-}
-
 .jiali-avatar img {
     border-radius: 50%;
     width: 32px;
@@ -203,6 +194,10 @@ body {
 }
 
 // HORIZONTAL CARD
+.jiali-card-item {
+    margin-bottom: 8px;
+}
+
 .jiali-horizontal-card {
     display: flex;
     border: $gray_3 1px solid;
@@ -259,7 +254,7 @@ body {
 }
 
 .jiali-top-categories-wrapper .jiali-sub-title {
-    margin-top:8px;
+    margin-top:16px;
     margin-bottom: 32px
 }
 .jiali-top-categorirs-item {
@@ -283,4 +278,78 @@ body {
 .jiali-top-categorirs-item .jiali-card-body {
     padding: 0px;
 }
+
+// Banner
+.jiali-double-banner {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.jiali-banner-item {
+    position: relative;
+    border-radius: 15px;
+    min-height: 320px!important;
+}
+
+.jiali-banner-description {
+    width: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    text-align: center;
+}
+
+.jiali-banner-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.jiali-banner-button {
+    margin-top: 16px
+}
+
+// RECENT ARTICLES
+.jiali-recent-articles-wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.jiali-recent-articles-wrapper .jiali-title {
+    margin-bottom: 32px;
+}
+
+.jiali-recent-articles-wrapper .jiali-card-item {
+    margin-bottom: 16px;
+}
+
+.jiali-recent-articles-wrapper .jiali-vertical-card {
+    min-height: 394px;
+}
+
+.jiali-recent-articles-wrapper .jiali-card-title {
+    margin-top: 0!important;
+    margin-bottom: 8px!important;
+    font-size: 20px!important;
+}
+
+.jiali-recent-articles-wrapper .jiali-card-body {
+    padding: 8px!important;
+}
+
+.jiali-recent-articles-wrapper .jiali-card-author,.jiali-recent-articles-wrapper .jiali-card-date {
+    font-size: 14px!important;
+}
+
+.jiali-recent-articles-wrapper .jiali-avatar img {
+    width: 28px;
+    height: 28px;
+}
+
+.jiali-more-articles {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
 

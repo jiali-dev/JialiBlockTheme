@@ -15,6 +15,7 @@ function university_files() {
 add_action('wp_enqueue_scripts', 'university_files');
 
 function jiali_theme_features() {
+  load_theme_textdomain('jiali', get_template_directory() . '/languages');
   $defaults = array(
 		'height'               => 100,
 		'width'                => 400,
@@ -28,7 +29,8 @@ function jiali_theme_features() {
   add_theme_support('post-thumbnails');
   add_theme_support('editor-styles');
   add_image_size('horizontal-card', 200, 200, true);
-  add_image_size('vertical-card', 580, 455, true);
+  add_image_size('vertical-card-large', 580, 455, true);
+  add_image_size('vertical-card-medium', 280, 325, true);
   add_image_size('category-card', 360, 500, true);
 }
 
@@ -67,6 +69,7 @@ new PlaceholderBlock("top-header");
 new PlaceholderBlock("suggested-articles");
 new PlaceholderBlock("top-categories");
 new PlaceholderBlock("double-banner");
+new PlaceholderBlock("recent-articles");
 
 /**
  * Register Custom Navigation Walker

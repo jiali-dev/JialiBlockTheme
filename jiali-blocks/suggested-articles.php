@@ -1,22 +1,25 @@
-<section class="jiali_suggested_articles">
-    <div class="jiali-section-custom-width-transparent">
-        <h1 class="jiali-title">
-            <?php _e( "Our suggestions", "jiali" ) ?>
-        </h1>
-        <div class="row">
-            <?php
-            $suggested_posts = get_posts( array(
-                'posts_per_page' => 4,
-                'category_name' => 'suggested-posts'
-            ) );
+<?php
+    $suggested_posts = get_posts( array(
+        'posts_per_page' => 4,
+        'category_name' => 'suggested-posts'
+    ) );
 
-            if( $suggested_posts ): 
-                $args = array(
-                    'post' => []
-                )
-            ?>
-                
-                <div class="col-md-6">
+    if( $suggested_posts ): 
+        $args['thumbnail'] = true;
+        $args['title'] = true;
+        $args['excerpt'] = true;
+        $args['author'] = true;
+        $args['date'] = true;
+        $args['tags'] = true;
+           
+    ?>   
+    <section class="jiali_suggested_articles">
+        <div class="jiali-section-custom-width-transparent">
+            <h1 class="jiali-title">
+                <?php _e( "Our suggestions", "jiali" ) ?>
+            </h1>
+            <div class="row"> 
+                <div class="col-md-6 jiali_suggested_article">
                     <?php 
                     
                         $args['post'] = $suggested_posts[0]; 
@@ -35,9 +38,13 @@
                         }
                     ?>
                 </div>
+                    
                 
-            <?php endif; ?>
+            </div>
         </div>
-    </div>
 
-</section>
+    </section>
+    
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
+

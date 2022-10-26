@@ -15,8 +15,16 @@
     @include section($gray_2, null);
 }
 
+.jiali-section-full-width-primary {
+    @include section($primary, null);
+}
+
 .jiali-section-full-width-primary-one {
     @include section($primary_1, null);
+}
+
+.jiali-section-full-width-secondary {
+    @include section($secondary, null);
 }
 
 .jiali-section-full-width-secondary-one {
