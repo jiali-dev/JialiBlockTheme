@@ -22,9 +22,55 @@ body {
   text-decoration: none;
 }
 
-.jiali-top-header {
-  margin-top: 8px;
-  margin-bottom: 16px;
+.jiali-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #23CBE7), url(images/banner.71ff0556.jpg);
+  background-size: cover;
+  position: center;
+  height: 100vh;
+  padding-top: 8px !important;
+}
+
+.jiali-header-top {
+  display: flex;
+  align-items: center;
+}
+
+.jiali-divider {
+  margin: 8px !important;
+  color: #CBCBCB;
+}
+
+.jiali-site-title {
+  padding-top: 200px;
+  color: #F9F9F9;
+  text-align: center;
+}
+
+.jiali-site-title h1 {
+  margin-bottom: 24px;
+  font-family: "IRANSansX";
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.jiali-site-title p {
+  font-family: IranSansX;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.jiali-site-title div {
+  padding: 24px;
+}
+
+.jiali-login {
+  display: flex;
+  justify-content: end;
+}
+
+.jiali-logo {
+  display: flex;
+  justify-content: center;
 }
 
 .jiali-avatar img {
@@ -33,38 +79,36 @@ body {
   height: 32px;
 }
 
-.jiali-top-header-logo {
+.jiali-header-logo {
   width: 138px !important;
 }
 
-.jiali-logo {
-  justify-content: center;
+.jiali-search {
+  display: flex;
+  justify-content: start;
 }
 
 .jilai-search-icon {
+  color: #F9F9F9;
   background-color: transparent !important;
   -webkit-border-end: 0px !important;
           border-inline-end: 0px !important;
 }
 
-.jiali-search {
-  justify-content: end;
-}
-
 .jilai-search-input {
+  color: #F9F9F9;
   text-align: end;
   background-color: transparent !important;
   -webkit-border-start: 0px !important;
           border-inline-start: 0px !important;
 }
 
-.jiali-login {
-  justify-content: end;
+.jilai-search-input::-moz-placeholder {
+  color: #CBCBCB;
 }
 
-.jiali-login a {
-  -webkit-margin-start: 8px;
-          margin-inline-start: 8px;
+.jilai-search-input::placeholder {
+  color: #CBCBCB;
 }
 
 .jiali-social-icons {
@@ -72,7 +116,7 @@ body {
 }
 
 .jiali-social-icons a {
-  color: #000;
+  color: #F9F9F9;
   font-size: 24px;
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
@@ -89,7 +133,7 @@ body {
 
 .jiali-top-menu ul li a {
   position: relative;
-  color: #000;
+  color: #F9F9F9;
 }
 
 .jiali-top-menu ul li a:after {
@@ -99,7 +143,7 @@ body {
   left: 0;
   bottom: 0px;
   height: 5px;
-  background-color: #40A7E3;
+  background-color: #F6B7AD;
   transition: 0.4s;
 }
 
@@ -108,11 +152,11 @@ body {
 }
 
 .jiali-top-menu ul li a:hover {
-  color: #40A7E3;
+  color: #F6B7AD;
 }
 
 .jiali-top-menu ul li.active a {
-  color: #1C83BE;
+  color: #5A150A;
 }
 
 .jiali-top-menu ul li.active a:after {
@@ -122,7 +166,7 @@ body {
   left: 0;
   bottom: 0;
   height: 5px;
-  background-color: #1C83BE;
+  background-color: #5A150A;
 }
 
 .jiali-navbar {
@@ -135,6 +179,12 @@ body {
 
 .jiali_suggested_articles .jiali-title {
   margin-bottom: 24px;
+}
+
+.jiali_suggested_article_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jiali-card {
@@ -164,7 +214,8 @@ body {
 }
 
 .jiali-vertical-card {
-  margin: 1px;
+  display: flex;
+  flex-direction: column;
   border: #CBCBCB 1px solid;
   border-radius: 10px;
 }
@@ -177,17 +228,14 @@ body {
 }
 
 .jiali-vertical-card .jiali-card-body {
-  padding: 16px;
+  padding: 32px 8px 8px;
 }
 
 .jiali-vertical-card .jiali-card-info {
   margin-bottom: 0 !important;
-  position: absolute;
-  bottom: 2px;
 }
 
 .jiali-vertical-card .jiali-card-title {
-  margin-top: 16px;
   font-size: 24px;
 }
 
@@ -203,13 +251,14 @@ body {
   display: flex;
   border: #CBCBCB 1px solid;
   border-radius: 10px;
-  -webkit-margin-after: 8px;
-          margin-block-end: 8px;
   justify-content: space-between;
 }
 
 .jiali-horizontal-card .jiali-card-body {
-  padding: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .jiali-horizontal-card .jiali-card-title {
@@ -224,11 +273,6 @@ body {
   font-size: 14px;
 }
 
-.jiali-horizontal-card .jiali-card-info {
-  position: absolute;
-  bottom: 2px;
-}
-
 .jiali-horizontal-card .jiali-card-info .jiali-avatar {
   -webkit-margin-start: 0;
           margin-inline-start: 0;
@@ -240,14 +284,6 @@ body {
   flex-basis: 200px;
   min-height: 200px;
   width: 200px;
-}
-
-.jiali_suggested_articles .jiali-horizontal-card {
-  min-height: 180px;
-}
-
-.jiali_suggested_articles .jiali-vertical-card {
-  min-height: 620px;
 }
 
 .jiali-top-categories-wrapper {
@@ -354,58 +390,122 @@ body {
 
 /* BEM Blocks */
 .jiali-btn-primary {
-  background: #E73F23;
+  background: #5A150A;
   color: #F9F9F9;
+  position: relative;
+  z-index: 1;
+}
+.jiali-btn-primary:before {
+  content: "";
+  background-color: #F6B7AD;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px;
+  transition: 0.5s;
+  z-index: -1;
 }
 .jiali-btn-primary:hover {
-  background: #ab2813;
-  color: #F9F9F9;
-  transition: all 0.3s ease;
+  border-color: #F6B7AD;
+  color: #070707;
+}
+.jiali-btn-primary:hover:before {
+  width: 100%;
 }
 .jiali-btn-primary:active {
-  background: #7d1e0e;
+  background: #350c06;
   color: #F9F9F9;
 }
 
 .jiali-btn-secondary {
-  background: #23CBE7;
-  color: #ffffff;
+  background: #0A4E5A;
+  color: #F9F9F9;
+  position: relative;
+  z-index: 1;
+}
+.jiali-btn-secondary:before {
+  content: "";
+  background-color: #ADECF6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px;
+  transition: 0.5s;
+  z-index: -1;
 }
 .jiali-btn-secondary:hover {
-  background: #1395ab;
-  color: #ffffff;
-  transition: all 0.3s ease;
+  border-color: #ADECF6;
+  color: #070707;
+}
+.jiali-btn-secondary:hover:before {
+  width: 100%;
 }
 .jiali-btn-secondary:active {
-  background: #0e6d7d;
-  color: #ffffff;
+  background: #062e35;
+  color: #F9F9F9;
 }
 
 .jiali-btn-outline-primary {
-  color: #757575;
-  border: 1px solid #E73F23 !important;
+  color: #F9F9F9;
+  border: 1px solid #5A150A !important;
+  position: relative;
+  z-index: 1;
+}
+.jiali-btn-outline-primary:before {
+  content: "";
+  background-color: #5A150A;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px;
+  transition: 0.5s;
+  z-index: -1;
 }
 .jiali-btn-outline-primary:hover {
-  background: #E73F23;
   color: #F9F9F9;
-  transition: all 0.3s ease;
+}
+.jiali-btn-outline-primary:hover:before {
+  right: 0;
+  width: 100%;
 }
 .jiali-btn-outline-primary:active {
-  background: #E73F23;
+  background: #5A150A;
   color: #F9F9F9;
 }
 
 .jiali-btn-outline-secondary {
-  color: #757575;
-  border: 1px solid #23CBE7 !important;
+  color: #F9F9F9;
+  border: 1px solid #0A4E5A !important;
+  position: relative;
+  z-index: 1;
+}
+.jiali-btn-outline-secondary:before {
+  content: "";
+  background-color: #0A4E5A;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px;
+  transition: 0.5s;
+  z-index: -1;
 }
 .jiali-btn-outline-secondary:hover {
-  background: #23CBE7;
   color: #F9F9F9;
-  transition: all 0.3s ease;
+}
+.jiali-btn-outline-secondary:hover:before {
+  right: 0;
+  width: 100%;
 }
 .jiali-btn-outline-secondary:active {
-  background: #23CBE7;
+  background: #0A4E5A;
   color: #F9F9F9;
 }
 

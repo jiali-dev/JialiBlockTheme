@@ -184,21 +184,9 @@ This set of fonts are used in this project under the license: (.....)
 body {
 	font-family: IranYekan;
 }
+
 .jiali-search {
-    justify-content: start;
     direction: ltr;
-}
-
-.jiali-login {
-    justify-content: end;
-}
-
-.jiali-social-icons {
-    justify-content:  end;
-}
-
-.jiali-top-menu {
-    justify-content: start;
 }
 
 .jiali-top-menu ul {

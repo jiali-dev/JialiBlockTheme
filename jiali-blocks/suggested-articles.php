@@ -19,7 +19,7 @@
                 <?php _e( "Our suggestions", "jiali" ) ?>
             </h1>
             <div class="row"> 
-                <div class="col-md-6 jiali_suggested_article">
+                <div class="col-md-6 jiali_suggested_article_col">
                     <?php 
                     
                         $args['post'] = $suggested_posts[0]; 
@@ -27,7 +27,7 @@
                         
                     ?>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 jiali_suggested_article_col">
 
                     <?php 
                         foreach ($suggested_posts as $index => $value )

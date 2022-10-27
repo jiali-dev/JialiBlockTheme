@@ -4,8 +4,10 @@
 
         <div class="jiali-card jiali-horizontal-card">                
             <div class="jiali-card-body">
-                <h4 class="jiali-card-title"><?php echo $post->post_title ?></h4>
-                <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>
+                <div>
+                    <h4 class="jiali-card-title"><?php echo $post->post_title ?></h4>
+                    <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>
+                </div>
                 <div class="jiali-card-info">
                     <span class="jiali-avatar">
                         <?php echo get_avatar($post->post_author, 60); ?>

@@ -1,13 +1,29 @@
-@mixin button-bg($bg, $text) {
+@mixin button-bg($bg, $hover_bg, $text, $hover_text) {
     background: $bg;
     color: $text;
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: "";
+      background-color: $hover_bg;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 100%;
+      border-radius: 6px;
+      transition: 0.5s;
+      z-index: -1;
+    }
     &:hover {
-      background:darken($bg,15%);
-      color: $text;
-      transition: all 0.3s ease;
+      &:before {
+        width: 100%;
+      }
+      border-color: $hover_bg;
+      color: $hover_text;
     }
     &:active {
-      background:darken($bg,25%);
+      background:darken($bg,8%);
       color: $text;
     } 
 }
@@ -15,10 +31,26 @@
 @mixin outline-button-bg($bg, $text, $hover_text) {
     color: $text;
     border: 1px solid $bg!important;
+    position: relative;
+    z-index: 1;
+    &:before {
+      content: "";
+      background-color: $bg;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 100%;
+      border-radius: 6px;
+      transition: 0.5s;
+      z-index: -1;
+    }
     &:hover {
-      background:$bg;
+      &:before {
+        right: 0;
+        width: 100%;
+      }
       color: $hover_text;
-      transition: all 0.3s ease;
     }
     &:active {
       background:$bg;
@@ -27,17 +59,17 @@
 }
 
 .jiali-btn-primary {
-    @include button-bg($primary, $gray_1)
+    @include button-bg($primary_4, $primary_1, $gray_1, $black)
 }
 
 .jiali-btn-secondary {
-    @include button-bg($secondary, $white)
+    @include button-bg($secondary_4, $secondary_1, $gray_1, $black)
 }
 
 .jiali-btn-outline-primary {
-    @include outline-button-bg($primary, $gray_4, $gray_1)
+    @include outline-button-bg($primary_4, $gray_1, $gray_1)
 }
 
 .jiali-btn-outline-secondary {
-    @include outline-button-bg($secondary, $gray_4, $gray_1)
+    @include outline-button-bg($secondary_4, $gray_1, $gray_1)
 }
