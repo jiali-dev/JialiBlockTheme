@@ -1,0 +1,87 @@
+@mixin overlay-bg($color) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(rgba(0,0,0,0.5), $color);
+    opacity: 0.8;
+    z-index: 999;
+}
+
+@mixin card-overlay-bg($color, $from) {
+    @if ( $from ) {
+
+        #{$from}: 0;
+        @if( $from == top or $from == bottom ) {
+            height: 0;
+            width: 100%;
+            background: linear-gradient( to bottom, $color,rgba(255, 255, 255, 0.1));
+        } @else {
+            width: 0;
+            height: 100%;
+            $direction : right;
+            background: linear-gradient( to right, $color,rgba(255, 255, 255, 0.1));
+        }
+        
+    } @else {
+        top: 0;
+        height: 0;
+        width: 100%;
+    }
+    position: absolute;
+    left: 0;
+    border-radius: 15px;
+    opacity: 0.8;
+    z-index: 999;
+    transition: 0.5s;
+    .jiali-card-item:hover & {
+        @if( $from ) {
+            @if( $from == top or $from == bottom ) {
+                height: 100%;
+            } @else {
+                width: 100%;
+            }
+            
+        } @else {
+            height: 100%;
+        }
+        cursor: pointer;
+    }
+}
+
+.jiali-overlay-primary {
+    @include overlay-bg($primary)
+}
+
+.jiali-overlay-secondary {
+    @include overlay-bg($secondary)
+}
+
+.jiali-card-overlay-primary-top {
+    @include card-overlay-bg($primary, top )
+}
+.jiali-card-overlay-primary-right {
+    @include card-overlay-bg($primary, right)
+}
+.jiali-card-overlay-primary-bottom {
+    @include card-overlay-bg($primary,bottom )
+}
+.jiali-card-overlay-primary-left {
+    @include card-overlay-bg($primary, left)
+}
+.jiali-card-overlay-secondary-top {
+    @include card-overlay-bg($secondary, top)
+}
+.jiali-card-overlay-secondary-right {
+    @include card-overlay-bg($secondary, right)
+}
+.jiali-card-overlay-secondary-bottom {
+    @include card-overlay-bg($secondary,bottom )
+}
+.jiali-card-overlay-secondary-left {
+    @include card-overlay-bg($secondary, left)
+}
+
+

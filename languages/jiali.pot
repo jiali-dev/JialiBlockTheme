@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Jiali Block Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-26 14:26+0000\n"
+"POT-Creation-Date: 2022-10-28 19:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -21,6 +21,14 @@ msgstr ""
 msgid "#"
 msgstr ""
 
+#: jiali-blocks/appointment.php:5
+msgid "Appointment"
+msgstr ""
+
+#: jiali-blocks/services.php:15
+msgid "Eco cardiography"
+msgstr ""
+
 #: jiali-blocks/top-categories.php:15
 msgid "Frequent topics"
 msgstr ""
@@ -33,11 +41,15 @@ msgstr ""
 msgid "Jiali Block Theme"
 msgstr ""
 
-#: jiali-blocks/top-header.php:36
+#: jiali-blocks/appointment.php:26
+msgid "Location"
+msgstr ""
+
+#: jiali-blocks/header.php:36
 msgid "Log In"
 msgstr ""
 
-#: jiali-blocks/top-header.php:30
+#: jiali-blocks/header.php:30
 msgid "Log Out"
 msgstr ""
 
@@ -45,26 +57,70 @@ msgstr ""
 msgid "More than several interesting topics"
 msgstr ""
 
-#: jiali-blocks/suggested-articles.php:4
+#: jiali-blocks/services.php:5
+msgid "Our Service"
+msgstr ""
+
+#: jiali-blocks/suggested-articles.php:19
 msgid "Our suggestions"
 msgstr ""
 
-#: functions.php:81
+#: jiali-blocks/appointment.php:40
+msgid "Phone"
+msgstr ""
+
+#: functions.php:84
 msgid "Primary Menu"
 msgstr ""
 
-#: jiali-blocks/top-header.php:37
+#: jiali-blocks/recent-articles.php:21
+msgid "Recent Articles"
+msgstr ""
+
+#: jiali-blocks/header.php:37
 msgid "Register"
 msgstr ""
 
-#: jiali-blocks/top-header.php:7
+#: jiali-blocks/header.php:77
+msgid "Reserve apointment"
+msgstr ""
+
+#: jiali-blocks/header.php:7
 msgid "Search"
 msgstr ""
 
-#: jiali-blocks/double-banner.php:10 jiali-blocks/double-banner.php:18
+#: jiali-blocks/double-banner.php:8 jiali-blocks/double-banner.php:16
 msgid "See More ..."
 msgstr ""
 
-#: jiali-blocks/double-banner.php:9 jiali-blocks/double-banner.php:17
+#: jiali-blocks/double-banner.php:7 jiali-blocks/double-banner.php:15
 msgid "See More Articles"
+msgstr ""
+
+#: jiali-blocks/recent-articles.php:39
+msgid "See more articles"
+msgstr ""
+
+#: jiali-blocks/header.php:76
+msgid "See Our Service"
+msgstr ""
+
+#: jiali-blocks/services.php:42
+msgid "Specialized echocardiography of children's heart"
+msgstr ""
+
+#: jiali-blocks/services.php:31
+msgid "Specialized echocardiography of the baby's heart"
+msgstr ""
+
+#: jiali-blocks/services.php:21
+msgid "Specialized echocardiography of the fetal heart"
+msgstr ""
+
+#: jiali-blocks/services.php:54
+msgid "Specialized echocardiography of the heart of teenagers"
+msgstr ""
+
+#: jiali-blocks/appointment.php:12
+msgid "Working hours"
 msgstr ""

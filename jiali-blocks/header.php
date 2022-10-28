@@ -73,8 +73,8 @@
         <h1>وبسایت دکتر محمد رادگودرزی</h1>
         <p>فوق تخصص قلب اطفال</p>
         <div>
-            <a href="#jiali-services" class="btn jiali-btn-secondary btn-lg"><?php _e("See Our Service", "jiali") ?></a>
-            <a href="#jiali-reserve" class="btn jiali-btn-primary btn-lg"><?php _e("Reserve apointment", "jiali") ?></a>
+            <a href="#jiali-services" class="btn jiali-btn-primary btn-lg"><?php _e("See Our Service", "jiali") ?></a>
+            <a href="#jiali-reserve" class="btn jiali-btn-secondary btn-lg"><?php _e("Reserve apointment", "jiali") ?></a>
         </div>
     </div>
 </header>

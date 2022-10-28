@@ -69,6 +69,8 @@ new PlaceholderBlock("suggested-articles");
 new PlaceholderBlock("top-categories");
 new PlaceholderBlock("double-banner");
 new PlaceholderBlock("recent-articles");
+new PlaceholderBlock("services");
+new PlaceholderBlock("appointment");
 
 /**
  * Register Custom Navigation Walker

@@ -1,5 +1,7 @@
 <?php $post = $args['post']; ?>
 <div class="jiali-card-item">
+    <div class="jiali-card-overlay-primary-left"></div>
+
     <a class="jiali-permalink" href="<?php echo get_permalink( $post->ID ) ?>">
 
         <div class="jiali-card jiali-horizontal-card">                

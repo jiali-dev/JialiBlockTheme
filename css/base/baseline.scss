@@ -5,7 +5,27 @@ body {
 }
 
 .jiali-title {
+    margin: 16px auto!important;
     font-size: 32px;
+    color: $secondary_4;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    &::after {
+        content: '';
+        width: 50px;
+        height: 35px;
+        background: linear-gradient($secondary_4,#fff);
+        position: absolute;
+        top: -20px;
+        left: 0;
+        z-index: -1;
+        transform: rotate(10deg);
+        border-top-left-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
 }
 
 .jiali-sub-title {
@@ -172,10 +192,6 @@ body {
     margin: 40px auto;
 }
 
-.jiali_suggested_articles .jiali-title {
-    margin-bottom: 24px;
-}
-
 .jiali_suggested_article_col {
     display: flex;
     flex-direction: column;
@@ -184,6 +200,19 @@ body {
 // CARD
 .jiali-card {
     position: relative;
+}
+
+.jiali-card-tags {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    z-index: 999;
+}
+
+.jiali-card-tag {
+    border-radius: 10px;
+    padding: 0 4px;
+    font-size: 12px;
 }
 
 .jiali-card-title {
@@ -241,6 +270,7 @@ body {
 
 // HORIZONTAL CARD
 .jiali-card-item {
+    position: relative;
     margin-bottom: 8px;
 }
 
@@ -373,7 +403,7 @@ body {
 .jiali-recent-articles-wrapper .jiali-card-title {
     margin-top: 0!important;
     margin-bottom: 8px!important;
-    font-size: 20px!important;
+    font-size: 18px!important;
 }
 
 .jiali-recent-articles-wrapper .jiali-card-body {
@@ -392,7 +422,61 @@ body {
 .jiali-more-articles {
     display: flex;
     justify-content: center;
-    padding: 8px;
+    padding: 32px;
 }
 
+// FEATURE -> SERVICES - RESERVE
+.jiali-services-wrapper {
+    padding-top: 32PX;
+    padding-bottom: 32PX;
+}
 
+.jiali-services-wrapper .jiali-feature-item h1{
+    color: $primary_3;
+}
+
+.jiali-appointment-wrapper {
+    padding-top: 32PX;
+    padding-bottom: 32PX;
+}
+
+.jiali-appointment-wrapper .jiali-feature-item h1{
+    color: $secondary_3;
+}
+
+.jiali-feature-img {
+    position: relative;
+    padding: 0!important;
+}
+
+.jiali-feature-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.jiali-feature-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.jiali-feature-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.jiali-feature-item h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.jiali-feature-item-desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.jiali-feature-text {
+    margin: 0!important;
+    padding: 0 16px;
+}

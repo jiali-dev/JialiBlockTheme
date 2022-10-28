@@ -1,6 +1,25 @@
 <?php $post = $args['post']; ?>
 <div class="jiali-card-item">
-    <a class="jiali-permalink jiali-card-item" href="<?php echo get_permalink( $post->ID ) ?>">
+    <div class="jiali-card-overlay-primary-top"></div>
+    <?php if( $args['tags'] ): ?>
+        <?php 
+            $tags = wp_get_post_tags( $post->ID, array(
+                'number' => 3
+            ) );
+
+            if( $tags ):
+        ?>
+            <div class="jiali-card-tags">
+                <?php foreach( $tags as $tag ): ?>
+                    <span class="jiali-card-tag" style="background-color:<?php echo ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff"  ?>">
+                        <?php echo $tag->name ?>
+                        <br>
+                    </span>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>
+    <a class="jiali-permalink" href="<?php echo get_permalink( $post->ID ) ?>">
 
         <div class="jiali-card jiali-vertical-card">
             <?php if( $args['thumbnail'] ): ?>
