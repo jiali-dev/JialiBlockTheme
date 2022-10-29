@@ -1,9 +1,12 @@
-<div class="jiali-appointment-wrapper" id="jiali-reserve">
+<section class="jiali-appointment-wrapper" id="jiali-reserve">
     <div class="jiali-section-custom-width-transparent">
+        <div class="jiali-title-wrapper">
+
+             <h1 class="jiali-title">
          
-        <h1 class="jiali-title">
-            <?php _e( "Appointment", "jiali" ) ?>
-        </h1>
+             <?php _e( "Appointment", "jiali" ) ?>
+            </h1>
+        </div>
         <div class="row jiali-feature">
             
             <div class="col-md-6 jiali-feature-items">
@@ -59,4 +62,4 @@
 
         </div>
     </div>
-</div>
+</section>

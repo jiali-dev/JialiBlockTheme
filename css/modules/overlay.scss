@@ -47,7 +47,8 @@
         } @else {
             height: 100%;
         }
-        cursor: pointer;
+        cursor: pointer!important;
+
     }
 }
 

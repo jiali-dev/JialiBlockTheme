@@ -1,6 +1,5 @@
 <?php $post = $args['post']; ?>
 <div class="jiali-card-item">
-    <div class="jiali-card-overlay-primary-top"></div>
     <?php if( $args['tags'] ): ?>
         <?php 
             $tags = wp_get_post_tags( $post->ID, array(
@@ -20,6 +19,7 @@
         <?php endif; ?>
     <?php endif; ?>
     <a class="jiali-permalink" href="<?php echo get_permalink( $post->ID ) ?>">
+        <div class="jiali-card-overlay-primary-top"></div>
 
         <div class="jiali-card jiali-vertical-card">
             <?php if( $args['thumbnail'] ): ?>

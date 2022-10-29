@@ -1,9 +1,10 @@
-<div class="jiali-services-wrapper" id="jiali-services">
+<section class="jiali-services-wrapper" id="jiali-services">
     <div class="jiali-section-custom-width-transparent">
-         
-        <h1 class="jiali-title">
-            <?php _e( "Our Service", "jiali" ) ?>
-        </h1>
+        <div class="jiali-title-wrapper">
+            <h1 class="jiali-title">
+                <?php _e( "Our Service", "jiali" ) ?>
+            </h1>
+        </div>
         <div class="row jiali-feature">
             <div class="col-md-6 jiali-feature-img">
                 <img src="<?php echo get_template_directory_uri(  ) . '/images/services.jpg' ?>" >
@@ -60,4 +61,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

@@ -71,6 +71,7 @@ new PlaceholderBlock("double-banner");
 new PlaceholderBlock("recent-articles");
 new PlaceholderBlock("services");
 new PlaceholderBlock("appointment");
+new PlaceholderBlock("footer");
 
 /**
  * Register Custom Navigation Walker

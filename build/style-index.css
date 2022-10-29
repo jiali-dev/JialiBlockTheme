@@ -11,9 +11,9 @@ body {
 }
 
 .jiali-title {
-  margin: 16px auto !important;
+  margin: 16px auto 32px !important;
   font-size: 32px;
-  color: #0A4E5A;
+  color: rgb(10, 78, 90);
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -24,7 +24,7 @@ body {
   content: "";
   width: 50px;
   height: 35px;
-  background: linear-gradient(#0A4E5A, #fff);
+  background: linear-gradient(rgb(10, 78, 90), #fff);
   position: absolute;
   top: -20px;
   left: 0;
@@ -32,6 +32,10 @@ body {
   transform: rotate(10deg);
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;
+}
+
+.jiali-title-wrapper {
+  text-align: center;
 }
 
 .jiali-sub-title {
@@ -43,7 +47,7 @@ body {
 }
 
 .jiali-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #23CBE7), url(images/banner.71ff0556.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(35, 203, 231, 0.5)), url(images/banner.131abed3.jpg);
   background-size: cover;
   position: center;
   height: 100vh;
@@ -163,7 +167,7 @@ body {
   left: 0;
   bottom: 0px;
   height: 5px;
-  background-color: #F6B7AD;
+  background-color: rgb(246, 183, 173);
   transition: 0.4s;
 }
 
@@ -172,11 +176,11 @@ body {
 }
 
 .jiali-top-menu ul li a:hover {
-  color: #F6B7AD;
+  color: rgb(246, 183, 173);
 }
 
 .jiali-top-menu ul li.active a {
-  color: #5A150A;
+  color: rgb(90, 21, 10);
 }
 
 .jiali-top-menu ul li.active a:after {
@@ -186,7 +190,7 @@ body {
   left: 0;
   bottom: 0;
   height: 5px;
-  background-color: #5A150A;
+  background-color: rgb(90, 21, 10);
 }
 
 .jiali-navbar {
@@ -275,6 +279,7 @@ body {
 .jiali-card-item {
   position: relative;
   margin-bottom: 8px;
+  height: 100%;
 }
 
 .jiali-horizontal-card {
@@ -282,6 +287,7 @@ body {
   border: #CBCBCB 1px solid;
   border-radius: 10px;
   justify-content: space-between;
+  height: 100%;
 }
 
 .jiali-horizontal-card .jiali-card-body {
@@ -311,9 +317,7 @@ body {
 .jiali-card-img-side img {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  flex-basis: 200px;
-  min-height: 200px;
-  width: 200px;
+  height: 100%;
 }
 
 .jiali-top-categories-wrapper {
@@ -379,6 +383,7 @@ body {
 .jiali-recent-articles-wrapper {
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .jiali-recent-articles-wrapper .jiali-title {
@@ -424,7 +429,7 @@ body {
 }
 
 .jiali-services-wrapper .jiali-feature-item h1 {
-  color: #B42B14;
+  color: rgb(180, 43, 20);
 }
 
 .jiali-appointment-wrapper {
@@ -433,7 +438,7 @@ body {
 }
 
 .jiali-appointment-wrapper .jiali-feature-item h1 {
-  color: #149DB4;
+  color: rgb(20, 157, 180);
 }
 
 .jiali-feature-img {
@@ -473,16 +478,60 @@ body {
   padding: 0 16px;
 }
 
+.jiali-footer {
+  position: relative;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(35, 203, 231, 0.5));
+}
+
+.jiali-footer .jiali-title {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jiali-footer-col-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.jiali-footer-col-wrapper * {
+  color: #070707 !important;
+  line-height: 1.5;
+}
+
+.jiali-footer .jiali-title {
+  color: rgb(237, 111, 90) !important;
+}
+
+.jiali-footer .jiali-title::after {
+  background: linear-gradient(rgb(231, 63, 35), #fff) !important;
+}
+
+.jiali-footer-col {
+  margin-top: 64px;
+}
+
+.jiali-footer-col .jiali-feature-item {
+  padding: 8px 0;
+}
+
+.jiali-copyright {
+  color: #ffffff;
+  text-align: center;
+}
+
 /* BEM Blocks */
 .jiali-btn-primary {
-  background: #5A150A;
+  background: rgb(90, 21, 10);
   color: #F9F9F9;
   position: relative;
   z-index: 1;
 }
 .jiali-btn-primary:before {
   content: "";
-  background-color: #F6B7AD;
+  background-color: rgb(246, 183, 173);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -493,7 +542,7 @@ body {
   z-index: -1;
 }
 .jiali-btn-primary:hover {
-  border-color: #F6B7AD;
+  border-color: rgb(246, 183, 173);
   color: #070707;
 }
 .jiali-btn-primary:hover:before {
@@ -505,14 +554,14 @@ body {
 }
 
 .jiali-btn-secondary {
-  background: #0A4E5A;
+  background: rgb(10, 78, 90);
   color: #F9F9F9;
   position: relative;
   z-index: 1;
 }
 .jiali-btn-secondary:before {
   content: "";
-  background-color: #ADECF6;
+  background-color: rgb(173, 236, 246);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -523,7 +572,7 @@ body {
   z-index: -1;
 }
 .jiali-btn-secondary:hover {
-  border-color: #ADECF6;
+  border-color: rgb(173, 236, 246);
   color: #070707;
 }
 .jiali-btn-secondary:hover:before {
@@ -536,13 +585,13 @@ body {
 
 .jiali-btn-outline-primary {
   color: #F9F9F9;
-  border: 1px solid #5A150A !important;
+  border: 1px solid rgb(90, 21, 10) !important;
   position: relative;
   z-index: 1;
 }
 .jiali-btn-outline-primary:before {
   content: "";
-  background-color: #5A150A;
+  background-color: rgb(90, 21, 10);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -560,19 +609,19 @@ body {
   width: 100%;
 }
 .jiali-btn-outline-primary:active {
-  background: #5A150A;
+  background: rgb(90, 21, 10);
   color: #F9F9F9;
 }
 
 .jiali-btn-outline-secondary {
   color: #F9F9F9;
-  border: 1px solid #0A4E5A !important;
+  border: 1px solid rgb(10, 78, 90) !important;
   position: relative;
   z-index: 1;
 }
 .jiali-btn-outline-secondary:before {
   content: "";
-  background-color: #0A4E5A;
+  background-color: rgb(10, 78, 90);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -590,7 +639,7 @@ body {
   width: 100%;
 }
 .jiali-btn-outline-secondary:active {
-  background: #0A4E5A;
+  background: rgb(10, 78, 90);
   color: #F9F9F9;
 }
 
@@ -606,13 +655,44 @@ body {
 }
 
 .jiali-section-full-width-primary {
-  background: #F6B7AD;
+  background: rgb(246, 183, 173);
+  margin: auto;
+}
+
+.jiali-section-full-width-dark-secondary {
+  background: rgb(10, 78, 90);
   margin: auto;
 }
 
 .jiali-section-full-width-secondary {
-  background: #ADECF6;
+  background: rgb(173, 236, 246);
   margin: auto;
+}
+
+.jiali-square-icon-white {
+  display: flex;
+  justify-content: center;
+  min-width: 50px !important;
+  height: 50px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.jiali-square-icon-black {
+  display: flex;
+  justify-content: center;
+  min-width: 50px !important;
+  height: 50px;
+  border: 1px solid #070707;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #070707;
+  font-size: 24px;
 }
 
 .jiali-square-icon-primary {
@@ -620,11 +700,11 @@ body {
   justify-content: center;
   min-width: 50px !important;
   height: 50px;
-  border: 1px solid #B42B14;
+  border: 1px solid rgb(180, 43, 20);
   text-align: center;
   align-items: center;
   border-radius: 5px;
-  color: #B42B14;
+  color: rgb(180, 43, 20);
   font-size: 24px;
 }
 
@@ -633,11 +713,11 @@ body {
   justify-content: center;
   min-width: 50px !important;
   height: 50px;
-  border: 1px solid #149DB4;
+  border: 1px solid rgb(20, 157, 180);
   text-align: center;
   align-items: center;
   border-radius: 5px;
-  color: #149DB4;
+  color: rgb(20, 157, 180);
   font-size: 24px;
 }
 
@@ -648,7 +728,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #E73F23);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(231, 63, 35));
   opacity: 0.8;
   z-index: 999;
 }
@@ -660,7 +740,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #23CBE7);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(35, 203, 231));
   opacity: 0.8;
   z-index: 999;
 }
@@ -669,7 +749,7 @@ body {
   top: 0;
   height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #E73F23, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to bottom, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -679,14 +759,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-primary-top {
   height: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-primary-right {
   right: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #E73F23, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to right, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -696,14 +776,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-primary-right {
   width: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-primary-bottom {
   bottom: 0;
   height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #E73F23, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to bottom, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -713,14 +793,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-primary-bottom {
   height: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-primary-left {
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #E73F23, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to right, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -730,14 +810,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-primary-left {
   width: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-secondary-top {
   top: 0;
   height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #23CBE7, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to bottom, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -747,14 +827,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-secondary-top {
   height: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-secondary-right {
   right: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #23CBE7, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to right, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -764,14 +844,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-secondary-right {
   width: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-secondary-bottom {
   bottom: 0;
   height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #23CBE7, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to bottom, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -781,14 +861,14 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-secondary-bottom {
   height: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .jiali-card-overlay-secondary-left {
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #23CBE7, rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to right, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
   position: absolute;
   left: 0;
   border-radius: 15px;
@@ -798,7 +878,7 @@ body {
 }
 .jiali-card-item:hover .jiali-card-overlay-secondary-left {
   width: 100%;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

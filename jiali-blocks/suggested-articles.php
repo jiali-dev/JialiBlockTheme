@@ -15,9 +15,11 @@
     ?>   
     <section class="jiali_suggested_articles">
         <div class="jiali-section-custom-width-transparent">
-            <h1 class="jiali-title">
-                <?php _e( "Our suggestions", "jiali" ) ?>
-            </h1>
+            <div class="jiali-title-wrapper">
+                <h1 class="jiali-title">
+                    <?php _e( "Our suggestions", "jiali" ) ?>
+                </h1>
+            </div>
             <div class="row"> 
                 <div class="col-md-6 jiali_suggested_article_col">
                     <?php 

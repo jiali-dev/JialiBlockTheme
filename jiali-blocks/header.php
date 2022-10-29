@@ -70,8 +70,9 @@
     </div>
     
     <div class="jiali-site-title">
-        <h1>وبسایت دکتر محمد رادگودرزی</h1>
-        <p>فوق تخصص قلب اطفال</p>
+        <h1>NINI HEART CLINIC</h1>
+        <h1>دکتر محمد رادگودرزی</h1>
+        <h3>فوق تخصص قلب اطفال</h3>
         <div>
             <a href="#jiali-services" class="btn jiali-btn-primary btn-lg"><?php _e("See Our Service", "jiali") ?></a>
             <a href="#jiali-reserve" class="btn jiali-btn-secondary btn-lg"><?php _e("Reserve apointment", "jiali") ?></a>

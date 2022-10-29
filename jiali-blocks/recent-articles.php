@@ -17,9 +17,11 @@
 
     <section class="jiali-recent-articles-wrapper">
         <div class="jiali-section-custom-width-transparent">
-            <h1 class="jiali-title">
-                <?php _e( "Recent Articles", "jiali" ) ?>
-            </h1>
+            <div class="jiali-title-wrapper">
+                <h1 class="jiali-title">
+                    <?php _e( "Recent Articles", "jiali" ) ?>
+                </h1>
+    </div>
 
             <div class="row jiali-recent-posts-items">
 

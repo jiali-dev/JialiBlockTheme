@@ -5,7 +5,7 @@ body {
 }
 
 .jiali-title {
-    margin: 16px auto!important;
+    margin: 16px auto 32px!important;
     font-size: 32px;
     color: $secondary_4;
     font-weight: bold;
@@ -28,6 +28,9 @@ body {
     }
 }
 
+.jiali-title-wrapper {
+    text-align: center;
+}
 .jiali-sub-title {
     font-size: 16px;
 }
@@ -38,7 +41,7 @@ body {
 
 // HEADER
 .jiali-header { 
-    background: linear-gradient( rgba(0,0,0,0.5), $secondary) ,url(/images/banner.jpg);
+    background: linear-gradient( rgba(0,0,0,0.5), $secondary_op ) , url(/images/banner.jpg);
     background-size: cover;
     position: center;
     height: 100vh;
@@ -272,6 +275,7 @@ body {
 .jiali-card-item {
     position: relative;
     margin-bottom: 8px;
+    height: 100%;
 }
 
 .jiali-horizontal-card {
@@ -279,6 +283,7 @@ body {
     border: $gray_3 1px solid;
     border-radius: 10px;
     justify-content: space-between;
+    height: 100%;
 }
 
 .jiali-horizontal-card .jiali-card-body {
@@ -307,19 +312,8 @@ body {
 .jiali-card-img-side img{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    flex-basis: 200px;
-    min-height: 200px;
-    width: 200px;
+    height: 100%;
 }
-
-// SUGGESTED ARTICLES
-// .jiali_suggested_articles .jiali-horizontal-card {
-//     min-height: 180px;
-// }
-
-// .jiali_suggested_articles .jiali-vertical-card {
-//     min-height: 620px;
-// }
 
 // TOP CATEGORIES
 .jiali-top-categories-wrapper {
@@ -386,6 +380,7 @@ body {
 .jiali-recent-articles-wrapper {
     padding-top: 32px;
     padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .jiali-recent-articles-wrapper .jiali-title {
@@ -479,4 +474,50 @@ body {
 .jiali-feature-text {
     margin: 0!important;
     padding: 0 16px;
+}
+
+// FOOTER
+.jiali-footer {
+    position: relative;
+    background: linear-gradient(to top,rgba(0,0,0,0.2), $secondary_op );
+}
+
+.jiali-footer .jiali-title {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.jiali-footer-col-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+
+}
+
+.jiali-footer-col-wrapper *{
+    color: $black!important;
+    line-height: 1.5;
+}
+
+.jiali-footer .jiali-title {
+    color: $primary_2!important;
+}
+
+.jiali-footer .jiali-title::after {
+    background: linear-gradient($primary,#fff)!important;
+}
+
+.jiali-footer-col {
+    margin-top: 64px;
+}
+
+.jiali-footer-col .jiali-feature-item {
+    padding: 8px 0;
+}
+
+.jiali-copyright {
+    color: $white;
+    text-align: center;
 }

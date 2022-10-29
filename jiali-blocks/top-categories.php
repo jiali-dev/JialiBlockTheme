@@ -11,9 +11,11 @@ $categories = get_categories( array(
 
     <section class="jiali-top-categories-wrapper jiali-section-full-width-secondary">
         <div class="jiali-section-custom-width-transparent">
-            <h1 class="jiali-title">
-                <?php _e( "Frequent topics", "jiali" ) ?>
-            </h1>
+            <div class="jiali-title-wrapper">
+                <h1 class="jiali-title">
+                    <?php _e( "Frequent topics", "jiali" ) ?>
+                </h1>
+            </div>
 
             <h3 class="jiali-sub-title">
                 <?php _e( "More than several interesting topics", "jiali" ) ?>
