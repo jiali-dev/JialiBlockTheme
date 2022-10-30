@@ -10,6 +10,17 @@
     z-index: 999;
 }
 
+@mixin overlayed-card($color) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+    background: linear-gradient(360deg, $color, transparent);
+    z-index: 999;
+}
+
 @mixin card-overlay-bg($color, $from) {
     @if ( $from ) {
 
@@ -60,6 +71,9 @@
     @include overlay-bg($secondary)
 }
 
+.jiali-overlayed-card-overlay-darkprimary {
+    @include overlayed-card($primary_4)
+}
 .jiali-card-overlay-primary-top {
     @include card-overlay-bg($primary, top )
 }

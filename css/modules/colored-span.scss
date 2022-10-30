@@ -1,0 +1,13 @@
+@mixin span($color) {
+    color: $color;
+    font-weight: bold
+}
+
+.jiali-span-primary {
+    @include span($primary);
+}
+
+.jiali-span-secondary {
+    @include span($secondary);
+}
+

@@ -10,20 +10,7 @@
         <div class="row jiali-feature">
             
             <div class="col-md-6 jiali-feature-items">
-                <div class="jiali-feature-item">
-
-                    <h1><?php _e("Working hours", "jiali") ?></h1>
-                    <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-secondary">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                        <p class="jiali-feature-text">
-                            روز های * الی *
-                            <br>
-                            از ساعت * الی *
-                        </p>
-                    </div>
-                </div>
+                
                 <div class="jiali-feature-item">
 
                     <h1><?php _e("Location", "jiali") ?></h1>
@@ -33,7 +20,7 @@
                         </div>
                         <p class="jiali-feature-text">
 
-                            سعادت آباد، میدان کاج، سرو غربی، ساختمان سینا، طبقه همکف    
+                            سعادت آباد،  میدان کاج، سرو غربی، ساختمان سینا، طبقه همکف    
 
                         </p>
                     </div>
@@ -52,11 +39,23 @@
                         </p>
                     </div>
                 </div>
+                <div class="jiali-feature-item">
+
+                    <h1><?php _e("Appointment Methods", "jiali") ?></h1>
+                    <div class="jiali-feature-item-desc">
+                        <div class="jiali-square-icon-secondary">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <p class="jiali-feature-text">
+                            جهت تعیین وقت حتما از قبل با شماره تماس ذکر شده هماهنگ فرمایید
+                        </p>
+                    </div>
+                </div>
                 
             </div>
 
             <div class="col-md-6 jiali-feature-img">
-                <img src="<?php echo get_template_directory_uri(  ) . '/images/services.jpg' ?>" >
+                <img src="<?php echo get_template_directory_uri(  ) . '/images/appointment.jpg' ?>" >
                 <div class="jiali-overlay-secondary"></div>
             </div>
 

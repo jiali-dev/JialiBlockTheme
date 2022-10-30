@@ -65,6 +65,7 @@ class PlaceholderBlock {
 }
 
 new PlaceholderBlock("header");
+new PlaceholderBlock("home-header");
 new PlaceholderBlock("suggested-articles");
 new PlaceholderBlock("top-categories");
 new PlaceholderBlock("double-banner");
@@ -72,6 +73,43 @@ new PlaceholderBlock("recent-articles");
 new PlaceholderBlock("services");
 new PlaceholderBlock("appointment");
 new PlaceholderBlock("footer");
+new PlaceholderBlock("daily-pictures");
+new PlaceholderBlock("single");
+
+class JSXBlock {
+  function __construct($name, $renderCallback = null, $data = null) {
+    $this->name = $name;
+    $this->data = $data;
+    $this->renderCallback = $renderCallback;
+    add_action('init', [$this, 'onInit']);
+  }
+
+  function jialiBlockRenderCallback($attributes, $content) {
+    ob_start();
+    require get_theme_file_path("/jiali-blocks/{$this->name}.php");
+    return ob_get_clean();
+  }
+
+  function onInit() {
+    wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'));
+    
+    if ($this->data) {
+      wp_localize_script($this->name, $this->name, $this->data);
+    }
+
+    $ourArgs = array(
+      'editor_script' => $this->name
+    );
+
+    if ($this->renderCallback) {
+      $ourArgs['render_callback'] = [$this, 'jialiBlockRenderCallback'];
+    }
+
+    register_block_type("jialiblocktheme/{$this->name}", $ourArgs);
+  }
+}
+
+new JSXBlock('custom-width-section');
 
 /**
  * Register Custom Navigation Walker
@@ -93,3 +131,160 @@ function special_nav_class ($classes, $item) {
   }
   return $classes;
 }
+
+/**
+ * Register a custom post type called "book".
+ *
+ * @see get_post_type_labels() for label keys.
+ */
+function jiali_post_type() {
+    $labels = array(
+        'name'                  => 'Appointment',
+        'add_new'               => 'Add new Appointment',
+        'add_new_item'          => 'Add new Appointments',
+        'singular_name'         => 'Appointment',
+        'edit_item'             => 'Edit Appointment',
+        'all_items'             => 'All Appointments'
+        );
+ 
+    $args = array(
+        'labels'             => $labels,
+        'has_archive'        => true,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'appointments' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-calendar',
+        'supports'           => array( 'title' ),
+    );
+ 
+    register_post_type( 'appointment', $args );
+
+    $labels = array(
+        'name'                  => 'App',
+        'add_new'               => 'Add new App',
+        'add_new_item'          => 'Add new Apps',
+        'singular_name'         => 'App',
+        'edit_item'             => 'Edit App',
+        'all_items'             => 'All Apps'
+        );
+ 
+    $args = array(
+        'labels'             => $labels,
+        'has_archive'        => true,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'apps' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-smiley',
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies' => array( 'category', 'post_tag' )
+    );
+ 
+    register_post_type( 'app', $args );
+
+    $labels = array(
+        'name'                  => 'Multimedia',
+        'add_new'               => 'Add new Multimedia',
+        'add_new_item'          => 'Add new Multimedias',
+        'singular_name'         => 'Multimedia',
+        'edit_item'             => 'Edit Multimedia',
+        'all_items'             => 'All Multimedias'
+        );
+ 
+    $args = array(
+        'labels'             => $labels,
+        'has_archive'        => true,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'multimedias' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-admin-media',
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies' => array( 'category', 'post_tag' )
+    );
+ 
+    register_post_type( 'multimedia', $args );
+
+    $labels = array(
+        'name'                  => 'Useful Link',
+        'add_new'               => 'Add new Useful Link',
+        'add_new_item'          => 'Add new Useful Links',
+        'singular_name'         => 'Useful Link',
+        'edit_item'             => 'Edit Useful Link',
+        'all_items'             => 'All Useful Links'
+        );
+ 
+    $args = array(
+        'labels'             => $labels,
+        'has_archive'        => true,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'usefullinks' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-admin-links',
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+    );
+ 
+    register_post_type( 'usefullink', $args );
+
+}
+ 
+add_action( 'init', 'jiali_post_type' );
+function get_breadcrumb() {
+  echo '<a class="jiali-permalink" href="'.home_url().'" rel="nofollow">Home</a>';
+  if (is_category() || is_single()) {
+      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+      $args = array(
+        'taxonomy'               => 'category',
+        'exclude'                => 'suggested-posts',
+        'hide_empty'             => false,
+      );
+
+      $the_query = wp_get_post_terms( get_the_ID(), 'category', $args );
+
+      echo '<a class="jiali-permalink" href="'.get_category_link( $the_query[0]->term_id ).'">'.$the_query[0]->name.'</a>';
+
+          if (is_single()) {
+              echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
+              the_title();
+          }
+  } elseif (is_page()) {
+      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
+      echo the_title();
+  } elseif (is_search()) {
+      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
+      echo '"<em>';
+      echo the_search_query();
+      echo '</em>"';
+  }
+}
+

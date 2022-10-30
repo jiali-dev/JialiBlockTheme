@@ -47,6 +47,11 @@ body {
 }
 
 .jiali-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(35, 203, 231, 0.5));
+  padding-top: 8px !important;
+}
+
+.jiali-home-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(35, 203, 231, 0.5)), url(images/banner.131abed3.jpg);
   background-size: cover;
   position: center;
@@ -207,8 +212,16 @@ body {
   justify-content: space-between;
 }
 
+.jiali_suggested_articles .jiali-card-item {
+  height: 100% !important;
+}
+
 .jiali-card {
   position: relative;
+}
+
+.jiali_suggested_articles .jiali-card-item, .jiali-recent-articles-wrapper .jiali-card-item {
+  box-shadow: 0 10px 20px 3px rgba(231, 63, 35, 0.1);
 }
 
 .jiali-card-tags {
@@ -251,6 +264,7 @@ body {
   flex-direction: column;
   border: #CBCBCB 1px solid;
   border-radius: 10px;
+  height: 100%;
 }
 
 .jiali-vertical-card .jiali-card-img-top {
@@ -279,7 +293,6 @@ body {
 .jiali-card-item {
   position: relative;
   margin-bottom: 8px;
-  height: 100%;
 }
 
 .jiali-horizontal-card {
@@ -325,8 +338,9 @@ body {
 }
 
 .jiali-top-categories-wrapper .jiali-sub-title {
-  margin-top: 16px;
   margin-bottom: 32px;
+  margin-top: -20px;
+  text-align: center;
 }
 
 .jiali-top-categorirs-item {
@@ -383,36 +397,36 @@ body {
 .jiali-recent-articles-wrapper {
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-bottom: 32px;
 }
 
 .jiali-recent-articles-wrapper .jiali-title {
   margin-bottom: 32px;
 }
 
-.jiali-recent-articles-wrapper .jiali-card-item {
+.jiali-recent-posts-items .jiali-card-item {
   margin-bottom: 16px;
 }
 
-.jiali-recent-articles-wrapper .jiali-vertical-card {
-  min-height: 394px;
+.jiali-recent-posts-items .jiali-card-img-top {
+  max-height: 325px;
+  border-bottom: 1px solid #EDEDED;
 }
 
-.jiali-recent-articles-wrapper .jiali-card-title {
+.jiali-recent-posts-items .jiali-card-title {
   margin-top: 0 !important;
   margin-bottom: 8px !important;
   font-size: 18px !important;
 }
 
-.jiali-recent-articles-wrapper .jiali-card-body {
+.jiali-recent-posts-items .jiali-card-body {
   padding: 8px !important;
 }
 
-.jiali-recent-articles-wrapper .jiali-card-author, .jiali-recent-articles-wrapper .jiali-card-date {
+.jiali-recent-posts-items .jiali-card-author, .jiali-recent-posts-items .jiali-card-date {
   font-size: 14px !important;
 }
 
-.jiali-recent-articles-wrapper .jiali-avatar img {
+.jiali-recent-posts-items .jiali-avatar img {
   width: 28px;
   height: 28px;
 }
@@ -520,6 +534,55 @@ body {
 .jiali-copyright {
   color: #ffffff;
   text-align: center;
+}
+
+.jiali-daily-pictures-curousel-wrapper {
+  padding: 20px 0;
+}
+
+.jiali-single-wrapper {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.jiali-single-top .jiali-card-img-top {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px 3px rgba(231, 63, 35, 0.1);
+}
+
+.jiali-single-title {
+  margin: 16px auto 32px !important;
+  font-size: 32px;
+  color: rgb(10, 78, 90);
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+.jiali-card-overlayed .jiali-card-body {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.jiali-card-overlayed .jiali-card-title,
+.jiali-card-overlayed .jiali-card-text {
+  color: #F9F9F9 !important;
+}
+
+.jiali-card-overlayed .jiali-card-author,
+.jiali-card-overlayed .jiali-card-date {
+  color: #CBCBCB !important;
+}
+
+.jiali-single-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* BEM Blocks */
@@ -669,6 +732,16 @@ body {
   margin: auto;
 }
 
+.jiali-span-primary {
+  color: rgb(231, 63, 35);
+  font-weight: bold;
+}
+
+.jiali-span-secondary {
+  color: rgb(35, 203, 231);
+  font-weight: bold;
+}
+
 .jiali-square-icon-white {
   display: flex;
   justify-content: center;
@@ -742,6 +815,17 @@ body {
   border-radius: 15px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(35, 203, 231));
   opacity: 0.8;
+  z-index: 999;
+}
+
+.jiali-overlayed-card-overlay-darkprimary {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
+  background: linear-gradient(360deg, rgb(90, 21, 10), transparent);
   z-index: 999;
 }
 

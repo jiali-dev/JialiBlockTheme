@@ -19,7 +19,7 @@
                             <i class="fa-solid fa-square-check"></i>
                         </div>
                         <p class="jiali-feature-text">
-                            <?php _e("Specialized echocardiography of the fetal heart", "jiali") ?>
+                            <?php _e("Specialized echocardiography of the","jiali") ?> <span class="jiali-span-primary"><?php _e("fetal heart", "jiali") ?></span>
                         </p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         <div class="jiali-square-icon-primary">
                             <i class="fa-solid fa-square-check"></i>
                         </div>
-                        <p class="jiali-feature-text">
+                        <p class="jiali-feature-text">    
                             <?php _e("Specialized echocardiography of the baby's heart", "jiali") ?>
                         </p>
                     </div>
