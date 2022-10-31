@@ -4,6 +4,15 @@ body {
     font-family: Montserrat;
 }
 
+a {
+    color: $secondary_3;
+    text-decoration: none!important;
+}
+
+h1,h1,h3,h4,h5,h6 {
+    color: $secondary_4!important;
+}
+
 .jiali-title {
     margin: 16px auto 32px!important;
     font-size: 32px;
@@ -86,6 +95,9 @@ body {
     padding: 24px;
 }
 
+.jiali-login a {
+    margin-inline-start: 16px;
+}
 
 // LOGIN
 .jiali-login {
@@ -548,6 +560,7 @@ body {
     margin-top: 32px;
     margin-bottom: 32px;
 }
+
 .jiali-single-top .jiali-card-img-top {
     width: 100%;
     border-radius: 15px;
@@ -589,3 +602,57 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.jiali-single-content {
+    margin-top: 32px;
+    text-align: justify;
+    line-height: 1.75;
+    color: $gray_4;
+}
+
+.jiali-comment-wrapper {
+    margin: 32px auto!important;
+}
+
+.jiali-comment-wrapper p {
+    margin: 16px auto!important;
+}
+
+.jiali-comment-wrapper .comment-form-comment label {
+    margin-bottom: 8px;
+}
+
+.jiali-comment-wrapper textarea,
+.jiali-comment-wrapper input {
+    border-radius: 10px;
+}
+
+.jiali-comment-wrapper .submit {
+    background-color: $secondary_4;
+}
+
+.jiali-comment-wrapper > ol > .comment {
+    background: $gray_2;
+    padding: 15px 15px;
+    border-radius: 15px;
+    margin: 8px 0;
+}
+
+.jiali-comment-wrapper .jiali-comment-item {
+    background: $gray_1;
+    padding: 5px;
+    margin: 8px 0;
+    border-radius: 15px;
+    border: 1px solid $primary_1;
+}
+
+.jiali-comment-wrapper .byuser .jiali-comment-item {
+    background: $gray_1;
+    border: 1px solid $secondary_1;
+}
+
+.jiali-comment-wrapper #comments {
+    font-size: 18px;
+    margin-top: 24px;
+}
+

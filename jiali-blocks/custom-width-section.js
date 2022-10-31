@@ -9,18 +9,23 @@ registerBlockType("jialiblocktheme/custom-width-section", {
 })
 
 function EditComponent() {
-
   return (
     <> 
-      
-        
       <InnerBlocks />
-
-      
     </>
   )
 }
 
 function SaveComponent() {
-  return null
+  return (
+    <>
+      <div className="jiali-section-custom-width-transparent">
+
+        <InnerBlocks.Content />
+
+      </div>
+
+    </>
+  )
+  
 }

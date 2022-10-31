@@ -21,7 +21,7 @@
                 <h1 class="jiali-title">
                     <?php _e( "Recent Articles", "jiali" ) ?>
                 </h1>
-    </div>
+            </div>
 
             <div class="row jiali-recent-posts-items">
 
