@@ -11,6 +11,7 @@
         $args['author'] = true;
         $args['date'] = true;
         $args['tags'] = true;
+        $args['linked'] = true;
            
     ?>   
     <section class="jiali_suggested_articles">

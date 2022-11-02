@@ -13,6 +13,7 @@
         $args['author'] = true;
         $args['date'] = true;
         $args['tags'] = true;
+        $args['linked'] = true;
     ?>  
 
     <section class="jiali-recent-articles-wrapper">

@@ -11,18 +11,14 @@
     font-size: 24px;
 }
 
-.jiali-square-icon-white {
-  @include squre_icon($white)
-}
-
 .jiali-square-icon-black {
   @include squre_icon($black)
 }
 
-.jiali-square-icon-primary {
-  @include squre_icon($primary_3)
+.jiali-square-icon-dark-primary {
+  @include squre_icon($dark_primary)
 }
 
-.jiali-square-icon-secondary {
-  @include squre_icon($secondary_3)
+.jiali-square-icon-dark-secondary {
+  @include squre_icon($dark_secondary)
 }

@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="jiali-section-full-width-dark-secondary">
+    <div class="jiali-section-full-width-black">
         <div class="jiali-copyright">
             Copyright <?php echo get_bloginfo("name") ?> - <?php echo date("Y") ?>
         </div>

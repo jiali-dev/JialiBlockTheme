@@ -15,7 +15,7 @@
 
                     <h1><?php _e("Location", "jiali") ?></h1>
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-secondary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <p class="jiali-feature-text">
@@ -29,7 +29,7 @@
 
                     <h1><?php _e("Phone", "jiali") ?></h1>
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-secondary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-square-phone"></i>
                         </div>
                         <p class="jiali-feature-text">
@@ -43,7 +43,7 @@
 
                     <h1><?php _e("Appointment Methods", "jiali") ?></h1>
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-secondary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-clock"></i>
                         </div>
                         <p class="jiali-feature-text">
@@ -55,8 +55,9 @@
             </div>
 
             <div class="col-md-6 jiali-feature-img">
+                <div class="jiali-overlay-ultra-secondary"></div>
+
                 <img src="<?php echo get_template_directory_uri(  ) . '/images/appointment.jpg' ?>" >
-                <div class="jiali-overlay-secondary"></div>
             </div>
 
         </div>

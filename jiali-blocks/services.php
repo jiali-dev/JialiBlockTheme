@@ -8,24 +8,24 @@
         <div class="row jiali-feature">
             <div class="col-md-6 jiali-feature-img">
                 <img src="<?php echo get_template_directory_uri(  ) . '/images/services.jpg' ?>" >
-                <div class="jiali-overlay-primary"></div>
+                <div class="jiali-overlay-ultra-secondary"></div>
             </div>
             <div class="col-md-6 jiali-feature-items">
                 <div class="jiali-feature-item">
 
                     <h1><?php _e("Eco cardiography" , "jiali" ) ?></h1>
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-primary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-square-check"></i>
                         </div>
                         <p class="jiali-feature-text">
-                            <?php _e("Specialized echocardiography of the","jiali") ?> <span class="jiali-span-primary"><?php _e("fetal heart", "jiali") ?></span>
+                            <?php _e("Specialized echocardiography of the","jiali") ?> <span class="jiali-span-ultra-dark-primary"><?php _e("fetal heart", "jiali") ?></span>
                         </p>
                     </div>
                 </div>
                 <div class="jiali-feature-item">
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-primary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-square-check"></i>
                         </div>
                         <p class="jiali-feature-text">    
@@ -35,7 +35,7 @@
                 </div>
                 <div class="jiali-feature-item">
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-primary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-square-check"></i>
                         </div>
                         <p class="jiali-feature-text">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="jiali-feature-item">
                     <div class="jiali-feature-item-desc">
-                        <div class="jiali-square-icon-primary">
+                        <div class="jiali-square-icon-dark-secondary">
                             <i class="fa-solid fa-square-check"></i>
                         </div>
                         <p class="jiali-feature-text">

@@ -65,7 +65,6 @@ class PlaceholderBlock {
 }
 
 new PlaceholderBlock("header");
-new PlaceholderBlock("home-header");
 new PlaceholderBlock("suggested-articles");
 new PlaceholderBlock("top-categories");
 new PlaceholderBlock("double-banner");

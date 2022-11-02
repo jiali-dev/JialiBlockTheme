@@ -9,7 +9,7 @@ $categories = get_categories( array(
 ?>
 <?php if( $categories ): ?>
 
-    <section class="jiali-top-categories-wrapper jiali-section-full-width-secondary">
+    <section class="jiali-top-categories-wrapper jiali-section-full-width-super-ultra-primary">
         <div class="jiali-section-custom-width-transparent">
             <div class="jiali-title-wrapper">
                 <h1 class="jiali-title">
@@ -26,6 +26,7 @@ $categories = get_categories( array(
                     <div class="col-md-2">
                         <?php
                             $args['category'] = $cat; 
+                            $args['linked'] = $cat; 
                             get_template_part('template-parts/card-category', null, $args );
                         ?>
                     </div>

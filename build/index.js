@@ -22,7 +22,48 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
+/* harmony import */ var _modules_MyScripts_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MyScripts.js */ "./src/modules/MyScripts.js");
 
+
+
+// Instantiate a new object using our modules/classes
+const myScripts = new _modules_MyScripts_js__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+/***/ }),
+
+/***/ "./src/modules/MyScripts.js":
+/*!**********************************!*\
+  !*** ./src/modules/MyScripts.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+class MyScripts {
+
+  // constructor() {
+  //     this.fnc()
+  // }
+
+  // fnc(params) {
+
+  //     let pElements = document.querySelectorAll(".jiali-single-content p");
+
+  //     pElements.forEach(myFunction)
+
+  //     function myFunction(item, index, arr) {
+  //         if (item.querySelector('img') !== null) {
+  //             item.style.textAlign = "center";
+  //         } 
+  //         let aElements = item.querySelectorAll('a');
+  //         aElements.forEach((v,i) => {
+  //             v.setAttribute("target", "_blank")
+  //         })
+
+  //     }
+
+  // }
+}
+/* harmony default export */ __webpack_exports__["default"] = (MyScripts);
 
 /***/ })
 

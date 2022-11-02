@@ -3,11 +3,8 @@
     font-weight: bold
 }
 
-.jiali-span-primary {
-    @include span($primary);
+.jiali-span-ultra-dark-primary {
+    @include span($ultra_dark_primary);
 }
 
-.jiali-span-secondary {
-    @include span($secondary);
-}
 

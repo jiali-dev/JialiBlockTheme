@@ -12,17 +12,17 @@
 }
 
 .jiali-section-full-width-gray {
-    @include section($gray_2, null);
+    @include section($light_gray, null);
 }
 
 .jiali-section-full-width-primary {
-    @include section($primary_1, null);
+    @include section($primary, null);
 }
 
-.jiali-section-full-width-dark-secondary {
-    @include section($secondary_4, null);
+.jiali-section-full-width-black {
+    @include section($black, null);
 }
 
-.jiali-section-full-width-secondary {
-    @include section($secondary_1, null);
+.jiali-section-full-width-super-ultra-primary {
+    @include section($super_ultra_primary, null);
 }

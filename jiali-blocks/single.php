@@ -52,6 +52,7 @@
                                     $params['date'] = true;
                                     // $params['tags'] = true;
                                     $params['post'] = $value;
+                                    $params['linked'] = true;
                                     get_template_part('template-parts/card-vertical', null, $params );
                                 ?>
                             </div>

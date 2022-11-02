@@ -16,7 +16,7 @@
                     <a href="<?php site_url('/') ?>" >
                         <?php
                             if( has_custom_logo() ) {
-                                echo '<img src="' . esc_url( $logo[0] ) . '" class="jiali-header-logo" alt="' . get_bloginfo( 'name' ) . '">';
+                                echo '<img src="' . esc_url( $logo[0] ) . '" class="jiali-logo-img" alt="' . get_bloginfo( 'name' ) . '">';
                             } else {
                                 echo '<h1>' . get_bloginfo('name') . '</h1>';
                             }
@@ -26,15 +26,15 @@
 
             <div class="col-lg-4 jiali-login">
                 <?php if(is_user_logged_in()) { ?>
-                    <a href="<?php echo wp_logout_url(); ?>" class="btn jiali-btn-outline-secondary">
+                    <a href="<?php echo wp_logout_url(); ?>" class="btn jiali-btn-outline-primary">
                         <?php _e("Log Out", "jiali") ?>
                         <span class="jiali-avatar">
                             <?php echo get_avatar(get_current_user_id(), 60); ?>
                         </span>
                     </a>
                 <?php } else { ?>
-                    <a href="<?php echo wp_login_url(); ?>" class="btn jiali-btn-secondary"><?php _e("Log In", "jiali") ?></a>
-                    <a href="<?php echo wp_registration_url(); ?>" class="btn jiali-btn-outline-secondary"><?php _e("Register", "jiali") ?></a>
+                    <a href="<?php echo wp_login_url(); ?>" class="btn jiali-btn-primary"><?php _e("Log In", "jiali") ?></a>
+                    <a href="<?php echo wp_registration_url(); ?>" class="btn jiali-btn-outline-primary"><?php _e("Register", "jiali") ?></a>
                 <?php } ?>
             </div>
             

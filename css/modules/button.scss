@@ -3,6 +3,7 @@
     color: $text;
     position: relative;
     z-index: 1;
+    border-radius: 6px!important;
     &:before {
       content: "";
       background-color: $hover_bg;
@@ -33,6 +34,7 @@
     border: 1px solid $bg!important;
     position: relative;
     z-index: 1;
+    border-radius: 6px!important;
     &:before {
       content: "";
       background-color: $bg;
@@ -41,7 +43,7 @@
       bottom: 0;
       width: 0;
       height: 100%;
-      border-radius: 6px;
+      border-radius: 6px!important;
       transition: 0.5s;
       z-index: -1;
     }
@@ -59,17 +61,17 @@
 }
 
 .jiali-btn-primary {
-    @include button-bg($primary_4, $primary_1, $gray_1, $black)
-}
-
-.jiali-btn-secondary {
-    @include button-bg($secondary_4, $secondary_1, $gray_1, $black)
+  @include button-bg($primary, $dark_primary, $white, $white);
 }
 
 .jiali-btn-outline-primary {
-    @include outline-button-bg($primary_4, $gray_1, $gray_1)
+  @include outline-button-bg($primary, $black, $white)
 }
 
-.jiali-btn-outline-secondary {
-    @include outline-button-bg($secondary_4, $gray_1, $gray_1)
+.jiali-btn-ultra-dark-secondary {
+  @include button-bg($ultra_dark_secondary, $dark_secondary, $white, $white);
+}
+
+.jiali-btn-outline-ultra-dark-secondary {
+  @include outline-button-bg($ultra_dark_secondary, $black, $white)
 }

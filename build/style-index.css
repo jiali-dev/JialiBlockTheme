@@ -11,18 +11,18 @@ body {
 }
 
 a {
-  color: rgb(20, 157, 180);
+  color: #1C9CC7;
   text-decoration: none !important;
 }
 
 h1, h1, h3, h4, h5, h6 {
-  color: rgb(10, 78, 90) !important;
+  color: #167D9F !important;
 }
 
 .jiali-title {
   margin: 16px auto 32px !important;
   font-size: 32px;
-  color: rgb(10, 78, 90);
+  color: #9F1616 !important;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -33,7 +33,7 @@ h1, h1, h3, h4, h5, h6 {
   content: "";
   width: 50px;
   height: 35px;
-  background: linear-gradient(rgb(10, 78, 90), #fff);
+  background: linear-gradient(#9F1616, #fff);
   position: absolute;
   top: -20px;
   left: 0;
@@ -56,16 +56,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(35, 203, 231, 0.5));
-  padding-top: 8px !important;
-}
-
-.jiali-home-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(35, 203, 231, 0.5)), url(images/banner.131abed3.jpg);
-  background-size: cover;
-  position: center;
-  height: 100vh;
-  padding-top: 8px !important;
+  padding-top: 8px;
 }
 
 .jiali-header-top {
@@ -74,7 +65,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-divider {
-  margin: 8px !important;
+  margin: 8px 0 0 !important;
   color: #CBCBCB;
 }
 
@@ -122,7 +113,7 @@ h1, h1, h3, h4, h5, h6 {
   height: 32px;
 }
 
-.jiali-header-logo {
+.jiali-logo-img {
   width: 138px !important;
 }
 
@@ -131,15 +122,19 @@ h1, h1, h3, h4, h5, h6 {
   justify-content: start;
 }
 
+.jiali-search * {
+  border-color: #070707;
+}
+
 .jilai-search-icon {
-  color: #F9F9F9;
+  color: #070707;
   background-color: transparent !important;
   -webkit-border-end: 0px !important;
           border-inline-end: 0px !important;
 }
 
 .jilai-search-input {
-  color: #F9F9F9;
+  color: #070707;
   text-align: end;
   background-color: transparent !important;
   -webkit-border-start: 0px !important;
@@ -147,11 +142,11 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jilai-search-input::-moz-placeholder {
-  color: #CBCBCB;
+  color: #757575;
 }
 
 .jilai-search-input::placeholder {
-  color: #CBCBCB;
+  color: #757575;
 }
 
 .jiali-social-icons {
@@ -159,10 +154,14 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-social-icons a {
-  color: #F9F9F9;
+  color: #070707;
   font-size: 24px;
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
+}
+
+.jiali-top-menu-wrapper {
+  background-color: #EDEDED;
 }
 
 .jiali-top-menu {
@@ -176,7 +175,7 @@ h1, h1, h3, h4, h5, h6 {
 
 .jiali-top-menu ul li a {
   position: relative;
-  color: #F9F9F9;
+  color: #070707;
 }
 
 .jiali-top-menu ul li a:after {
@@ -186,20 +185,12 @@ h1, h1, h3, h4, h5, h6 {
   left: 0;
   bottom: 0px;
   height: 5px;
-  background-color: rgb(246, 183, 173);
+  background-color: #ED7E7E;
   transition: 0.4s;
 }
 
 .jiali-top-menu ul li a:hover:after {
   width: 100%;
-}
-
-.jiali-top-menu ul li a:hover {
-  color: rgb(246, 183, 173);
-}
-
-.jiali-top-menu ul li.active a {
-  color: rgb(90, 21, 10);
 }
 
 .jiali-top-menu ul li.active a:after {
@@ -209,7 +200,7 @@ h1, h1, h3, h4, h5, h6 {
   left: 0;
   bottom: 0;
   height: 5px;
-  background-color: rgb(90, 21, 10);
+  background-color: #ED7E7E;
 }
 
 .jiali-navbar {
@@ -230,12 +221,13 @@ h1, h1, h3, h4, h5, h6 {
   height: 100% !important;
 }
 
-.jiali-card {
-  position: relative;
+.jiali-card-item:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
 }
 
-.jiali_suggested_articles .jiali-card-item, .jiali-recent-articles-wrapper .jiali-card-item {
-  box-shadow: 0 10px 20px 3px rgba(231, 63, 35, 0.1);
+.jiali-card {
+  position: relative;
 }
 
 .jiali-card-tags {
@@ -276,15 +268,12 @@ h1, h1, h3, h4, h5, h6 {
 .jiali-vertical-card {
   display: flex;
   flex-direction: column;
-  border: #CBCBCB 1px solid;
   border-radius: 10px;
   height: 100%;
 }
 
 .jiali-vertical-card .jiali-card-img-top {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   vertical-align: middle;
 }
 
@@ -307,12 +296,12 @@ h1, h1, h3, h4, h5, h6 {
 .jiali-card-item {
   position: relative;
   margin-bottom: 8px;
+  border: #FBDFDF 1px solid;
+  border-radius: 15px;
 }
 
 .jiali-horizontal-card {
   display: flex;
-  border: #CBCBCB 1px solid;
-  border-radius: 10px;
   justify-content: space-between;
   height: 100%;
 }
@@ -342,8 +331,8 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-card-img-side img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
   height: 100%;
 }
 
@@ -360,6 +349,10 @@ h1, h1, h3, h4, h5, h6 {
 .jiali-top-categorirs-item {
   border: 0px !important;
   border-radius: 0px !important;
+}
+
+.jiali-top-categorirs-item .jiali-card-item {
+  border: none !important;
 }
 
 .jiali-top-categorirs-item .jiali-card-img-top {
@@ -457,7 +450,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-services-wrapper .jiali-feature-item h1 {
-  color: rgb(180, 43, 20);
+  color: #F29E9E;
 }
 
 .jiali-appointment-wrapper {
@@ -466,7 +459,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-appointment-wrapper .jiali-feature-item h1 {
-  color: rgb(20, 157, 180);
+  color: #9F1616;
 }
 
 .jiali-feature-img {
@@ -507,8 +500,9 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-footer {
+  background: #EDEDED;
   position: relative;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(35, 203, 231, 0.5));
+  border-top: 1px solid #EDEDED;
 }
 
 .jiali-footer .jiali-title {
@@ -529,12 +523,8 @@ h1, h1, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-.jiali-footer .jiali-title {
-  color: rgb(237, 111, 90) !important;
-}
-
 .jiali-footer .jiali-title::after {
-  background: linear-gradient(rgb(231, 63, 35), #fff) !important;
+  background: linear-gradient(#ED7E7E, #fff) !important;
 }
 
 .jiali-footer-col {
@@ -559,16 +549,20 @@ h1, h1, h3, h4, h5, h6 {
   margin-bottom: 32px;
 }
 
+.jiali-card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
 .jiali-single-top .jiali-card-img-top {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px 3px rgba(231, 63, 35, 0.1);
+  border-radius: 12px;
 }
 
 .jiali-single-title {
   margin: 16px auto 32px !important;
   font-size: 32px;
-  color: rgb(10, 78, 90);
+  color: #9F1616;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -589,7 +583,7 @@ h1, h1, h3, h4, h5, h6 {
 
 .jiali-card-overlayed .jiali-card-author,
 .jiali-card-overlayed .jiali-card-date {
-  color: #CBCBCB !important;
+  color: #070707 !important;
 }
 
 .jiali-single-info {
@@ -604,6 +598,10 @@ h1, h1, h3, h4, h5, h6 {
   text-align: justify;
   line-height: 1.75;
   color: #757575;
+}
+
+.jiali-single-content img {
+  border-radius: 15px;
 }
 
 .jiali-comment-wrapper {
@@ -623,28 +621,31 @@ h1, h1, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
-.jiali-comment-wrapper .submit {
-  background-color: rgb(10, 78, 90);
+.jiali-comment-wrapper #submit {
+  color: #ffffff !important;
+  border: 1px solid #7ED1ED !important;
+  background-color: #7ED1ED;
+}
+
+.jiali-comment-wrapper h3 {
+  color: #212529 !important;
 }
 
 .jiali-comment-wrapper > ol > .comment {
-  background: #EDEDED;
   padding: 15px 15px;
   border-radius: 15px;
   margin: 8px 0;
 }
 
 .jiali-comment-wrapper .jiali-comment-item {
-  background: #F9F9F9;
+  background: #DFF4FB;
   padding: 5px;
   margin: 8px 0;
   border-radius: 15px;
-  border: 1px solid rgb(246, 183, 173);
 }
 
 .jiali-comment-wrapper .byuser .jiali-comment-item {
-  background: #F9F9F9;
-  border: 1px solid rgb(173, 236, 246);
+  background: #FBDFDF;
 }
 
 .jiali-comment-wrapper #comments {
@@ -654,14 +655,15 @@ h1, h1, h3, h4, h5, h6 {
 
 /* BEM Blocks */
 .jiali-btn-primary {
-  background: rgb(90, 21, 10);
-  color: #F9F9F9;
+  background: #ED7E7E;
+  color: #ffffff;
   position: relative;
   z-index: 1;
+  border-radius: 6px !important;
 }
 .jiali-btn-primary:before {
   content: "";
-  background-color: rgb(246, 183, 173);
+  background-color: #9F1616;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -672,26 +674,58 @@ h1, h1, h3, h4, h5, h6 {
   z-index: -1;
 }
 .jiali-btn-primary:hover {
-  border-color: rgb(246, 183, 173);
-  color: #070707;
+  border-color: #9F1616;
+  color: #ffffff;
 }
 .jiali-btn-primary:hover:before {
   width: 100%;
 }
 .jiali-btn-primary:active {
-  background: #350c06;
-  color: #F9F9F9;
+  background: #e85a5a;
+  color: #ffffff;
 }
 
-.jiali-btn-secondary {
-  background: rgb(10, 78, 90);
-  color: #F9F9F9;
+.jiali-btn-outline-primary {
+  color: #070707;
+  border: 1px solid #ED7E7E !important;
   position: relative;
   z-index: 1;
+  border-radius: 6px !important;
 }
-.jiali-btn-secondary:before {
+.jiali-btn-outline-primary:before {
   content: "";
-  background-color: rgb(173, 236, 246);
+  background-color: #ED7E7E;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px !important;
+  transition: 0.5s;
+  z-index: -1;
+}
+.jiali-btn-outline-primary:hover {
+  color: #ffffff;
+}
+.jiali-btn-outline-primary:hover:before {
+  right: 0;
+  width: 100%;
+}
+.jiali-btn-outline-primary:active {
+  background: #ED7E7E;
+  color: #ffffff;
+}
+
+.jiali-btn-ultra-dark-secondary {
+  background: #2EB5E2;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px !important;
+}
+.jiali-btn-ultra-dark-secondary:before {
+  content: "";
+  background-color: #167D9F;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -701,76 +735,47 @@ h1, h1, h3, h4, h5, h6 {
   transition: 0.5s;
   z-index: -1;
 }
-.jiali-btn-secondary:hover {
-  border-color: rgb(173, 236, 246);
+.jiali-btn-ultra-dark-secondary:hover {
+  border-color: #167D9F;
+  color: #ffffff;
+}
+.jiali-btn-ultra-dark-secondary:hover:before {
+  width: 100%;
+}
+.jiali-btn-ultra-dark-secondary:active {
+  background: #1c9fcb;
+  color: #ffffff;
+}
+
+.jiali-btn-outline-ultra-dark-secondary {
   color: #070707;
-}
-.jiali-btn-secondary:hover:before {
-  width: 100%;
-}
-.jiali-btn-secondary:active {
-  background: #062e35;
-  color: #F9F9F9;
-}
-
-.jiali-btn-outline-primary {
-  color: #F9F9F9;
-  border: 1px solid rgb(90, 21, 10) !important;
+  border: 1px solid #2EB5E2 !important;
   position: relative;
   z-index: 1;
+  border-radius: 6px !important;
 }
-.jiali-btn-outline-primary:before {
+.jiali-btn-outline-ultra-dark-secondary:before {
   content: "";
-  background-color: rgb(90, 21, 10);
+  background-color: #2EB5E2;
   position: absolute;
   right: 0;
   bottom: 0;
   width: 0;
   height: 100%;
-  border-radius: 6px;
+  border-radius: 6px !important;
   transition: 0.5s;
   z-index: -1;
 }
-.jiali-btn-outline-primary:hover {
-  color: #F9F9F9;
+.jiali-btn-outline-ultra-dark-secondary:hover {
+  color: #ffffff;
 }
-.jiali-btn-outline-primary:hover:before {
+.jiali-btn-outline-ultra-dark-secondary:hover:before {
   right: 0;
   width: 100%;
 }
-.jiali-btn-outline-primary:active {
-  background: rgb(90, 21, 10);
-  color: #F9F9F9;
-}
-
-.jiali-btn-outline-secondary {
-  color: #F9F9F9;
-  border: 1px solid rgb(10, 78, 90) !important;
-  position: relative;
-  z-index: 1;
-}
-.jiali-btn-outline-secondary:before {
-  content: "";
-  background-color: rgb(10, 78, 90);
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 100%;
-  border-radius: 6px;
-  transition: 0.5s;
-  z-index: -1;
-}
-.jiali-btn-outline-secondary:hover {
-  color: #F9F9F9;
-}
-.jiali-btn-outline-secondary:hover:before {
-  right: 0;
-  width: 100%;
-}
-.jiali-btn-outline-secondary:active {
-  background: rgb(10, 78, 90);
-  color: #F9F9F9;
+.jiali-btn-outline-ultra-dark-secondary:active {
+  background: #2EB5E2;
+  color: #ffffff;
 }
 
 .jiali-section-custom-width-transparent {
@@ -785,41 +790,23 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-section-full-width-primary {
-  background: rgb(246, 183, 173);
+  background: #ED7E7E;
   margin: auto;
 }
 
-.jiali-section-full-width-dark-secondary {
-  background: rgb(10, 78, 90);
+.jiali-section-full-width-black {
+  background: #070707;
   margin: auto;
 }
 
-.jiali-section-full-width-secondary {
-  background: rgb(173, 236, 246);
+.jiali-section-full-width-super-ultra-primary {
+  background: #FBDFDF;
   margin: auto;
 }
 
-.jiali-span-primary {
-  color: rgb(231, 63, 35);
+.jiali-span-ultra-dark-primary {
+  color: #E22E2E;
   font-weight: bold;
-}
-
-.jiali-span-secondary {
-  color: rgb(35, 203, 231);
-  font-weight: bold;
-}
-
-.jiali-square-icon-white {
-  display: flex;
-  justify-content: center;
-  min-width: 50px !important;
-  height: 50px;
-  border: 1px solid #ffffff;
-  text-align: center;
-  align-items: center;
-  border-radius: 5px;
-  color: #ffffff;
-  font-size: 24px;
 }
 
 .jiali-square-icon-black {
@@ -835,201 +822,76 @@ h1, h1, h3, h4, h5, h6 {
   font-size: 24px;
 }
 
-.jiali-square-icon-primary {
+.jiali-square-icon-dark-primary {
   display: flex;
   justify-content: center;
   min-width: 50px !important;
   height: 50px;
-  border: 1px solid rgb(180, 43, 20);
+  border: 1px solid #9F1616;
   text-align: center;
   align-items: center;
   border-radius: 5px;
-  color: rgb(180, 43, 20);
+  color: #9F1616;
   font-size: 24px;
 }
 
-.jiali-square-icon-secondary {
+.jiali-square-icon-dark-secondary {
   display: flex;
   justify-content: center;
   min-width: 50px !important;
   height: 50px;
-  border: 1px solid rgb(20, 157, 180);
+  border: 1px solid #167D9F;
   text-align: center;
   align-items: center;
   border-radius: 5px;
-  color: rgb(20, 157, 180);
+  color: #167D9F;
   font-size: 24px;
 }
 
-.jiali-overlay-primary {
+.jiali-overlay-ultra-primary {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(231, 63, 35));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #F6BFBF);
   opacity: 0.8;
   z-index: 999;
 }
 
-.jiali-overlay-secondary {
+.jiali-overlay-ultra-secondary {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(35, 203, 231));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #BFE8F6);
   opacity: 0.8;
   z-index: 999;
 }
 
-.jiali-overlayed-card-overlay-darkprimary {
+.jiali-overlayed-card-overlay-ultra-primary {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 80%;
   border-radius: 15px;
-  background: linear-gradient(360deg, rgb(90, 21, 10), transparent);
+  background: linear-gradient(to top, #F6BFBF, transparent);
   z-index: 999;
 }
 
-.jiali-card-overlay-primary-top {
-  top: 0;
-  height: 0;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
+.jiali-overlayed-card-overlay-ultra-secondary {
   position: absolute;
   left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-primary-top {
-  height: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-primary-right {
-  right: 0;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(to right, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-primary-right {
-  width: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-primary-bottom {
   bottom: 0;
-  height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
+  height: 80%;
   border-radius: 15px;
-  opacity: 0.8;
+  background: linear-gradient(to top, #BFE8F6, transparent);
   z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-primary-bottom {
-  height: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-primary-left {
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(to right, rgb(231, 63, 35), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-primary-left {
-  width: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-secondary-top {
-  top: 0;
-  height: 0;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-secondary-top {
-  height: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-secondary-right {
-  right: 0;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(to right, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-secondary-right {
-  width: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-secondary-bottom {
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-secondary-bottom {
-  height: 100%;
-  cursor: pointer !important;
-}
-
-.jiali-card-overlay-secondary-left {
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: linear-gradient(to right, rgb(35, 203, 231), rgba(255, 255, 255, 0.1));
-  position: absolute;
-  left: 0;
-  border-radius: 15px;
-  opacity: 0.8;
-  z-index: 999;
-  transition: 0.5s;
-}
-.jiali-card-item:hover .jiali-card-overlay-secondary-left {
-  width: 100%;
-  cursor: pointer !important;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
