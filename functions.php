@@ -3,8 +3,9 @@
 function university_files() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_script('jiali-main-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
-  wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
-  wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js');
+  // wp_enqueue_style('bootstrap-css', get_theme_file_uri('/assets/bootstrap/css/bootstrap.min.css'));
+  // wp_enqueue_style('bootstrap-rtl-css', get_theme_file_uri('/assets/bootstrap/css/bootstrap.rtl.min.css'));
+  // wp_enqueue_script('bootstrap-js', get_theme_file_uri('/assets/bootstrap/js/bootstrap.bundle.min.js'));
   wp_enqueue_style('jiali_main_styles', get_theme_file_uri('/build/style-index.css'));
   wp_enqueue_style('jiali_extra_styles', get_theme_file_uri('/build/index.css'));
   wp_enqueue_script('font-awesome-js', get_theme_file_uri('/assets/font-awesome/all.min.js'));

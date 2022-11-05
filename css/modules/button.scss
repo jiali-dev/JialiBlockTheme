@@ -1,85 +1,131 @@
-@mixin button-bg($bg, $hover_bg, $text, $hover_text) {
-    background: $bg;
-    color: $text;
-    position: relative;
-    z-index: 1;
-    border-radius: 6px!important;
-    &:before {
-      content: "";
-      background-color: $hover_bg;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 100%;
-      border-radius: 6px;
-      transition: 0.5s;
-      z-index: -1;
+@mixin button-variant(
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background: if($color == $color-contrast-light, shade-color($background, $btn-hover-bg-shade-amount), tint-color($background, $btn-hover-bg-tint-amount)),
+  $hover-border: if($color == $color-contrast-light, shade-color($border, $btn-hover-border-shade-amount), tint-color($border, $btn-hover-border-tint-amount)),
+  $hover-color: color-contrast($hover-background),
+  $active-background: if($color == $color-contrast-light, shade-color($background, $btn-active-bg-shade-amount), tint-color($background, $btn-active-bg-tint-amount)),
+  $active-border: if($color == $color-contrast-light, shade-color($border, $btn-active-border-shade-amount), tint-color($border, $btn-active-border-tint-amount)),
+  $active-color: color-contrast($active-background),
+  $disabled-background: $background,
+  $disabled-border: $border,
+  $disabled-color: color-contrast($disabled-background)
+  ) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+
+  &:hover {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $hover-color;
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+    @if $enable-shadows {
+      @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
     }
-    &:hover {
-      &:before {
-        width: 100%;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $active-color;
+    background-color: $active-background;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $active-border;
+
+    &:focus {
+      @if $enable-shadows {
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
       }
-      border-color: $hover_bg;
-      color: $hover_text;
     }
-    &:active {
-      background:darken($bg,8%);
-      color: $text;
-    } 
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $disabled-color;
+    background-color: $disabled-background;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: $disabled-border;
+  }
 }
 
-@mixin outline-button-bg($bg, $text, $hover_text) {
-    color: $text;
-    border: 1px solid $bg!important;
-    position: relative;
-    z-index: 1;
-    border-radius: 6px!important;
-    &:before {
-      content: "";
-      background-color: $bg;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 0;
-      height: 100%;
-      border-radius: 6px!important;
-      transition: 0.5s;
-      z-index: -1;
-    }
-    &:hover {
-      &:before {
-        right: 0;
-        width: 100%;
+@mixin button-outline-variant(
+  $color,
+  $color-hover: color-contrast($color),
+  $active-background: $color,
+  $active-border: $color,
+  $active-color: color-contrast($active-background)
+) {
+  color: $color;
+  border-color: $color;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  &.dropdown-toggle.show {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+
+    &:focus {
+      @if $enable-shadows {
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
       }
-      color: $hover_text;
     }
-    &:active {
-      background:$bg;
-      color: $hover_text;
-    } 
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $color;
+    background-color: transparent;
+  }
 }
 
 .jiali-btn-primary {
-  @include button-bg($primary, $dark_primary, $white, $white);
+    @include button-variant($primary, $primary);
 }
 
 .jiali-btn-outline-primary {
-  @include outline-button-bg($primary, $black, $white)
+  @include button-outline-variant($primary)
 }
 
-.jiali-btn-ultra-dark-secondary {
-  @include button-bg($ultra_dark_secondary, $dark_secondary, $black, $white);
+.jiali-btn-apk {
+  @include button-variant($apk_color, $apk_color)
 }
 
-.jiali-btn-outline-ultra-dark-secondary {
-  @include outline-button-bg($ultra_dark_secondary, $black, $white)
-}
-
-.jiali-btn-outline-apk {
-  @include outline-button-bg($apk_color, $black, $white)
-}
-
-.jiali-btn-outline-ios {
-  @include outline-button-bg($ios_color, $black, $white)
+.jiali-btn-ios {
+  @include button-variant($ios_color, $ios_color)
 }

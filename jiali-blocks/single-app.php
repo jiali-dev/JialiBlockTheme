@@ -31,12 +31,12 @@
                 </div>
                 <div class="jiali-app-download-box">
                     <?php if( get_field("apk_url")): ?>
-                        <a href="<?php echo get_field("apk_url") ?>" class="btn jiali-btn-outline-apk btn-lg">
+                        <a href="<?php echo get_field("apk_url") ?>" class="btn jiali-btn-apk btn-lg">
                             <?php _e("Go to Google Play", "jiali") ?> <i class="fa-brands fa-android"></i>
                         </a>
                     <?php endif; ?>
                     <?php if( get_field("ios_url")): ?>
-                        <a href="<?php echo get_field("ios_url") ?>" class="btn jiali-btn-outline-ios btn-lg">
+                        <a href="<?php echo get_field("ios_url") ?>" class="btn jiali-btn-ios btn-lg">
                             <?php _e("Go to App Store", "jiali") ?> <i class="fa-brands fa-apple"></i>
                         </a>
                     <?php endif; ?>
