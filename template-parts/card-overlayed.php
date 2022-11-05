@@ -47,6 +47,13 @@
                         <?php if( $args['date'] ): ?>
                             <span class="jiali-card-date"><?php echo( function_exists("parsidate") ? parsidate( "d M Y", $post->post_date, 'per' ) : date_format(date_create($post->post_date), "Y M d") ) ?></span>
                         <?php endif; ?>
+                        <?php if( function_exists("wp_statistics_visit")  && $args['views'] ): ?>
+                            <span class="text-muted">-</span>
+                            <span class="jiali-card-views">
+                                <i class="fa-solid fa-eye"></i>
+                                <?php echo wp_statistics_pages('total', get_permalink( $post->ID ) ,$post->ID ) ?>
+                            </span>
+                        <?php endif; ?>
                     </p>
                 </div>
             </div>

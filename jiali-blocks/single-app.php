@@ -4,6 +4,7 @@
         the_post();
         $post = get_post(  );
         $args['thumbnail'] = true;
+        $args['views'] = true;
         $args['author'] = true;
         $args['date'] = true;
         $args['post'] = $post;

@@ -3,9 +3,6 @@
 function university_files() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_script('jiali-main-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
-  // wp_enqueue_style('bootstrap-css', get_theme_file_uri('/assets/bootstrap/css/bootstrap.min.css'));
-  // wp_enqueue_style('bootstrap-rtl-css', get_theme_file_uri('/assets/bootstrap/css/bootstrap.rtl.min.css'));
-  // wp_enqueue_script('bootstrap-js', get_theme_file_uri('/assets/bootstrap/js/bootstrap.bundle.min.js'));
   wp_enqueue_style('jiali_main_styles', get_theme_file_uri('/build/style-index.css'));
   wp_enqueue_style('jiali_extra_styles', get_theme_file_uri('/build/index.css'));
   wp_enqueue_script('font-awesome-js', get_theme_file_uri('/assets/font-awesome/all.min.js'));
@@ -74,9 +71,11 @@ new PlaceholderBlock("recent-articles");
 new PlaceholderBlock("services");
 new PlaceholderBlock("appointment");
 new PlaceholderBlock("footer");
-new PlaceholderBlock("daily-pictures");
 new PlaceholderBlock("single");
 new PlaceholderBlock("single-app");
+new PlaceholderBlock("archive");
+new PlaceholderBlock("page");
+new PlaceholderBlock("page-appointment");
 
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
@@ -268,8 +267,7 @@ function get_breadcrumb() {
   if (is_category() || is_single()) {
       echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
       $args = array(
-        'taxonomy'               => 'category',
-        'exclude'                => 'suggested-posts',
+        'exclude'                => array(get_term_by('slug', 'suggested-posts', 'category')->term_id),
         'hide_empty'             => false,
       );
 
@@ -291,3 +289,15 @@ function get_breadcrumb() {
       echo '</em>"';
   }
 }
+
+function jiali_change_posts_per_page( $query ) {
+
+    if ( ! is_admin() && $query->is_main_query() ) {
+          $query->set( 'posts_per_page', '12' );
+    }
+
+    return $query;
+
+}
+
+add_filter( 'pre_get_posts', 'jiali_change_posts_per_page' );

@@ -10,6 +10,7 @@
         $args['excerpt'] = true;
         $args['author'] = true;
         $args['date'] = true;
+        $args['views'] = true;
         $args['tags'] = true;
         $args['linked'] = true;
            

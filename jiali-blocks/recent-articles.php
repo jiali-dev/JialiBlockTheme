@@ -10,13 +10,14 @@
         $args['thumbnail-size'] = 'medium';
         $args['title'] = true;
         $args['excerpt'] = false;
+        $args['views'] = true;
         $args['author'] = true;
         $args['date'] = true;
         $args['tags'] = true;
         $args['linked'] = true;
     ?>  
 
-    <section class="jiali-recent-articles-wrapper">
+    <section class="jiali-posts-wrapper">
         <div class="jiali-section-custom-width-transparent">
             <div class="jiali-title-wrapper">
                 <h1 class="jiali-title jiali-title-primary">
@@ -24,7 +25,7 @@
                 </h1>
             </div>
 
-            <div class="row jiali-recent-posts-items">
+            <div class="row jiali-posts-items">
 
                 <?php foreach($recent_posts as $value ): ?>
 
