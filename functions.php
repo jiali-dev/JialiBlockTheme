@@ -1,6 +1,7 @@
 <?php
 
 function university_files() {
+  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_script('jiali-main-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
   wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js');
@@ -74,6 +75,7 @@ new PlaceholderBlock("appointment");
 new PlaceholderBlock("footer");
 new PlaceholderBlock("daily-pictures");
 new PlaceholderBlock("single");
+new PlaceholderBlock("single-app");
 
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
@@ -109,6 +111,7 @@ class JSXBlock {
 }
 
 new JSXBlock('custom-width-section');
+new JSXBlock('full-width-section');
 
 /**
  * Register Custom Navigation Walker
@@ -190,7 +193,7 @@ function jiali_post_type() {
         'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-smiley',
-        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'comments' ),
         'taxonomies' => array( 'category', 'post_tag' )
     );
  
@@ -220,7 +223,7 @@ function jiali_post_type() {
         'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-media',
-        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'comments' ),
         'taxonomies' => array( 'category', 'post_tag' )
     );
  
@@ -258,6 +261,7 @@ function jiali_post_type() {
 }
  
 add_action( 'init', 'jiali_post_type' );
+
 function get_breadcrumb() {
   echo '<a class="jiali-permalink" href="'.home_url().'" rel="nofollow">Home</a>';
   if (is_category() || is_single()) {
@@ -286,4 +290,3 @@ function get_breadcrumb() {
       echo '</em>"';
   }
 }
-

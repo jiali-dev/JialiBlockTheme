@@ -69,9 +69,17 @@
 }
 
 .jiali-btn-ultra-dark-secondary {
-  @include button-bg($ultra_dark_secondary, $dark_secondary, $white, $white);
+  @include button-bg($ultra_dark_secondary, $dark_secondary, $black, $white);
 }
 
 .jiali-btn-outline-ultra-dark-secondary {
   @include outline-button-bg($ultra_dark_secondary, $black, $white)
+}
+
+.jiali-btn-outline-apk {
+  @include outline-button-bg($apk_color, $black, $white)
+}
+
+.jiali-btn-outline-ios {
+  @include outline-button-bg($ios_color, $black, $white)
 }

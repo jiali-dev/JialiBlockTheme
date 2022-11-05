@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "wp-scripts start src/index.js jiali-blocks/custom-width-section.js",
+    "start": "wp-scripts start src/index.js jiali-blocks/custom-width-section.js jiali-blocks/full-width-section.js",
     "dev": "wp-scripts start",
     "devFast": "wp-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,11 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wordpress/icons": "^7.0.1"
+    "@wordpress/icons": "^7.0.1",
+    "bootstrap": "^5.2.2"
   },
   "devDependencies": {
     "@wordpress/scripts": "^24.3.0",
     "css-loader": "^6.7.1"
   }
-  
 }

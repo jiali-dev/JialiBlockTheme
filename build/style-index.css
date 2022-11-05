@@ -5,9 +5,13 @@
 /*!*******************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss (1) ***!
   \*******************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./css/style.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 /* SASS and Global'ish Stuff */
 body {
-  font-family: Montserrat;
+  font-family: Roboto;
 }
 
 a {
@@ -22,7 +26,6 @@ h1, h1, h3, h4, h5, h6 {
 .jiali-title {
   margin: 16px auto 32px !important;
   font-size: 32px;
-  color: #9F1616 !important;
   font-weight: bold;
   position: relative;
   z-index: 1;
@@ -33,7 +36,6 @@ h1, h1, h3, h4, h5, h6 {
   content: "";
   width: 50px;
   height: 35px;
-  background: linear-gradient(#9F1616, #fff);
   position: absolute;
   top: -20px;
   left: 0;
@@ -41,6 +43,20 @@ h1, h1, h3, h4, h5, h6 {
   transform: rotate(10deg);
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;
+}
+
+.jiali-title-primary {
+  color: #9F1616 !important;
+}
+.jiali-title-primary::after {
+  background: linear-gradient(#9F1616, #fff);
+}
+
+.jiali-title-secondary {
+  color: #167D9F !important;
+}
+.jiali-title-secondary::after {
+  background: linear-gradient(#167D9F, #fff);
 }
 
 .jiali-title-wrapper {
@@ -523,10 +539,6 @@ h1, h1, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-.jiali-footer .jiali-title::after {
-  background: linear-gradient(#ED7E7E, #fff) !important;
-}
-
 .jiali-footer-col {
   margin-top: 64px;
 }
@@ -622,7 +634,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 
 .jiali-comment-wrapper #submit {
-  color: #ffffff !important;
+  color: #070707 !important;
   border: 1px solid #7ED1ED !important;
   background-color: #7ED1ED;
 }
@@ -651,6 +663,21 @@ h1, h1, h3, h4, h5, h6 {
 .jiali-comment-wrapper #comments {
   font-size: 18px;
   margin-top: 24px;
+}
+
+.jiali-app-download-box-wrapper {
+  padding: 16px 16px;
+}
+
+.jiali-app-download-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.jiali-app-download-box a {
+  align-self: flex-start;
+  -webkit-margin-after: 16px;
+          margin-block-end: 16px;
 }
 
 /* BEM Blocks */
@@ -718,7 +745,7 @@ h1, h1, h3, h4, h5, h6 {
 
 .jiali-btn-ultra-dark-secondary {
   background: #2EB5E2;
-  color: #ffffff;
+  color: #070707;
   position: relative;
   z-index: 1;
   border-radius: 6px !important;
@@ -744,7 +771,7 @@ h1, h1, h3, h4, h5, h6 {
 }
 .jiali-btn-ultra-dark-secondary:active {
   background: #1c9fcb;
-  color: #ffffff;
+  color: #070707;
 }
 
 .jiali-btn-outline-ultra-dark-secondary {
@@ -778,9 +805,76 @@ h1, h1, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
+.jiali-btn-outline-apk {
+  color: #070707;
+  border: 1px solid #3ddb87 !important;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px !important;
+}
+.jiali-btn-outline-apk:before {
+  content: "";
+  background-color: #3ddb87;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px !important;
+  transition: 0.5s;
+  z-index: -1;
+}
+.jiali-btn-outline-apk:hover {
+  color: #ffffff;
+}
+.jiali-btn-outline-apk:hover:before {
+  right: 0;
+  width: 100%;
+}
+.jiali-btn-outline-apk:active {
+  background: #3ddb87;
+  color: #ffffff;
+}
+
+.jiali-btn-outline-ios {
+  color: #070707;
+  border: 1px solid #000000 !important;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px !important;
+}
+.jiali-btn-outline-ios:before {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 6px !important;
+  transition: 0.5s;
+  z-index: -1;
+}
+.jiali-btn-outline-ios:hover {
+  color: #ffffff;
+}
+.jiali-btn-outline-ios:hover:before {
+  right: 0;
+  width: 100%;
+}
+.jiali-btn-outline-ios:active {
+  background: #000000;
+  color: #ffffff;
+}
+
 .jiali-section-custom-width-transparent {
   background: transparent;
   width: 85%;
+  margin: auto;
+}
+
+.jiali-section-full-width-transparent {
+  background: transparent;
   margin: auto;
 }
 
@@ -801,6 +895,11 @@ h1, h1, h3, h4, h5, h6 {
 
 .jiali-section-full-width-super-ultra-primary {
   background: #FBDFDF;
+  margin: auto;
+}
+
+.jiali-section-full-width-super-ultra-secondary {
+  background: #DFF4FB;
   margin: auto;
 }
 

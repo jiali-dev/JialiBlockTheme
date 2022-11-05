@@ -7,7 +7,7 @@
     <div class="jiali-section-custom-width-transparent">
         
         <div class="jiali-title-wrapper">
-            <h1 class="jiali-title">NINI HEART CLINIC</h1>
+            <h1 class="jiali-title jiali-title-primary">NINI HEART CLINIC</h1>
         </div>
         <div class="row jiali-footer-col-wrapper">
             <div class="col-md-6 jiali-footer-col">

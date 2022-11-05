@@ -11,6 +11,10 @@
     @include section(transparent, 85%);
 }
 
+.jiali-section-full-width-transparent {
+    @include section(transparent, null);
+}
+
 .jiali-section-full-width-gray {
     @include section($light_gray, null);
 }
@@ -25,4 +29,8 @@
 
 .jiali-section-full-width-super-ultra-primary {
     @include section($super_ultra_primary, null);
+}
+
+.jiali-section-full-width-super-ultra-secondary {
+    @include section($super_ultra_secondary, null);
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
-    font-family: Montserrat;
+    font-family: Roboto;
 }
 
 a {
@@ -16,7 +16,6 @@ h1,h1,h3,h4,h5,h6 {
 .jiali-title {
     margin: 16px auto 32px!important;
     font-size: 32px;
-    color: $dark_primary!important;
     font-weight: bold;
     position: relative;
     z-index: 1;
@@ -26,7 +25,6 @@ h1,h1,h3,h4,h5,h6 {
         content: '';
         width: 50px;
         height: 35px;
-        background: linear-gradient($dark_primary,#fff);
         position: absolute;
         top: -20px;
         left: 0;
@@ -34,6 +32,20 @@ h1,h1,h3,h4,h5,h6 {
         transform: rotate(10deg);
         border-top-left-radius: 35px;
         border-bottom-right-radius: 35px;
+    }
+}
+
+.jiali-title-primary {
+    color: $dark_primary!important;
+    &::after {
+        background: linear-gradient($dark_primary,#fff);
+    }
+}
+
+.jiali-title-secondary {
+    color: $dark_secondary!important;
+    &::after {
+        background: linear-gradient($dark_secondary,#fff);
     }
 }
 
@@ -527,10 +539,6 @@ h1,h1,h3,h4,h5,h6 {
     line-height: 1.5;
 }
 
-.jiali-footer .jiali-title::after {
-    background: linear-gradient($primary,#fff)!important;
-}
-
 .jiali-footer-col {
     margin-top: 64px;
 }
@@ -633,7 +641,7 @@ h1,h1,h3,h4,h5,h6 {
 }
 
 .jiali-comment-wrapper #submit {
-    color: $white!important;
+    color: $black!important;
     border: 1px solid $secondary!important;
     background-color: $secondary;
 }
@@ -664,3 +672,16 @@ h1,h1,h3,h4,h5,h6 {
     margin-top: 24px;
 }
 
+.jiali-app-download-box-wrapper {
+    padding: 16px 16px;
+}
+
+.jiali-app-download-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.jiali-app-download-box a {
+    align-self: flex-start;
+    margin-block-end: 16px;
+}
