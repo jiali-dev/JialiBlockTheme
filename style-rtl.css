@@ -1,106 +1,4 @@
-/**
-*
-*	Name:			IRANYekan Font
-*	Version:			3.3
-*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
-*	Created on:		Sep 17, 2020
-*	Updated on:		Sep 17, 2020
-*	Website:			http://fontiran.com
-*	Copyright:		Commercial/Proprietary Software
---------------------------------------------------------------------------------------
-IRANYekan fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
---------------------------------------------------------------------------------------
-This set of fonts are used in this project under the license: (.....)
---------------------------------------------------------------------------------------
-*	
-**/
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: bold;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebboldfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebboldfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebboldfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebboldfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebboldfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: 100;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebthinfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebthinfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebthinfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebthinfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebthinfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: 300;
-	src: url('assets/fonts/IranYekan/eot/IranYekanweblightfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanweblightfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanweblightfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanweblightfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanweblightfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: normal;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebregularfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebregularfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebregularfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebregularfanumfanum.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebregularfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: 500;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebmediumfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebmediumfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebmediumfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebmediumfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebmediumfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: 800;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebextraboldfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebextraboldfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebextraboldfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebextraboldfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebextraboldfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: 850;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebblackfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebblackfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebblackfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebblackfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebblackfanum.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: IranYekan;
-	font-style: normal;
-	font-weight: 900;
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebextrablackfanum.eot');
-	src: url('assets/fonts/IranYekan/eot/IranYekanwebextrablackfanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-		 url('assets/fonts/IranYekan/woff/IranYekanwebextrablackfanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-		 url('assets/fonts/IranYekan/woff2/IranYekanwebextrablackfanumfanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-		 url('assets/fonts/IranYekan/ttf/IranYekanwebextrablackfanum.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /**
 *
@@ -108,7 +6,7 @@ This set of fonts are used in this project under the license: (.....)
 *	Website:			http://fontiran.com
 *	Copyright:		Commercial/Proprietary Software
 --------------------------------------------------------------------------------------
-IRANYekan fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+Vazirmatn fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
 --------------------------------------------------------------------------------------
 This set of fonts are used in this project under the license: (.....)
 --------------------------------------------------------------------------------------
@@ -182,7 +80,7 @@ This set of fonts are used in this project under the license: (.....)
 }
 
 body {
-	font-family: IranYekan;
+	font-family: Vazirmatn;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -197,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jiali-top-menu ul li {
-    font-family: IranYekan;
+    font-family: Vazirmatn;
     font-weight: normal;
     margin-inline-end: 16px;
 	margin-inline-start: 0!important;
@@ -212,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jiali-sub-title {
-    font-family: IranYekan;
+    font-family: Vazirmatn;
 	font-weight: bold;
 }
 
@@ -221,15 +119,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .jiali-card-text {
-	font-family: IranYekan;
+	font-family: Vazirmatn;
 }
 
 .jiali-card-author {
-    font-family: IranYekan;
+    font-family: Vazirmatn;
 }
 
 .jiali-card-date {
-    font-family: IranYekan;
+    font-family: Vazirmatn;
 }
 
 .jiali-top-categorirs-item .jiali-card-text {

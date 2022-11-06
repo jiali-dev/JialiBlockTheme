@@ -2,7 +2,7 @@
     <div class="jiali-section-custom-width-transparent">
         <div class="jiali-title-wrapper">
 
-            <h1 class="jiali-title jiali-title-primary">
+            <h1 class="jiali-title jiali-title-secondary">
                 <?php _e( "Appointment", "jiali" ) ?>
             </h1>
         </div>

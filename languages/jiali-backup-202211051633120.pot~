@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Jiali Block Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-05 16:37+0000\n"
+"POT-Creation-Date: 2022-10-28 19:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -21,44 +21,16 @@ msgstr ""
 msgid "#"
 msgstr ""
 
-#: jiali-blocks/footer.php:45
-msgid "About Us"
-msgstr ""
-
-#: jiali-blocks/single-app.php:36
-msgid "apk Version Url"
-msgstr ""
-
-#: jiali-blocks/appointment.php:6 jiali-blocks/page-appointment.php:6
+#: jiali-blocks/appointment.php:5
 msgid "Appointment"
 msgstr ""
 
-#: jiali-blocks/appointment.php:43 jiali-blocks/page-appointment.php:43
-msgid "Appointment Methods"
-msgstr ""
-
-#: jiali-blocks/footer.php:14
-msgid "Contact Us"
-msgstr ""
-
-#: jiali-blocks/single-app.php:30
-msgid "Download Box"
-msgstr ""
-
-#: jiali-blocks/services.php:16
+#: jiali-blocks/services.php:15
 msgid "Eco cardiography"
 msgstr ""
 
-#: jiali-blocks/services.php:22
-msgid "fetal heart"
-msgstr ""
-
-#: jiali-blocks/top-categories.php:16
+#: jiali-blocks/top-categories.php:15
 msgid "Frequent topics"
-msgstr ""
-
-#: jiali-blocks/single-app.php:41
-msgid "ios Version Url"
 msgstr ""
 
 #. Author of the theme
@@ -69,7 +41,7 @@ msgstr ""
 msgid "Jiali Block Theme"
 msgstr ""
 
-#: jiali-blocks/appointment.php:15 jiali-blocks/page-appointment.php:15
+#: jiali-blocks/appointment.php:26
 msgid "Location"
 msgstr ""
 
@@ -81,31 +53,27 @@ msgstr ""
 msgid "Log Out"
 msgstr ""
 
-#: jiali-blocks/top-categories.php:21
+#: jiali-blocks/top-categories.php:19
 msgid "More than several interesting topics"
-msgstr ""
-
-#: jiali-blocks/archive.php:49
-msgid "Ooops! There is no result."
 msgstr ""
 
 #: jiali-blocks/services.php:5
 msgid "Our Service"
 msgstr ""
 
-#: jiali-blocks/suggested-articles.php:22
+#: jiali-blocks/suggested-articles.php:19
 msgid "Our suggestions"
 msgstr ""
 
-#: jiali-blocks/appointment.php:29 jiali-blocks/page-appointment.php:29
+#: jiali-blocks/appointment.php:40
 msgid "Phone"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:84
 msgid "Primary Menu"
 msgstr ""
 
-#: jiali-blocks/recent-articles.php:24
+#: jiali-blocks/recent-articles.php:21
 msgid "Recent Articles"
 msgstr ""
 
@@ -113,8 +81,8 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: jiali-blocks/single.php:38 jiali-blocks/single-app.php:57
-msgid "Related Articles"
+#: jiali-blocks/header.php:77
+msgid "Reserve apointment"
 msgstr ""
 
 #: jiali-blocks/header.php:7
@@ -129,22 +97,30 @@ msgstr ""
 msgid "See More Articles"
 msgstr ""
 
-#: jiali-blocks/recent-articles.php:43
+#: jiali-blocks/recent-articles.php:39
 msgid "See more articles"
 msgstr ""
 
-#: jiali-blocks/services.php:43
+#: jiali-blocks/header.php:76
+msgid "See Our Service"
+msgstr ""
+
+#: jiali-blocks/services.php:42
 msgid "Specialized echocardiography of children's heart"
 msgstr ""
 
-#: jiali-blocks/services.php:22
-msgid "Specialized echocardiography of the"
-msgstr ""
-
-#: jiali-blocks/services.php:32
+#: jiali-blocks/services.php:31
 msgid "Specialized echocardiography of the baby's heart"
 msgstr ""
 
-#: jiali-blocks/services.php:55
+#: jiali-blocks/services.php:21
+msgid "Specialized echocardiography of the fetal heart"
+msgstr ""
+
+#: jiali-blocks/services.php:54
 msgid "Specialized echocardiography of the heart of teenagers"
+msgstr ""
+
+#: jiali-blocks/appointment.php:12
+msgid "Working hours"
 msgstr ""

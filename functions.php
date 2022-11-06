@@ -1,6 +1,6 @@
 <?php
 
-function university_files() {
+function jialit_theme_enqueue() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_script('jiali-main-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   wp_enqueue_style('jiali_main_styles', get_theme_file_uri('/build/style-index.css'));
@@ -11,7 +11,7 @@ function university_files() {
   wp_style_add_data( 'jiali-rtl-style', 'rtl', 'replace' );
 }
 
-add_action('wp_enqueue_scripts', 'university_files');
+add_action('wp_enqueue_scripts', 'jialit_theme_enqueue');
 
 function jiali_theme_features() {
   load_theme_textdomain('jiali', get_template_directory() . '/languages');
@@ -76,6 +76,7 @@ new PlaceholderBlock("single-app");
 new PlaceholderBlock("archive");
 new PlaceholderBlock("page");
 new PlaceholderBlock("page-appointment");
+new PlaceholderBlock("app-page");
 
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
@@ -151,8 +152,8 @@ function jiali_post_type() {
  
     $args = array(
         'labels'             => $labels,
-        'has_archive'        => true,
         'public'             => true,
+        'has_archive'        => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
@@ -179,22 +180,21 @@ function jiali_post_type() {
         );
  
     $args = array(
-        'labels'             => $labels,
-        'has_archive'        => true,
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'show_in_rest'       => true,
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'apps' ),
-        'capability_type'    => 'post',
-        'has_archive'        => true,
-        'hierarchical'       => false,
-        'menu_position'      => null,
-        'menu_icon'          => 'dashicons-smiley',
-        'supports'           => array( 'title', 'editor', 'thumbnail', 'comments' ),
-        'taxonomies' => array( 'category', 'post_tag' )
+      'labels'             => $labels,
+      'description'        => 'App custom post type.',
+      'public'             => true,
+      'publicly_queryable' => true,
+      'show_ui'            => true,
+      'show_in_menu'       => true,
+      'query_var'          => true,
+      'rewrite'            => array( 'slug' => 'apps' ),
+      'capability_type'    => 'post',
+      'has_archive'        => true,
+      'hierarchical'       => false,
+      'menu_position'      => null,
+      'supports'           => array( 'title', 'editor', 'author', 'comments', 'thumbnail' ),
+      'taxonomies'         => array( 'category', 'post_tag' ),
+      'show_in_rest'       => true
     );
  
     register_post_type( 'app', $args );
@@ -210,8 +210,8 @@ function jiali_post_type() {
  
     $args = array(
         'labels'             => $labels,
-        'has_archive'        => true,
         'public'             => true,
+        'has_archive'        => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
@@ -219,7 +219,6 @@ function jiali_post_type() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'multimedias' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-media',
@@ -249,7 +248,6 @@ function jiali_post_type() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'usefullinks' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-links',
@@ -294,6 +292,9 @@ function jiali_change_posts_per_page( $query ) {
 
     if ( ! is_admin() && $query->is_main_query() ) {
           $query->set( 'posts_per_page', '12' );
+          if ($query->is_category()) {
+            $query->set( 'post_type', array( 'post', 'app', 'multimedia' ) );
+          }
     }
 
     return $query;

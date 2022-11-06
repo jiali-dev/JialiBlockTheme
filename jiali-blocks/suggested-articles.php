@@ -15,7 +15,7 @@
         $args['linked'] = true;
            
     ?>   
-    <section class="jiali_suggested_articles">
+    <section class="jiali-suggested-articles">
         <div class="jiali-section-custom-width-transparent">
             <div class="jiali-title-wrapper">
                 <h1 class="jiali-title jiali-title-primary">
@@ -23,7 +23,7 @@
                 </h1>
             </div>
             <div class="row"> 
-                <div class="col-md-6 jiali_suggested_article_col">
+                <div class="col-md-6 jiali-suggested-article-col">
                     <?php 
                     
                         $args['post'] = $suggested_posts[0]; 
@@ -31,7 +31,7 @@
                         
                     ?>
                 </div>
-                <div class="col-md-6 jiali_suggested_article_col">
+                <div class="col-md-6 jiali-suggested-article-col">
 
                     <?php 
                         foreach ($suggested_posts as $index => $value )

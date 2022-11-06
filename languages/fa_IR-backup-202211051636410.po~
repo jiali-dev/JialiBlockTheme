@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Jiali Block Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-26 11:15+0000\n"
-"PO-Revision-Date: 2022-11-05 16:52+0000\n"
+"PO-Revision-Date: 2022-10-28 19:46+0000\n"
 "Last-Translator: نی نی هارت\n"
 "Language-Team: فارسی\n"
 "Language: fa_IR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.3; wp-6.1\n"
+"X-Loco-Version: 2.6.3; wp-6.0.3\n"
 "X-Domain: jiali"
 
 #. URI of the theme
@@ -20,45 +20,17 @@ msgstr ""
 msgid "#"
 msgstr ""
 
-#: jiali-blocks/footer.php:45
-msgid "About Us"
-msgstr "درباره ما"
-
-#: jiali-blocks/single-app.php:36
-msgid "apk Version Url"
-msgstr "آدرس نسخه اندروید"
-
-#: jiali-blocks/appointment.php:6 jiali-blocks/page-appointment.php:6
+#: jiali-blocks/appointment.php:5
 msgid "Appointment"
 msgstr "رزرو نوبت"
 
-#: jiali-blocks/appointment.php:43 jiali-blocks/page-appointment.php:43
-msgid "Appointment Methods"
-msgstr "روش های رزرو نوبت"
-
-#: jiali-blocks/footer.php:14
-msgid "Contact Us"
-msgstr "تماس با ما"
-
-#: jiali-blocks/single-app.php:30
-msgid "Download Box"
-msgstr "جعبه دانلود"
-
-#: jiali-blocks/services.php:16
+#: jiali-blocks/services.php:15
 msgid "Eco cardiography"
 msgstr "اکوکاردیوگرافی"
 
-#: jiali-blocks/services.php:22
-msgid "fetal heart"
-msgstr "قلب جنین"
-
-#: jiali-blocks/top-categories.php:16
+#: jiali-blocks/top-categories.php:15
 msgid "Frequent topics"
-msgstr "موضوعات پرتکرار"
-
-#: jiali-blocks/single-app.php:41
-msgid "ios Version Url"
-msgstr "آدرس نسخه ios"
+msgstr "سوالات پرتکرار"
 
 #. Author of the theme
 msgid "Jiali"
@@ -68,7 +40,7 @@ msgstr ""
 msgid "Jiali Block Theme"
 msgstr ""
 
-#: jiali-blocks/appointment.php:15 jiali-blocks/page-appointment.php:15
+#: jiali-blocks/appointment.php:26
 msgid "Location"
 msgstr "آدرس"
 
@@ -80,31 +52,27 @@ msgstr "ورود"
 msgid "Log Out"
 msgstr "خروج"
 
-#: jiali-blocks/top-categories.php:21
+#: jiali-blocks/top-categories.php:19
 msgid "More than several interesting topics"
 msgstr "بیش از چندین موضوع جالب"
-
-#: jiali-blocks/archive.php:49
-msgid "Ooops! There is no result."
-msgstr "متاسفانه نتیجه ای یافت نشد!"
 
 #: jiali-blocks/services.php:5
 msgid "Our Service"
 msgstr "خدمات ما"
 
-#: jiali-blocks/suggested-articles.php:22
+#: jiali-blocks/suggested-articles.php:19
 msgid "Our suggestions"
 msgstr "پیشنهادات ما"
 
-#: jiali-blocks/appointment.php:29 jiali-blocks/page-appointment.php:29
+#: jiali-blocks/appointment.php:40
 msgid "Phone"
 msgstr "شماره های تماس"
 
-#: functions.php:125
+#: functions.php:84
 msgid "Primary Menu"
 msgstr "منوی اولیه"
 
-#: jiali-blocks/recent-articles.php:24
+#: jiali-blocks/recent-articles.php:21
 msgid "Recent Articles"
 msgstr "مطالب اخیر"
 
@@ -112,9 +80,9 @@ msgstr "مطالب اخیر"
 msgid "Register"
 msgstr "ثبت نام"
 
-#: jiali-blocks/single.php:38 jiali-blocks/single-app.php:57
-msgid "Related Articles"
-msgstr "مطالب مرتبط"
+#: jiali-blocks/header.php:77
+msgid "Reserve apointment"
+msgstr "رزرو نوبت"
 
 #: jiali-blocks/header.php:7
 msgid "Search"
@@ -128,22 +96,30 @@ msgstr "مشاهده ادامه مطلب"
 msgid "See More Articles"
 msgstr "مشاهده مقالات بیشتر"
 
-#: jiali-blocks/recent-articles.php:43
+#: jiali-blocks/recent-articles.php:39
 msgid "See more articles"
-msgstr "مشاهده مطالب بیشتر"
+msgstr "مشاهده مطالب بیشتد"
 
-#: jiali-blocks/services.php:43
+#: jiali-blocks/header.php:76
+msgid "See Our Service"
+msgstr "مشاهده خدمات ما"
+
+#: jiali-blocks/services.php:42
 msgid "Specialized echocardiography of children's heart"
 msgstr "اکوکاردیوگرافی تخصصی قلب اطفال"
 
-#: jiali-blocks/services.php:22
-msgid "Specialized echocardiography of the"
-msgstr "اکوکاردیوگرافی تخصصی"
-
-#: jiali-blocks/services.php:32
+#: jiali-blocks/services.php:31
 msgid "Specialized echocardiography of the baby's heart"
 msgstr "اکوکاردیوگرافی تخصصی نوزاد"
 
-#: jiali-blocks/services.php:55
+#: jiali-blocks/services.php:21
+msgid "Specialized echocardiography of the fetal heart"
+msgstr "اکوکاردیوگرافی تخصصی قلب جنین"
+
+#: jiali-blocks/services.php:54
 msgid "Specialized echocardiography of the heart of teenagers"
 msgstr "اکوکاردیوگرافی تخصصی قلب نوجوانان"
+
+#: jiali-blocks/appointment.php:12
+msgid "Working hours"
+msgstr "ساعات کاری"

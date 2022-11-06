@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .jiali-title {
+        margin: 16px auto 24px !important;
+        font-size: 28px;
+    }
+
+    .jiali-feature-item h1 {
+        font-size: 22px;
+    }
+
+    .jiali-feature-img {
+        margin-block-end: 18px;
+    }
+
+    .jiali-feature-item {
+        margin-block-end: 8px;
+    }
+
+    .jiali-appointment-wrapper .jiali-feature {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .jiali-appointment-wrapper {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+}

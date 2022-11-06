@@ -211,17 +211,17 @@ h1,h1,h3,h4,h5,h6 {
     padding: 0px!important;
 }
 
-.jiali_suggested_articles {
+.jiali-suggested-articles {
     margin: 40px auto;
 }
 
-.jiali_suggested_article_col {
+.jiali-suggested-article-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.jiali_suggested_articles .jiali-card-item {
+.jiali-suggested-articles .jiali-card-item {
     height: 100%!important;
 }
 
@@ -235,7 +235,7 @@ h1,h1,h3,h4,h5,h6 {
     position: relative;
 }
 
-// .jiali_suggested_articles .jiali-card-item, .jiali-posts-wrapper .jiali-card-item {
+// .jiali-suggested-articles .jiali-card-item, .jiali-posts-wrapper .jiali-card-item {
 //     box-shadow: 0 10px 20px 3px $primary;
 // }
 

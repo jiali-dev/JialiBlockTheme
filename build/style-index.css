@@ -11046,17 +11046,17 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 0px !important;
 }
 
-.jiali_suggested_articles {
+.jiali-suggested-articles {
   margin: 40px auto;
 }
 
-.jiali_suggested_article_col {
+.jiali-suggested-article-col {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.jiali_suggested_articles .jiali-card-item {
+.jiali-suggested-articles .jiali-card-item {
   height: 100% !important;
 }
 
@@ -11511,6 +11511,32 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .jiali-title {
+    margin: 16px auto 24px !important;
+    font-size: 28px;
+  }
+  .jiali-feature-item h1, .jiali-feature-item .h1 {
+    font-size: 22px;
+  }
+  .jiali-feature-img {
+    -webkit-margin-after: 18px;
+            margin-block-end: 18px;
+  }
+  .jiali-feature-item {
+    -webkit-margin-after: 8px;
+            margin-block-end: 8px;
+  }
+  .jiali-appointment-wrapper .jiali-feature {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .jiali-appointment-wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
 /* BEM Blocks */
 .jiali-btn-primary {
   color: #000;
