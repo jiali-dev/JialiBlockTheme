@@ -27,4 +27,35 @@
         padding-bottom: 0px;
     }
 
+    .jiali-largescreen {
+        display: none;
+    }
+
+    .jiali-smallscreen {
+        display: flex;
+    }
+
+    .jiali-top-categorirs-item .jiali-card-body {
+        text-align: center;
+    }
+
+    .jiali-footer .jiali-title {
+        top: 0px;
+    }
+
+    .jiali-footer-col {
+        margin-top: 42px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+  
+    .jiali-largescreen {
+        display: flex;
+    }
+
+    .jiali-smallscreen {
+        display: none;
+    }
+
 }

@@ -31,7 +31,7 @@
                         
                     ?>
                 </div>
-                <div class="col-md-6 jiali-suggested-article-col">
+                <div class="col-md-6 jiali-suggested-article-col jiali-largescreen">
 
                     <?php 
                         foreach ($suggested_posts as $index => $value )
@@ -39,6 +39,17 @@
                             if ($index == 0 ) continue;
                             $args['post'] = $value; 
                             get_template_part('template-parts/card-horizontal', null, $args );
+                        }
+                    ?>
+                </div>
+                <div class="col-md-6 jiali-suggested-article-col jiali-smallscreen">
+
+                    <?php 
+                        foreach ($suggested_posts as $index => $value )
+                        {
+                            if ($index == 0 ) continue;
+                            $args['post'] = $value; 
+                            get_template_part('template-parts/card-vertical', null, $args );
                         }
                     ?>
                 </div>

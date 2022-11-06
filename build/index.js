@@ -41,7 +41,7 @@ __webpack_require__.r(__webpack_exports__);
 class MyScripts {
 
   // constructor() {
-  //     this.fnc()
+  //     this.mobile_styles()
   // }
 
   // fnc(params) {

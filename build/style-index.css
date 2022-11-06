@@ -11204,7 +11204,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .jiali-top-categorirs-item .jiali-card-title {
   margin-top: 8px !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 
 .jiali-top-categorirs-item .jiali-card-text {
@@ -11535,6 +11535,29 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   .jiali-appointment-wrapper {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  .jiali-largescreen {
+    display: none;
+  }
+  .jiali-smallscreen {
+    display: flex;
+  }
+  .jiali-top-categorirs-item .jiali-card-body {
+    text-align: center;
+  }
+  .jiali-footer .jiali-title {
+    top: 0px;
+  }
+  .jiali-footer-col {
+    margin-top: 42px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .jiali-largescreen {
+    display: flex;
+  }
+  .jiali-smallscreen {
+    display: none;
   }
 }
 /* BEM Blocks */

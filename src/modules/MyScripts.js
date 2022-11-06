@@ -1,7 +1,7 @@
 class MyScripts {
 
     // constructor() {
-    //     this.fnc()
+    //     this.mobile_styles()
     // }
 
     // fnc(params) {
