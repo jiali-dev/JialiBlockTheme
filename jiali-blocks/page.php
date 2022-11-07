@@ -14,12 +14,12 @@
                     <?php get_template_part('template-parts/card-overlayed', null, $args ); ?>
                 </div>
                 <div class="col-md-8 jiali-single-info">
-                    <h1 class="jiali-single-title"><?php echo get_the_title(  ) ?></h1>
+                    <h1 class="jiali-single-title"><?php echo $post->post_title ?></h1>
                     <div class="breadcrumb"><?php get_breadcrumb(); ?></div>
                 </div>
             </div>
             <div class="jiali-single-content">
-                <?php echo get_the_content( ) ?>
+                <?php echo $post->post_content ?>
             </div>
         </div>
     </section>

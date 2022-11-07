@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "@wordpress/icons": "^7.0.1",
-    "bootstrap": "^5.2.2"
+    "bootstrap": "^5.2.2",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@wordpress/scripts": "^24.3.0",

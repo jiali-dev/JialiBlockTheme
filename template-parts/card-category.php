@@ -17,7 +17,7 @@
                 <img class="jiali-card-img-top" src="<?php echo $category_thumbnail ?>" alt="Card image cap">
                 <div class="jiali-card-body">
                     <h5 class="jiali-card-title"><?php echo $cat->name ?></h5>
-                    <p class="jiali-card-text"><?php echo $cat->count . ' ' .  _n( __("Article", "jiali"), __("Articles", "jiali" ), $cat->count ); ?></p>
+                    <p class="jiali-card-text"><?php printf( _n( '%s Article', '%s Articles', $cat->count, 'jiali' ), number_format_i18n( $cat->count ) ); ?></p>
                 </div>
             </div>
     <?php if( $args['linked']) : ?>

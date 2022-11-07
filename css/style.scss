@@ -1,14 +1,13 @@
-// Custom.scss
-// Option A: Include all of Bootstrap
-
-// Include any default variable overrides here (though functions won't be available)
+// Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Then add additional custom code here
+// import Swiper and modules styles
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 /* SASS and Global'ish Stuff */
 @import "base/colors";
-
 @import "base/baseline";
 @import "base/mobile-baseline";
 

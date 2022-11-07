@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Jiali Block Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-05 16:37+0000\n"
+"POT-Creation-Date: 2022-11-07 09:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,6 +20,13 @@ msgstr ""
 #. Author URI of the theme
 msgid "#"
 msgstr ""
+
+#: template-parts/card-category.php:20
+#, php-format
+msgid "%s Article"
+msgid_plural "%s Articles"
+msgstr[0] ""
+msgstr[1] ""
 
 #: jiali-blocks/footer.php:45
 msgid "About Us"
@@ -101,7 +108,7 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:126
 msgid "Primary Menu"
 msgstr ""
 

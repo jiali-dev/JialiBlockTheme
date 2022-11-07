@@ -76,7 +76,7 @@ new PlaceholderBlock("single-app");
 new PlaceholderBlock("archive");
 new PlaceholderBlock("page");
 new PlaceholderBlock("page-appointment");
-new PlaceholderBlock("app-page");
+new PlaceholderBlock("categories");
 
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
