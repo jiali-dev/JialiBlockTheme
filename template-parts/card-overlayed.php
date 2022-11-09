@@ -22,7 +22,7 @@
 
         <a class="jiali-permalink" href="<?php echo get_permalink( $post->ID ) ?>">
     <?php endif; ?>
-            <div class="jiali-overlayed-card-overlay-ultra-secondary"></div>
+            <div class="jiali-overlayed-card-overlay-<?php echo $args["overlay-color"] ? $args["overlay-color"] : "ultra-secondary" ?>"></div>
             <?php if( $args['thumbnail'] ): ?>
                 <img class="jiali-card-img-top" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'vertical-card-'.( $args['thumbnail-size'] ? $args['thumbnail-size'] : "large" ) ) ?>" alt="Card image cap">
             <?php endif; ?>
@@ -31,10 +31,10 @@
                 <div class="jiali-card-body">
                 
                     <?php if( $args['title'] ): ?>
-                        <h5 class="jiali-card-title"><?php echo $post->post_title; ?></h5>
+                        <h5 class="jiali-card-title"><?php echo wp_trim_words($post->post_title, 5, NULL ); ?></h5>
                     <?php endif; ?>
                     <?php if( $args['excerpt'] ): ?>
-                        <p class="jiali-card-text"><?php echo $post->post_excerpt ? wp_trim_words( $post->post_excerpt, 8, NULL ) : wp_trim_words( $post->post_content, 8, NULL ) ?></p>
+                        <p class="jiali-card-text"><?php echo $post->post_excerpt ? wp_trim_words( $post->post_excerpt, 25, NULL ) : wp_trim_words( $post->post_content, 25, NULL ) ?></p>
                     <?php endif; ?>
                     <p class="jiali-card-info">
                         <?php if( $args['author'] ): ?>

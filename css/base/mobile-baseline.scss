@@ -35,7 +35,7 @@
         display: flex;
     }
 
-    .jiali-top-categorirs-item .jiali-card-body {
+    .jiali-top-categories-item .jiali-card-body {
         text-align: center;
     }
 
@@ -45,6 +45,17 @@
 
     .jiali-footer-col {
         margin-top: 42px;
+    }
+
+    .jiali-card-text {
+        display: none;
+    }
+    .jiali-card-title {
+        font-size: 18px!important;
+    }
+
+    .jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
+        font-size: 14px!important;
     }
 }
 

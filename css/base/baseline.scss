@@ -1,37 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-// .swiper {
-//     width: 100%;
-//     height: 100%;
-// }
+.jiali-categories-wrapper {
+    position: relative;
+}
+.swiper-button-next, .swiper-button-prev {
+    background: $light_gray!important;
+    top: 60%!important;
+    transform: translateY(-60%);
+    padding: 24px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 999;
+}
 
-//   .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     background: #fff;
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: $dark_gray;
+    font-size: 26px;
+    font-weight: bold;
+}
 
-//     /* Center slide text vertically */
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-box-pack: center;
-//     -ms-flex-pack: center;
-//     -webkit-justify-content: center;
-//     justify-content: center;
-//     -webkit-box-align: center;
-//     -ms-flex-align: center;
-//     -webkit-align-items: center;
-//     align-items: center;
-//   }
-
-//   .swiper-slide img {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
 body {
     font-family: Roboto;
 }
@@ -243,7 +231,7 @@ h1,h1,h3,h4,h5,h6 {
     padding: 0px!important;
 }
 
-.jiali-suggested-articles {
+.jiali-suggested-articles-wrapper {
     margin: 40px auto;
 }
 
@@ -253,7 +241,7 @@ h1,h1,h3,h4,h5,h6 {
     justify-content: space-between;
 }
 
-.jiali-suggested-articles .jiali-card-item {
+.jiali-suggested-articles-wrapper .jiali-card-item {
     height: 100%!important;
 }
 
@@ -267,7 +255,7 @@ h1,h1,h3,h4,h5,h6 {
     position: relative;
 }
 
-// .jiali-suggested-articles .jiali-card-item, .jiali-posts-wrapper .jiali-card-item {
+// .jiali-suggested-articles-wrapper .jiali-card-item, .jiali-posts-wrapper .jiali-card-item {
 //     box-shadow: 0 10px 20px 3px $primary;
 // }
 
@@ -287,6 +275,7 @@ h1,h1,h3,h4,h5,h6 {
 .jiali-card-title {
     color: $black;
     font-weight: 500;
+    font-size: 20px;
 }
 
 .jiali-card-text {
@@ -294,7 +283,7 @@ h1,h1,h3,h4,h5,h6 {
     color: $dark_gray;
     font-size: 16px;
     font-weight: 300;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .jiali-card-author {
@@ -303,7 +292,10 @@ h1,h1,h3,h4,h5,h6 {
 
 .jiali-card-date {
     color: $dark_gray;
-    font-size: 14px;
+}
+
+.jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
+    font-size: 14px!important;
 }
 
 // VERTICAL CARD
@@ -327,14 +319,6 @@ h1,h1,h3,h4,h5,h6 {
     margin-bottom: 0 !important;
 }
 
-.jiali-vertical-card .jiali-card-title {
-    font-size: 24px;
-}
-
-.jiali-vertical-card .jiali-card-author {
-    font-size: 16px;
-}
-
 // HORIZONTAL CARD
 .jiali-card-item {
     position: relative;
@@ -356,16 +340,8 @@ h1,h1,h3,h4,h5,h6 {
     justify-content: space-between;
 }
 
-.jiali-horizontal-card .jiali-card-title {
-    font-size: 20px;
-}
-
 .jiali-horizontal-card .jiali-card-text {
     font-size: 16px;
-}
-
-.jiali-horizontal-card .jiali-card-author {
-    font-size: 14px;
 }
 
 .jiali-horizontal-card .jiali-card-info .jiali-avatar {
@@ -393,30 +369,34 @@ h1,h1,h3,h4,h5,h6 {
     text-align: center;
 }
 
-.jiali-top-categorirs-item {
+.jiali-top-categories-item {
     border: 0px!important;
     border-radius: 0px!important;
 }
 
-.jiali-top-categorirs-item .jiali-card-item {
+.jiali-top-categories-item .jiali-card-item {
    border: none!important;
 }
 
-.jiali-top-categorirs-item .jiali-card-img-top {
+.jiali-categories-wrapper .jiali-card-item {
+   border: none!important;
+}
+
+.jiali-top-categories-item .jiali-card-img-top {
     border-radius: 10px!important;
 }
 
-.jiali-top-categorirs-item .jiali-card-title {
+.jiali-top-categories-item .jiali-card-title {
     margin-top: 8px!important;
     font-size: 16px!important;
 }
 
-.jiali-top-categorirs-item .jiali-card-text {
+.jiali-top-categories-item .jiali-card-text {
     margin-top: 8px;
 }
 
-.jiali-top-categorirs-item .jiali-card-body {
-    padding: 0px;
+.jiali-top-categories-item .jiali-card-body {
+    padding: 0px 8px;
 }
 
 // Banner
@@ -464,22 +444,18 @@ h1,h1,h3,h4,h5,h6 {
 }
 
 .jiali-posts-items .jiali-card-img-top {
+    width: 100%;
     max-height: 325px;
     border-bottom: 1px solid $light_gray;
 }
 
 .jiali-posts-items .jiali-card-title {
-    margin-top: 0!important;
+    margin-top: 8!important;
     margin-bottom: 8px!important;
-    font-size: 18px!important;
 }
 
 .jiali-posts-items .jiali-card-body {
     padding: 8px!important;
-}
-
-.jiali-posts-items .jiali-card-author,.jiali-posts-items .jiali-card-date {
-    font-size: 14px!important;
 }
 
 .jiali-posts-items .jiali-avatar img {
@@ -491,6 +467,20 @@ h1,h1,h3,h4,h5,h6 {
     display: flex;
     justify-content: center;
     padding: 32px;
+}
+
+// TOP ARTICLES
+.jiali-top-posts-wrapper {
+    margin-bottom: 32px;
+    .jiali-card-title {
+        color: $ultra_gray!important;
+    }
+    .jiali-card-text {
+        color: $light_gray;
+    }
+    .jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
+        color: $gray!important;
+    }
 }
 
 // FEATURE -> SERVICES - RESERVE
@@ -604,9 +594,9 @@ h1,h1,h3,h4,h5,h6 {
     border-top-right-radius: 12px;
 }
 
-.jiali-single-top .jiali-card-img-top {
+.jiali-card-overlayed .jiali-card-img-top {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
     // box-shadow: 0 10px 20px 3px $primary;
 }
 
@@ -625,18 +615,6 @@ h1,h1,h3,h4,h5,h6 {
     position: absolute;
     bottom: 0;
     z-index: 1000;
-}
-
-.jiali-card-overlayed .jiali-card-title,
-.jiali-card-overlayed .jiali-card-text
-{
-    color: $ultra_gray!important;
-}
-
-.jiali-card-overlayed .jiali-card-author,
-.jiali-card-overlayed .jiali-card-date
-{
-    color: $black!important;
 }
 
 .jiali-single-info {

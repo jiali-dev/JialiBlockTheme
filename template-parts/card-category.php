@@ -3,7 +3,7 @@
     <?php if( $args['linked']) : ?>
         <a class="jiali-permalink" href="<?php echo get_category_link( $cat->term_id ) ?>">
     <?php endif; ?>       
-            <div class="jiali-card jiali-vertical-card jiali-top-categorirs-item">
+            <div class="jiali-card jiali-vertical-card jiali-top-categories-item">
                 <?php 
                     $category_thumbnail = get_field('category_thumbnail', $cat->taxonomy . '_' . $cat->term_id );
                     if ( !$category_thumbnail )

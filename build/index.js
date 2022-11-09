@@ -25,6 +25,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Slider.js */ "./src/modules/Slider.js");
 
 
+// Import Slider
+
 
 /***/ }),
 
@@ -38,12 +40,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
 
 var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: 6,
   spaceBetween: 30,
-  freeMode: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
+  freeMode: true
+});
+var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 20
+    }
   }
 });
 

@@ -9,7 +9,7 @@
             <div class="jiali-card-body">
                 <div>
                     <?php if( $args['title'] ): ?>
-                        <h4 class="jiali-card-title"><?php echo $post->post_title ?></h4>
+                        <h4 class="jiali-card-title"><?php echo wp_trim_words($post->post_title, 5, NULL ) ?></h4>
                     <?php endif; ?>
                     <?php if( $args['excerpt'] ): ?>
                         <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>

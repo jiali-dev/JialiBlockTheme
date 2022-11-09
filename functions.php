@@ -77,6 +77,7 @@ new PlaceholderBlock("archive");
 new PlaceholderBlock("page");
 new PlaceholderBlock("page-appointment");
 new PlaceholderBlock("categories");
+new PlaceholderBlock("top-articles");
 
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
@@ -302,3 +303,26 @@ function jiali_change_posts_per_page( $query ) {
 }
 
 add_filter( 'pre_get_posts', 'jiali_change_posts_per_page' );
+
+function jiali_get_top_post()
+{
+  // Set params
+  $params = array(
+    'table_name' => 'statistics_pages' ,
+    'where_col' => 'type = "%s"',
+    'variables_arr' => 'post'
+  );
+
+  $top_articles = jiali_read( $params );
+
+  return $top_articles;
+}
+
+/**********************************************
+ *
+ * Inlcuding modules
+ *
+ **********************************************/
+
+include('inc/crud-function.php');
+

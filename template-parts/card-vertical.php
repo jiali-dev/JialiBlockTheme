@@ -28,7 +28,7 @@
 
                 <div class="jiali-card-body">
                     <?php if( $args['title'] ): ?>
-                        <h5 class="jiali-card-title"><?php echo $post->post_title ?></h5>
+                        <h5 class="jiali-card-title"><?php echo wp_trim_words($post->post_title, 5, NULL ) ?></h5>
                     <?php endif; ?>
                     <?php if( $args['excerpt'] ): ?>
                         <p class="jiali-card-text"><?php echo $post->post_excerpt ? wp_trim_words( $post->post_excerpt, 35, NULL ) : wp_trim_words( $post->post_content, 35, NULL ) ?></p>

@@ -11240,6 +11240,26 @@ button.swiper-pagination-bullet {
 }
 
 /* SASS and Global'ish Stuff */
+.jiali-categories-wrapper {
+  position: relative;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background: #EDEDED !important;
+  top: 60% !important;
+  transform: translateY(-60%);
+  padding: 24px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 999;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: #757575;
+  font-size: 26px;
+  font-weight: bold;
+}
+
 body {
   font-family: Roboto;
 }
@@ -11453,7 +11473,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 0px !important;
 }
 
-.jiali-suggested-articles {
+.jiali-suggested-articles-wrapper {
   margin: 40px auto;
 }
 
@@ -11463,7 +11483,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   justify-content: space-between;
 }
 
-.jiali-suggested-articles .jiali-card-item {
+.jiali-suggested-articles-wrapper .jiali-card-item {
   height: 100% !important;
 }
 
@@ -11492,6 +11512,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .jiali-card-title {
   color: #070707;
   font-weight: 500;
+  font-size: 20px;
 }
 
 .jiali-card-text {
@@ -11499,7 +11520,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #757575;
   font-size: 16px;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .jiali-card-author {
@@ -11508,7 +11529,10 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .jiali-card-date {
   color: #757575;
-  font-size: 14px;
+}
+
+.jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
+  font-size: 14px !important;
 }
 
 .jiali-vertical-card {
@@ -11531,14 +11555,6 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 0 !important;
 }
 
-.jiali-vertical-card .jiali-card-title {
-  font-size: 24px;
-}
-
-.jiali-vertical-card .jiali-card-author {
-  font-size: 16px;
-}
-
 .jiali-card-item {
   position: relative;
   margin-bottom: 8px;
@@ -11559,16 +11575,8 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   justify-content: space-between;
 }
 
-.jiali-horizontal-card .jiali-card-title {
-  font-size: 20px;
-}
-
 .jiali-horizontal-card .jiali-card-text {
   font-size: 16px;
-}
-
-.jiali-horizontal-card .jiali-card-author {
-  font-size: 14px;
 }
 
 .jiali-horizontal-card .jiali-card-info .jiali-avatar {
@@ -11596,30 +11604,34 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-align: center;
 }
 
-.jiali-top-categorirs-item {
+.jiali-top-categories-item {
   border: 0px !important;
   border-radius: 0px !important;
 }
 
-.jiali-top-categorirs-item .jiali-card-item {
+.jiali-top-categories-item .jiali-card-item {
   border: none !important;
 }
 
-.jiali-top-categorirs-item .jiali-card-img-top {
+.jiali-categories-wrapper .jiali-card-item {
+  border: none !important;
+}
+
+.jiali-top-categories-item .jiali-card-img-top {
   border-radius: 10px !important;
 }
 
-.jiali-top-categorirs-item .jiali-card-title {
+.jiali-top-categories-item .jiali-card-title {
   margin-top: 8px !important;
   font-size: 16px !important;
 }
 
-.jiali-top-categorirs-item .jiali-card-text {
+.jiali-top-categories-item .jiali-card-text {
   margin-top: 8px;
 }
 
-.jiali-top-categorirs-item .jiali-card-body {
-  padding: 0px;
+.jiali-top-categories-item .jiali-card-body {
+  padding: 0px 8px;
 }
 
 .jiali-double-banner {
@@ -11665,22 +11677,18 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .jiali-posts-items .jiali-card-img-top {
+  width: 100%;
   max-height: 325px;
   border-bottom: 1px solid #EDEDED;
 }
 
 .jiali-posts-items .jiali-card-title {
-  margin-top: 0 !important;
+  margin-top: 8 !important;
   margin-bottom: 8px !important;
-  font-size: 18px !important;
 }
 
 .jiali-posts-items .jiali-card-body {
   padding: 8px !important;
-}
-
-.jiali-posts-items .jiali-card-author, .jiali-posts-items .jiali-card-date {
-  font-size: 14px !important;
 }
 
 .jiali-posts-items .jiali-avatar img {
@@ -11692,6 +11700,19 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   display: flex;
   justify-content: center;
   padding: 32px;
+}
+
+.jiali-top-posts-wrapper {
+  margin-bottom: 32px;
+}
+.jiali-top-posts-wrapper .jiali-card-title {
+  color: #F9F9F9 !important;
+}
+.jiali-top-posts-wrapper .jiali-card-text {
+  color: #EDEDED;
+}
+.jiali-top-posts-wrapper .jiali-card-author, .jiali-top-posts-wrapper .jiali-card-date, .jiali-top-posts-wrapper .text-muted, .jiali-top-posts-wrapper .jiali-card-views {
+  color: #CBCBCB !important;
 }
 
 .jiali-services-wrapper {
@@ -11800,9 +11821,9 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border-top-right-radius: 12px;
 }
 
-.jiali-single-top .jiali-card-img-top {
+.jiali-card-overlayed .jiali-card-img-top {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .jiali-single-title {
@@ -11820,16 +11841,6 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   position: absolute;
   bottom: 0;
   z-index: 1000;
-}
-
-.jiali-card-overlayed .jiali-card-title,
-.jiali-card-overlayed .jiali-card-text {
-  color: #F9F9F9 !important;
-}
-
-.jiali-card-overlayed .jiali-card-author,
-.jiali-card-overlayed .jiali-card-date {
-  color: #070707 !important;
 }
 
 .jiali-single-info {
@@ -11949,7 +11960,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   .jiali-smallscreen {
     display: flex;
   }
-  .jiali-top-categorirs-item .jiali-card-body {
+  .jiali-top-categories-item .jiali-card-body {
     text-align: center;
   }
   .jiali-footer .jiali-title {
@@ -11957,6 +11968,15 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
   .jiali-footer-col {
     margin-top: 42px;
+  }
+  .jiali-card-text {
+    display: none;
+  }
+  .jiali-card-title {
+    font-size: 18px !important;
+  }
+  .jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
+    font-size: 14px !important;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -12163,27 +12183,25 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-size: 24px;
 }
 
-.jiali-overlay-ultra-primary {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #F6BFBF);
-  opacity: 0.8;
-  z-index: 999;
-}
-
 .jiali-overlay-ultra-secondary {
   position: absolute;
   left: 0;
   bottom: 0;
+  background: linear-gradient(to bottom, transparent, #BFE8F6);
   width: 100%;
-  height: 100%;
+  height: 80%;
   border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), #BFE8F6);
-  opacity: 0.8;
+  z-index: 999;
+}
+
+.jiali-overlayed-card-overlay-dark-primary {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #9F1616);
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
   z-index: 999;
 }
 
@@ -12191,10 +12209,10 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   position: absolute;
   left: 0;
   bottom: 0;
+  background: linear-gradient(to bottom, transparent, #F6BFBF);
   width: 100%;
   height: 80%;
   border-radius: 15px;
-  background: linear-gradient(to top, #F6BFBF, transparent);
   z-index: 999;
 }
 
@@ -12202,10 +12220,10 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   position: absolute;
   left: 0;
   bottom: 0;
+  background: linear-gradient(to bottom, transparent, #BFE8F6);
   width: 100%;
   height: 80%;
   border-radius: 15px;
-  background: linear-gradient(to top, #BFE8F6, transparent);
   z-index: 999;
 }
 
