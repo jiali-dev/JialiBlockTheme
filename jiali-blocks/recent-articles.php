@@ -1,14 +1,15 @@
 <?php
+
+    $post_per_page = 12;
     $recent_posts = new WP_Query(array(
-            'paged' => get_query_var('paged', 1),
             'post_type' => array( 'post', 'app', 'multimedia' ),
-            'post_status' => 'publish',
-            'orderby' => 'post-date',
+            'orderby' => 'date',
             'order' => 'DESC',
-            'posts_per_page' => 12
+            'posts_per_page' => $post_per_page,
+            'paged' => 1
         )
     );
-    
+
     if( have_posts($recent_posts ) ): 
         $args['thumbnail'] = true;
         $args['thumbnail-size'] = 'medium';
@@ -48,10 +49,17 @@
                 <?php endwhile; ?>
                 
             </div>
-            <div class="jiali-more-articles">
-                <a href="<?php echo home_url('/blog') ?>" class="btn jiali-btn-primary btn-lg"><?php _e("See more articles","jiali") ?> <i class="fa-solid fa-arrow-left"></i></a>
-            </div>
+            <?php 
+                if( $attributes['load_more'] == 'ajax' )
+                    $ajax_load_more = true; 
+            ?>
+            <?php if( $post_per_page < $recent_posts->found_posts ): ?>
+                <div class="jiali-more-articles">
+                    <a href="<?php echo $ajax_load_more ? 'javascript:void(0)' : home_url('/blog') ?>" id="<?php echo $ajax_load_more ? 'jiali-load-more-articles' :'' ?>" class="btn jiali-btn-primary btn-lg"><?php _e("See more articles","jiali") ?> <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
+<?php wp_nonce_field( 'jiali-nonce-blog', 'jiali-nonce-blog' ); ?>

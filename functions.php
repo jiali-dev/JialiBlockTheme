@@ -1,14 +1,20 @@
 <?php
 
 function jialit_theme_enqueue() {
-  wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
-  wp_enqueue_script('jiali-main-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
+  wp_enqueue_style('custom_google_fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
+	
+  wp_enqueue_script('notiflix_script', get_theme_file_uri('/assets/notiflix/notiflix.min.js', __FILE__), array('jquery'));
+  wp_enqueue_style('notiflix_style', get_theme_file_uri('/assets/notiflix/notiflix.min.css', __FILE__), array(), '1.0', 'all');
+	wp_enqueue_script('notiflix_custom_script', get_theme_file_uri('/assets/notiflix/notiflix-custom.js', __FILE__), array('jquery'));
+  
+  wp_enqueue_script('jiali_main_js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   wp_enqueue_style('jiali_main_styles', get_theme_file_uri('/build/style-index.css'));
-  wp_enqueue_style('jiali_extra_styles', get_theme_file_uri('/build/index.css'));
-  wp_enqueue_script('font-awesome-js', get_theme_file_uri('/assets/font-awesome/all.min.js'));
-  wp_enqueue_style('font-awesome-css', get_theme_file_uri('/assets/font-awesome/all.min.css'));
-  wp_enqueue_style( 'jiali-rtl-style', get_stylesheet_uri('style-rtl.css') );
-  wp_style_add_data( 'jiali-rtl-style', 'rtl', 'replace' );
+  wp_enqueue_style( 'jiali_rtl_style', get_theme_file_uri('/style-rtl.css'));
+  // wp_style_add_data( 'jiali_rtl_style', 'rtl', 'replace' );
+  wp_localize_script( 'jiali_main_js','jiali_ajaxhandler', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+  
+  wp_enqueue_script('font_awesome_js', get_theme_file_uri('/assets/font-awesome/all.min.js'));
+  wp_enqueue_style('font_awesome_css', get_theme_file_uri('/assets/font-awesome/all.min.css'));
 }
 
 add_action('wp_enqueue_scripts', 'jialit_theme_enqueue');
@@ -41,6 +47,140 @@ function jiali_login_title() {
 
 add_filter('login_headertitle', 'jiali_login_title');
 
+function jiali_custom_rest() {
+
+  register_rest_field('post', 'permalink', array(
+    'get_callback' => function() {return get_permalink();}
+  ));
+  register_rest_field('post', 'authorName', array(
+    'get_callback' => function() {return get_the_author();}
+  ));
+  register_rest_field('post', 'views', array(
+    'get_callback' => function() {return wp_statistics_pages('total', get_permalink() ,get_the_ID() );}
+  ));
+  register_rest_field('post', 'horizontalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'horizontal-card' );}
+  ));
+  register_rest_field('post', 'largeVerticalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'vertical-card-large' );}
+  ));
+  register_rest_field('post', 'mediumVerticalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(  ),'vertical-card-medium' );}
+  ));
+  register_rest_field('post', 'postTags', array(
+    'get_callback' => function() {return jiali_custom_get_post_tags(get_the_ID()); }
+  ));
+
+  
+  register_rest_field('app', 'permalink', array(
+    'get_callback' => function() {return get_permalink();}
+  ));
+  register_rest_field('app', 'authorName', array(
+    'get_callback' => function() {return get_the_author();}
+  ));
+  register_rest_field('app', 'views', array(
+    'get_callback' => function() {return wp_statistics_pages('total', get_permalink() ,get_the_ID() );}
+  ));
+  register_rest_field('app', 'horizontalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'horizontal-card' );}
+  ));
+  register_rest_field('app', 'largeVerticalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'vertical-card-large' );}
+  ));
+  register_rest_field('app', 'mediumVerticalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'vertical-card-medium' );}
+  ));
+  register_rest_field('app', 'postTags', array(
+    'get_callback' => function() {return jiali_custom_get_post_tags(get_the_ID()); }
+  ));
+
+  register_rest_field('multimedia', 'permalink', array(
+    'get_callback' => function() {return get_permalink();}
+  ));
+  register_rest_field('multimedia', 'authorName', array(
+    'get_callback' => function() {return get_the_author();}
+  ));
+  register_rest_field('multimedia', 'views', array(
+    'get_callback' => function() {return wp_statistics_pages('total', get_permalink() ,get_the_ID() );}
+  ));
+  register_rest_field('multimedia', 'horizontalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'horizontal-card' );}
+  ));
+  register_rest_field('multimedia', 'largeVerticalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'vertical-card-large' );}
+  ));
+  register_rest_field('multimedia', 'mediumVerticalThumbnail', array(
+    'get_callback' => function() {return get_the_post_thumbnail_url( get_the_ID(),'vertical-card-medium' );}
+  ));
+  register_rest_field('multimedia', 'postTags', array(
+    'get_callback' => function() {return jiali_custom_get_post_tags(get_the_ID()); }
+  ));
+
+  register_rest_field('tag', 'tagColor', array(
+    'get_callback' => function($object) {return get_field('tag_color', $object['taxonomy'] . '_' . $object['id'] );}
+  ));
+  
+
+  
+}
+
+add_action('rest_api_init', 'jiali_custom_rest');
+
+function jiali_query_custom_fields( $posts ) {
+
+  for ( $i = 0; $i < count($posts); $i++ ) {
+    
+    $permalink = get_permalink( $posts[$i]->ID );
+    $posts[$i]->permalink = $permalink;
+
+    $authorName = get_the_author_meta('display_name', $posts[$i]->post_author);
+    $posts[$i]->authorName = $authorName;
+
+    $authorAvatar = get_avatar( $posts[$i]->post_author, 60);
+    $posts[$i]->authorAvatar = $authorAvatar;
+
+    $views = wp_statistics_pages('total', $permalink ,$posts[$i]->ID );
+    $posts[$i]->views = $views;
+
+    $horizontalThumbnail = get_the_post_thumbnail_url( $posts[$i]->ID, 'horizontal-card' );
+    $posts[$i]->horizontalThumbnail = $horizontalThumbnail;
+
+    $largeVerticalThumbnail = get_the_post_thumbnail_url( $posts[$i]->ID, 'vertical-card-large' );
+    $posts[$i]->largeVerticalThumbnail = $largeVerticalThumbnail;
+    
+    $mediumVerticalThumbnail = get_the_post_thumbnail_url( $posts[$i]->ID, 'vertical-card-medium' );
+    $posts[$i]->mediumVerticalThumbnail = $mediumVerticalThumbnail;
+
+    $customDate = ( get_locale() == 'fa_IR' ) ? parsidate( "d M Y", $post->post_date, 'per' ) : date_format( date_create($post->post_date), "Y M d" );
+    $posts[$i]->customDate = $customDate;
+
+    $postTags = wp_get_post_tags( $posts[$i]->ID, array(
+      'number' => 3
+    ) );
+
+    $tagsObject = [];
+
+    if( $postTags )
+    {
+      foreach($postTags as $tag) 
+      {
+        $tempObject = [];
+        $tempObject['name'] = $tag->name;
+        $tempObject['color'] = ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff" ;
+        $tagsObject[] = (object)($tempObject);
+      }
+    }
+
+    $posts[$i]->postTags = $tagsObject;
+
+  }
+
+  return $posts;
+
+}
+
+add_filter( 'the_posts', 'jiali_query_custom_fields' );
+
 class PlaceholderBlock {
   function __construct($name) {
     $this->name = $name;
@@ -63,6 +203,28 @@ class PlaceholderBlock {
   }
 }
 
+
+function jiali_custom_get_post_tags( $post_id ) {
+  $postTags = wp_get_post_tags( $post_id, array(
+    'number' => 3
+  ) );
+
+  $tagsObject = [];
+
+  if( $postTags )
+  {
+    foreach($postTags as $tag) 
+    {
+      $tempObject = [];
+      $tempObject['id'] = $tag->term_id;
+      $tempObject['name'] = $tag->name;
+      $tempObject['color'] = ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff" ;
+      $tagsObject[] = $tempObject;
+    }
+  }
+
+  return $tagsObject;
+}
 new PlaceholderBlock("header");
 new PlaceholderBlock("suggested-articles");
 new PlaceholderBlock("top-categories");
@@ -78,6 +240,7 @@ new PlaceholderBlock("page");
 new PlaceholderBlock("page-appointment");
 new PlaceholderBlock("categories");
 new PlaceholderBlock("top-articles");
+new PlaceholderBlock("playground");
 
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
@@ -325,4 +488,5 @@ function jiali_get_top_post()
  **********************************************/
 
 include('inc/crud-function.php');
+include('inc/ajax.php');
 

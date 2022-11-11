@@ -22,11 +22,219 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var _modules_Slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Slider.js */ "./src/modules/Slider.js");
+/* harmony import */ var _modules_Custom_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Custom-script.js */ "./src/modules/Custom-script.js");
+/* harmony import */ var _modules_Slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Slider.js */ "./src/modules/Slider.js");
+/* harmony import */ var _modules_Ajax_handler_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/Ajax-handler.js */ "./src/modules/Ajax-handler.js");
+
+
+// Import Custom Scripts
 
 
 // Import Slider
 
+
+// Import Ajax Handler
+
+
+/***/ }),
+
+/***/ "./src/modules/Ajax-handler.js":
+/*!*************************************!*\
+  !*** ./src/modules/Ajax-handler.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+jQuery(document).ready(function ($) {
+  var paged = 1;
+  // Sample ajax call	
+  $('#jiali-load-more-articles').on('click', function () {
+    Notiflix.Loading.pulse();
+    paged++;
+
+    // Get nonce
+    var nonce = $("#jiali-nonce-blog").val();
+    $.ajaxSetup({
+      cache: false
+    });
+    $.ajax({
+      type: 'POST',
+      url: jiali_ajaxhandler.ajaxurl,
+      data: {
+        action: 'jiali_load_more_articles_ajax',
+        nonce: nonce,
+        paged: paged
+      },
+      success: function (data) {
+        Notiflix.Loading.remove();
+        var arr = $.parseJSON(data);
+        if (arr.data) {
+          if (arr.is_finished) $('#jiali-load-more-articles').closest('.jiali-more-articles').fadeOut();
+          var args = {
+            template: 'vertical',
+            thumbnail: true,
+            thumbnailSize: 'medium',
+            title: true,
+            excerpt: false,
+            author: true,
+            date: true,
+            views: true,
+            tags: true,
+            linked: true
+            // tags : true
+          };
+
+          console.log(arr.data);
+          var newPosts = '';
+          arr.data.forEach(function (item) {
+            args.post = item;
+            newPosts += `<div class="col-md-3"> ${jiali_post_item_template(args)} </div>`;
+          });
+          $('.jiali-posts-wrapper .jiali-posts-items').append(newPosts);
+        } else {
+          Notiflix.Notify.failure(arr.message);
+        }
+      },
+      error: function (MLHttpRequest, textStatus, errorThrown) {
+        Notiflix.Loading.remove();
+        if (errorThrown) {
+          Notiflix.Notify.failure(errorThrown);
+        } else {
+          Notiflix.Notify.failure('Unknown error!');
+        }
+      }
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/modules/Custom-script.js":
+/*!**************************************!*\
+  !*** ./src/modules/Custom-script.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+jQuery(document).ready(function ($) {
+  window.jiali_trim_content = function (string, number) {
+    return string.split(' ', number) //create array of the first four words
+    .join(' '); //join the array with spaces
+  };
+  // args' keys --> linked, 
+  window.jiali_post_item_template = function (args) {
+    var post = args.post;
+    var output = '';
+    if (args.template == 'horizontal') {
+      output += `<div class="jiali-card-item">`;
+      if (args.linked) {
+        output += `<a class="jiali-permalink" href="${post.permalink}">`;
+      }
+      output += `<div class="jiali-card jiali-horizontal-card">                
+                        <div class="jiali-card-body">
+                            <div>`;
+      if (args.title) {
+        output += `<h4 class="jiali-card-title">${jiali_trim_content(post.post_title, 5)}</h4>`;
+      }
+      if (args.excerpt) {
+        output += `<p class="jiali-card-text">${jiali_trim_content(post.post_content, 10)}</p>`;
+      }
+      output += `</div>
+                            <div class="jiali-card-info">`;
+      if (args.author) {
+        output += `<span class="jiali-avatar">
+                                        ${post.authorAvatar}
+                                    </span>
+                                    <span class="jiali-card-author">${post.authorName}</span>
+                                    <span class="text-muted">-</span>`;
+      }
+      if (args.date) {
+        output += `<span class="jiali-card-date">${post.customDate}</span>`;
+      }
+      if (args.views) {
+        if (args.date) {
+          output += `<span class="text-muted">-</span>`;
+        }
+        output += `<span class="jiali-card-views">
+                                        <i class="fa-solid fa-eye"></i>
+                                        ${post.views}
+                                    </span>`;
+      }
+      output += `</div>
+                        </div>`;
+      if (args.thumbnail) {
+        output += `<div class="jiali-card-img-side">
+                                <img src="${post.horizontalThumbnail}" alt="Card image cap">
+                            </div>`;
+      }
+      output += `</div>`;
+      if (args.linked) {
+        output += `</a>`;
+      }
+      output += `</div>`;
+      return output;
+    } else if (args.template == 'vertical') {
+      output += `<div class="jiali-card-item">`;
+      if (args.tags) {
+        if (post.postTags) {
+          var tags = post.postTags;
+          output += `<div class="jiali-card-tags">`;
+          tags.forEach(function (tag) {
+            output += `<span class="jiali-card-tag" style="background-color:${tag.color}">
+                            ${tag.name}
+                            <br>
+                            </span>`;
+          });
+          output += `</div>`;
+        }
+      }
+      if (args.linked) {
+        output += `<a class="jiali-permalink" href="${post.permalink}">`;
+      }
+      output += `<div class="jiali-card jiali-vertical-card">`;
+      if (args.thumbnail) {
+        output += `<img decoding="async" class="jiali-card-img-top" src="${args.thumbnailSize == 'large' ? post.largeVerticalThumbnail : post.mediumVerticalThumbnail}" alt="Card image cap">`;
+      }
+      output += `<div class="jiali-card-body">
+                            <div>`;
+      if (args.title) {
+        output += `<h4 class="jiali-card-title">${jiali_trim_content(post.post_title, 5)}</h4>`;
+      }
+      if (args.excerpt) {
+        output += `<p class="jiali-card-text">${jiali_trim_content(post.post_content, 10)}</p>`;
+      }
+      output += `</div>
+                            <div class="jiali-card-info">`;
+      if (args.author) {
+        output += `<span class="jiali-avatar">
+                                        ${post.authorAvatar}
+                                    </span>
+                                    <span class="jiali-card-author">${post.authorName}</span>
+                                    <span class="text-muted">-</span>`;
+      }
+      if (args.date) {
+        output += `<span class="jiali-card-date">${post.customDate}</span>`;
+      }
+      if (args.views) {
+        if (args.date) {
+          output += `<span class="text-muted">-</span>`;
+        }
+        output += `<span class="jiali-card-views">
+                                        <i class="fa-solid fa-eye"></i>
+                                        ${post.views}
+                                    </span>`;
+      }
+      output += `</div>
+                        </div>`;
+      output += `</div>`;
+      if (args.linked) {
+        output += `</a>`;
+      }
+      output += `</div>`;
+      return output;
+    }
+  };
+});
 
 /***/ }),
 
