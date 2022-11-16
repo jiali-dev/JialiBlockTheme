@@ -11242,6 +11242,7 @@ button.swiper-pagination-bullet {
 /* SASS and Global'ish Stuff */
 .jiali-categories-wrapper {
   position: relative;
+  padding-top: 32px;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -11321,13 +11322,11 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-decoration: none;
 }
 
-.jiali-header {
-  padding-top: 8px;
-}
-
 .jiali-header-top {
+  padding: 4px 0px;
   display: flex;
   align-items: center;
+  height: 40px;
 }
 
 .jiali-divider {
@@ -11368,9 +11367,13 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   justify-content: end;
 }
 
-.jiali-logo {
+.jiali-navbar-brand {
   display: flex;
   justify-content: center;
+}
+
+.jiali-logo-img {
+  width: 138px !important;
 }
 
 .jiali-avatar img {
@@ -11379,102 +11382,102 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   height: 32px;
 }
 
-.jiali-logo-img {
-  width: 138px !important;
-}
-
-.jiali-search {
-  display: flex;
-  justify-content: start;
-}
-
-.jiali-search * {
-  border-color: #070707;
-}
-
-.jilai-search-icon {
-  color: #070707;
-  background-color: transparent !important;
-  -webkit-border-end: 0px !important;
-          border-inline-end: 0px !important;
-}
-
-.jilai-search-input {
-  color: #070707;
-  text-align: end;
-  background-color: transparent !important;
-  -webkit-border-start: 0px !important;
-          border-inline-start: 0px !important;
-}
-
-.jilai-search-input::-moz-placeholder {
-  color: #757575;
-}
-
-.jilai-search-input::placeholder {
-  color: #757575;
-}
-
 .jiali-social-icons {
+  color: #ffffff;
+  font-size: 16px;
   justify-content: end;
 }
 
 .jiali-social-icons a {
-  color: #070707;
-  font-size: 24px;
+  color: #ffffff;
+  font-size: 16px;
   -webkit-margin-end: 8px;
           margin-inline-end: 8px;
 }
 
-.jiali-top-menu-wrapper {
-  background-color: #EDEDED;
+#jiali-primary-menu {
+  padding: 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.jiali-top-menu {
-  justify-content: start;
+.jiali-sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border-top: 0;
 }
 
-.jiali-top-menu ul li {
+.jiali-search-btn {
+  cursor: pointer;
+}
+
+.jiali-hamburger-btn {
+  display: none;
+  cursor: pointer;
+  z-index: 10000000000000;
+}
+
+.jiali-bar {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #9F1616;
+}
+
+.jiali-primary-menu-items {
+  display: flex;
+  align-items: center;
+  z-index: 1000000;
+  width: 100%;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.jiali-primary-menu-items li {
   -webkit-margin-start: 16px;
           margin-inline-start: 16px;
 }
 
-.jiali-top-menu ul li a {
+.jiali-primary-menu-items li a {
   position: relative;
   color: #070707;
 }
 
-.jiali-top-menu ul li a:after {
+.jiali-primary-menu-items li a:after {
   content: "";
   position: absolute;
   width: 0%;
   left: 0;
-  bottom: 0px;
-  height: 5px;
-  background-color: #ED7E7E;
+  bottom: -3px;
+  height: 3px;
+  background-color: #9F1616;
   transition: 0.4s;
 }
 
-.jiali-top-menu ul li a:hover:after {
+.jiali-primary-menu-items li a:hover:after {
   width: 100%;
 }
 
-.jiali-top-menu ul li.active a:after {
+.jiali-primary-menu-items li.active a:after {
   content: "";
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 0;
-  height: 5px;
-  background-color: #ED7E7E;
-}
-
-.jiali-navbar {
-  padding: 0px !important;
+  bottom: -3px;
+  height: 3px;
+  background-color: #9F1616;
 }
 
 .jiali-suggested-articles-wrapper {
   margin: 40px auto;
+  padding-top: 32px;
 }
 
 .jiali-suggested-article-col {
@@ -11497,13 +11500,21 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .jiali-card-tags {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 2px;
   right: 8px;
   z-index: 999;
 }
 
+.jiali-horizontal-card-tags {
+  left: 8px !important;
+  right: unset !important;
+}
+
 .jiali-card-tag {
+  color: #070707 !important;
   border-radius: 10px;
   padding: 0 4px;
   font-size: 12px;
@@ -11840,7 +11851,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .jiali-card-overlayed .jiali-card-body {
   position: absolute;
   bottom: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .jiali-single-info {
@@ -11912,6 +11923,7 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .jiali-app-download-box-wrapper {
   padding: 16px 16px;
+  border-radius: 15px;
 }
 
 .jiali-app-download-box {
@@ -11927,6 +11939,67 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .jiali-pagination-wrapper {
   text-align: center;
+}
+
+.jiali-recent-media-wrapper {
+  margin-bottom: 32px;
+}
+.jiali-recent-media-wrapper .jiali-card-title {
+  color: #F9F9F9 !important;
+}
+.jiali-recent-media-wrapper .jiali-card-text {
+  color: #EDEDED;
+}
+.jiali-recent-media-wrapper .jiali-card-author, .jiali-recent-media-wrapper .jiali-card-date, .jiali-recent-media-wrapper .text-muted, .jiali-recent-media-wrapper .jiali-card-views {
+  color: #CBCBCB !important;
+}
+
+.jiali-player-box-wrapper {
+  padding: 16px 16px;
+  border-radius: 15px;
+}
+
+.jiali-player-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.jiali-player-box a {
+  align-self: flex-start;
+  -webkit-margin-after: 16px;
+          margin-block-end: 16px;
+}
+
+.jiali-player-box iframe {
+  border-radius: 15px !important;
+}
+
+.jiali-third-part-logo img {
+  width: 24px;
+}
+
+button.active {
+  background-color: #167D9F !important;
+  color: #ffffff !important;
+}
+
+button.nav-link {
+  color: #167D9F;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 @media only screen and (max-width: 768px) {
@@ -11977,6 +12050,54 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
   .jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
     font-size: 14px !important;
+  }
+  .jiali-app-download-box a {
+    font-size: 16px;
+  }
+  .jiali-single-title {
+    font-size: 30px;
+  }
+  .jiali-primary-menu-items {
+    display: none;
+    flex-direction: column !important;
+    -webkit-margin-before: 16px;
+            margin-block-start: 16px;
+    align-items: flex-start;
+  }
+  .jiali-primary-menu-items.active {
+    display: flex;
+  }
+  .jiali-primary-menu-items li {
+    -webkit-margin-after: 16px;
+            margin-block-end: 16px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
+  }
+  .jiali-navbar-brand-wrapper {
+    align-self: baseline;
+  }
+  .jiali-hamburger-btn {
+    display: block;
+    border: 1px solid #9F1616;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .jiali-hamburger-btn.active .jiali-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .jiali-hamburger-btn.active .jiali-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .jiali-hamburger-btn.active .jiali-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  #jiali-primary-menu {
+    position: relative;
+  }
+  .jiali-primary-menu-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -12103,6 +12224,61 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border-color: #000000;
 }
 
+.jiali-btn-white {
+  color: #000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.jiali-btn-white:hover {
+  color: #000;
+  background-color: white;
+  border-color: white;
+}
+.btn-check:focus + .jiali-btn-white, .jiali-btn-white:focus {
+  color: #000;
+  background-color: white;
+  border-color: white;
+  box-shadow: 0 0 0 0.25rem rgba(217, 217, 217, 0.5);
+}
+.btn-check:checked + .jiali-btn-white, .btn-check:active + .jiali-btn-white, .jiali-btn-white:active, .jiali-btn-white.active, .show > .jiali-btn-white.dropdown-toggle {
+  color: #000;
+  background-color: white;
+  border-color: white;
+}
+.btn-check:checked + .jiali-btn-white:focus, .btn-check:active + .jiali-btn-white:focus, .jiali-btn-white:active:focus, .jiali-btn-white.active:focus, .show > .jiali-btn-white.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(217, 217, 217, 0.5);
+}
+.jiali-btn-white:disabled, .jiali-btn-white.disabled {
+  color: #000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.jiali-btn-outline-white {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.jiali-btn-outline-white:hover {
+  color: #000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-check:focus + .jiali-btn-outline-white, .jiali-btn-outline-white:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+}
+.btn-check:checked + .jiali-btn-outline-white, .btn-check:active + .jiali-btn-outline-white, .jiali-btn-outline-white:active, .jiali-btn-outline-white.active, .jiali-btn-outline-white.dropdown-toggle.show {
+  color: #000;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-check:checked + .jiali-btn-outline-white:focus, .btn-check:active + .jiali-btn-outline-white:focus, .jiali-btn-outline-white:active:focus, .jiali-btn-outline-white.active:focus, .jiali-btn-outline-white.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+}
+.jiali-btn-outline-white:disabled, .jiali-btn-outline-white.disabled {
+  color: #ffffff;
+  background-color: transparent;
+}
+
 .jiali-section-custom-width-transparent {
   background: transparent;
   width: 85%;
@@ -12111,6 +12287,11 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .jiali-section-full-width-transparent {
   background: transparent;
+  margin: auto;
+}
+
+.jiali-section-full-width-black {
+  background: #070707;
   margin: auto;
 }
 
@@ -12199,6 +12380,17 @@ h1, .h1, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   left: 0;
   bottom: 0;
   background: linear-gradient(to bottom, transparent, #9F1616);
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
+  z-index: 999;
+}
+
+.jiali-overlayed-card-overlay-super-dark-secondary {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #0B3E50);
   width: 100%;
   height: 80%;
   border-radius: 15px;

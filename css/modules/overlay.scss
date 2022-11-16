@@ -69,6 +69,10 @@
     @include overlayed-card($dark_primary, bottom)
 }
 
+.jiali-overlayed-card-overlay-super-dark-secondary {
+    @include overlayed-card($super_dark_secondary, bottom)
+}
+
 .jiali-overlayed-card-overlay-ultra-primary {
     @include overlayed-card( $ultra_primary, bottom)
 }

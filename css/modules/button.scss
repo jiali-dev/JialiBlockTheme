@@ -129,3 +129,11 @@
 .jiali-btn-ios {
   @include button-variant($ios_color, $ios_color)
 }
+
+.jiali-btn-white {
+  @include button-variant($white, $white)
+}
+
+.jiali-btn-outline-white {
+  @include button-outline-variant($white)
+}

@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-8 jiali-single-info">
                     <h1 class="jiali-single-title"><?php echo $post->post_title ?></h1>
-                    <div class="breadcrumb"><?php get_breadcrumb(); ?></div>
+                    <div class="breadcrumb"><?php jiali_get_breadcrumb(); ?></div>
                 </div>
             </div>
             <div class="jiali-single-content">

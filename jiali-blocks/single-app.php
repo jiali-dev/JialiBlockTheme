@@ -7,6 +7,7 @@
         $args['views'] = true;
         $args['author'] = true;
         $args['date'] = true;
+        $args['tags'] = true;
         $args['post'] = $post;
     ?>
 
@@ -18,7 +19,7 @@
                 </div>
                 <div class="col-md-8 jiali-single-info">
                     <h1 class="jiali-single-title"><?php echo get_the_title(  ) ?></h1>
-                    <div class="breadcrumb"><?php get_breadcrumb(); ?></div>
+                    <div class="breadcrumb"><?php jiali_get_breadcrumb(); ?></div>
                 </div>
             </div>
             <div class="jiali-single-content">
@@ -47,7 +48,12 @@
     </section>
     <?php
 
-        $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID) ) );
+        $related = get_posts( array( 
+            'post_type' => 'app',
+            'category__in' => wp_get_post_categories($post->ID), 
+            'numberposts' => 3, 
+            'post__not_in' => array($post->ID) )
+        );
         if( $related ):
             ?>  
             <section class="jiali-related-posts-wrapper">

@@ -1,5 +1,22 @@
 <?php $post = $args['post']; ?>
 <div class="jiali-card-item">
+    <?php if( $args['tags'] ): ?>
+        <?php 
+            $tags = jiali_custom_get_post_tags($post->ID);
+
+            if( $tags ):
+            ?>
+            <div class="jiali-card-tags jiali-horizontal-card-tags">
+                <?php foreach( $tags as $tag ): ?>
+                    <a href="<?php echo $tag['permalink'] ?>" target="_blank" >
+                        <span class="jiali-card-tag" style="background-color:<?php echo $tag['tagColor'] ?>">
+                            <?php echo $tag['name'] ?>
+                        </span>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>
     <?php if( $args['linked']) : ?>
 
         <a class="jiali-permalink" href="<?php echo get_permalink( $post->ID ) ?>">
@@ -15,6 +32,7 @@
                         <p class="jiali-card-text"><?php echo wp_trim_words( $post->post_content, 10, NULL ) ?></p>
                     <?php endif; ?>               
                 </div>
+
                 <div class="jiali-card-info">
                     <?php if( $args['author'] ): ?>
                         <span class="jiali-avatar">

@@ -57,6 +57,64 @@
     .jiali-card-author, .jiali-card-date, .text-muted, .jiali-card-views {
         font-size: 14px!important;
     }
+
+    .jiali-app-download-box a {
+        font-size: 16px;
+    }
+
+    .jiali-single-title {
+        font-size: 30px;
+    }
+
+    .jiali-primary-menu-items {
+        display: none;
+        flex-direction: column!important;
+        margin-block-start: 16px;
+        align-items: flex-start;
+    }
+
+    .jiali-primary-menu-items.active {
+        display: flex;
+    }
+
+    .jiali-primary-menu-items li {
+        margin-block-end: 16px;
+        margin-inline-start: 0px;
+    }
+
+    .jiali-navbar-brand-wrapper {
+        align-self: baseline;
+    }
+
+    .jiali-hamburger-btn {
+        display: block;
+        border: 1px solid $dark_primary;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .jiali-hamburger-btn.active .jiali-bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .jiali-hamburger-btn.active .jiali-bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .jiali-hamburger-btn.active .jiali-bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #jiali-primary-menu {
+        position: relative;
+    }
+
+    .jiali-primary-menu-items-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
 
 @media only screen and (min-width: 768px) {

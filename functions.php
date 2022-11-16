@@ -7,6 +7,10 @@ function jialit_theme_enqueue() {
   wp_enqueue_style('notiflix_style', get_theme_file_uri('/assets/notiflix/notiflix.min.css', __FILE__), array(), '1.0', 'all');
 	wp_enqueue_script('notiflix_custom_script', get_theme_file_uri('/assets/notiflix/notiflix-custom.js', __FILE__), array('jquery'));
   
+  wp_enqueue_script('bootstrap_script', get_theme_file_uri('/assets/bootstrap/bootstrap.min.js', __FILE__));
+  wp_enqueue_style('bootstrap_style', get_theme_file_uri('/assets/bootstrap/bootstrap.min.css', __FILE__));
+	wp_enqueue_style('bootstrap_style_rtl', get_theme_file_uri('/assets/bootstrap/bootstrap.rtl.min.css', __FILE__));
+  
   wp_enqueue_script('jiali_main_js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
   wp_enqueue_style('jiali_main_styles', get_theme_file_uri('/build/style-index.css'));
   wp_enqueue_style( 'jiali_rtl_style', get_theme_file_uri('/style-rtl.css'));
@@ -19,6 +23,7 @@ function jialit_theme_enqueue() {
 
 add_action('wp_enqueue_scripts', 'jialit_theme_enqueue');
 
+// Add Features to Theme
 function jiali_theme_features() {
   load_theme_textdomain('jiali', get_template_directory() . '/languages');
   $defaults = array(
@@ -41,12 +46,97 @@ function jiali_theme_features() {
 
 add_action('after_setup_theme', 'jiali_theme_features');
 
-function jiali_login_title() {
-  return get_bloginfo('name');
+// Get IP Info
+function jiali_ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
+  $output = NULL;
+  if (filter_var($ip, FILTER_VALIDATE_IP) === FALSE) {
+      $ip = $_SERVER["REMOTE_ADDR"];
+      if ($deep_detect) {
+          if (filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
+              $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+          if (filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
+              $ip = $_SERVER['HTTP_CLIENT_IP'];
+      }
+  }
+  $purpose    = str_replace(array("name", "\n", "\t", " ", "-", "_"), NULL, strtolower(trim($purpose)));
+  $support    = array("country", "countrycode", "state", "region", "city", "location", "address");
+  $continents = array(
+      "AF" => "Africa",
+      "AN" => "Antarctica",
+      "AS" => "Asia",
+      "EU" => "Europe",
+      "OC" => "Australia (Oceania)",
+      "NA" => "North America",
+      "SA" => "South America"
+  );
+  if (filter_var($ip, FILTER_VALIDATE_IP) && in_array($purpose, $support)) {
+      $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
+      if (@strlen(trim($ipdat->geoplugin_countryCode)) == 2) {
+          switch ($purpose) {
+              case "location":
+                  $output = array(
+                      "city"           => @$ipdat->geoplugin_city,
+                      "state"          => @$ipdat->geoplugin_regionName,
+                      "country"        => @$ipdat->geoplugin_countryName,
+                      "country_code"   => @$ipdat->geoplugin_countryCode,
+                      "continent"      => @$continents[strtoupper($ipdat->geoplugin_continentCode)],
+                      "continent_code" => @$ipdat->geoplugin_continentCode
+                  );
+                  break;
+              case "address":
+                  $address = array($ipdat->geoplugin_countryName);
+                  if (@strlen($ipdat->geoplugin_regionName) >= 1)
+                      $address[] = $ipdat->geoplugin_regionName;
+                  if (@strlen($ipdat->geoplugin_city) >= 1)
+                      $address[] = $ipdat->geoplugin_city;
+                  $output = implode(", ", array_reverse($address));
+                  break;
+              case "city":
+                  $output = @$ipdat->geoplugin_city;
+                  break;
+              case "state":
+                  $output = @$ipdat->geoplugin_regionName;
+                  break;
+              case "region":
+                  $output = @$ipdat->geoplugin_regionName;
+                  break;
+              case "country":
+                  $output = @$ipdat->geoplugin_countryName;
+                  break;
+              case "countrycode":
+                  $output = @$ipdat->geoplugin_countryCode;
+                  break;
+          }
+      }
+  }
+  return $output;
 }
 
-add_filter('login_headertitle', 'jiali_login_title');
+// Get Customized Tags
+function jiali_custom_get_post_tags( $post_id ) {
+  $postTags = wp_get_post_tags( $post_id, array(
+    'number' => 3
+  ) );
 
+  $tagsObject = [];
+
+  if( $postTags )
+  {
+    foreach($postTags as $tag) 
+    {
+      $tempObject = [];
+      $tempObject['id'] = $tag->term_id;
+      $tempObject['name'] = $tag->name;
+      $tempObject['tagColor'] = ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff" ;
+      $tempObject['permalink'] = get_term_link($tag->term_id) ;
+      $tagsObject[] = $tempObject;
+    }
+  }
+
+  return $tagsObject;
+}
+
+// Customize Rest Api
 function jiali_custom_rest() {
 
   register_rest_field('post', 'permalink', array(
@@ -120,12 +210,11 @@ function jiali_custom_rest() {
     'get_callback' => function($object) {return get_field('tag_color', $object['taxonomy'] . '_' . $object['id'] );}
   ));
   
-
-  
 }
 
 add_action('rest_api_init', 'jiali_custom_rest');
 
+// Customize Query
 function jiali_query_custom_fields( $posts ) {
 
   for ( $i = 0; $i < count($posts); $i++ ) {
@@ -158,20 +247,7 @@ function jiali_query_custom_fields( $posts ) {
       'number' => 3
     ) );
 
-    $tagsObject = [];
-
-    if( $postTags )
-    {
-      foreach($postTags as $tag) 
-      {
-        $tempObject = [];
-        $tempObject['name'] = $tag->name;
-        $tempObject['color'] = ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff" ;
-        $tagsObject[] = (object)($tempObject);
-      }
-    }
-
-    $posts[$i]->postTags = $tagsObject;
+    $posts[$i]->postTags = jiali_custom_get_post_tags( $posts[$i]->ID );
 
   }
 
@@ -181,6 +257,7 @@ function jiali_query_custom_fields( $posts ) {
 
 add_filter( 'the_posts', 'jiali_query_custom_fields' );
 
+// Make Blocks Placeholder
 class PlaceholderBlock {
   function __construct($name) {
     $this->name = $name;
@@ -203,28 +280,6 @@ class PlaceholderBlock {
   }
 }
 
-
-function jiali_custom_get_post_tags( $post_id ) {
-  $postTags = wp_get_post_tags( $post_id, array(
-    'number' => 3
-  ) );
-
-  $tagsObject = [];
-
-  if( $postTags )
-  {
-    foreach($postTags as $tag) 
-    {
-      $tempObject = [];
-      $tempObject['id'] = $tag->term_id;
-      $tempObject['name'] = $tag->name;
-      $tempObject['color'] = ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff" ;
-      $tagsObject[] = $tempObject;
-    }
-  }
-
-  return $tagsObject;
-}
 new PlaceholderBlock("header");
 new PlaceholderBlock("suggested-articles");
 new PlaceholderBlock("top-categories");
@@ -240,8 +295,11 @@ new PlaceholderBlock("page");
 new PlaceholderBlock("page-appointment");
 new PlaceholderBlock("categories");
 new PlaceholderBlock("top-articles");
+new PlaceholderBlock("recent-media");
+new PlaceholderBlock("single-multimedia");
 new PlaceholderBlock("playground");
 
+// Make Block
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data = null) {
     $this->name = $name;
@@ -278,26 +336,37 @@ class JSXBlock {
 new JSXBlock('custom-width-section');
 new JSXBlock('full-width-section');
 
-/**
- * Register Custom Navigation Walker
- */
-function register_navwalker(){
-	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-}
-add_action( 'after_setup_theme', 'register_navwalker' );
-
+// Make Nav Position
 register_nav_menus( array(
   'primary' => __( 'Primary Menu', 'jiali' ),
 ) );
 
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function jiali_add_search_btn( $items, $args ) {
 
-function special_nav_class ($classes, $item) {
+  if ( $args->theme_location == 'primary') {
+    
+    $items .= '<li>
+        <a class="jiali-search-btn">
+                        
+            <i class="fa-solid fa-search"></i>
+
+        </a>
+      </li>';
+    }
+    
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'jiali_add_search_btn', 10, 2 );
+
+// Add 'active' Class to Active Menu Item
+function jiali_special_nav_class ($classes, $item) {
   if (in_array('current-menu-item', $classes) ){
     $classes[] = 'active ';
   }
   return $classes;
 }
+add_filter('nav_menu_css_class' , 'jiali_special_nav_class' , 10 , 2);
+
 
 /**
  * Register a custom post type called "book".
@@ -386,7 +455,7 @@ function jiali_post_type() {
         'hierarchical'       => false,
         'menu_position'      => null,
         'menu_icon'          => 'dashicons-admin-media',
-        'supports'           => array( 'title', 'editor', 'thumbnail', 'comments' ),
+        'supports'           => array( 'title', 'editor', 'author', 'comments', 'thumbnail' ),
         'taxonomies' => array( 'category', 'post_tag' )
     );
  
@@ -421,10 +490,10 @@ function jiali_post_type() {
     register_post_type( 'usefullink', $args );
 
 }
- 
 add_action( 'init', 'jiali_post_type' );
 
-function get_breadcrumb() {
+// Get Breadcrumb
+function jiali_get_breadcrumb() {
   echo '<a class="jiali-permalink" href="'.home_url().'" rel="nofollow">Home</a>';
   if (is_category() || is_single()) {
       echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
@@ -452,6 +521,7 @@ function get_breadcrumb() {
   }
 }
 
+// Change number of posts per page
 function jiali_change_posts_per_page( $query ) {
 
     if ( ! is_admin() && $query->is_main_query() ) {
@@ -459,6 +529,7 @@ function jiali_change_posts_per_page( $query ) {
           if ($query->is_category()) {
             $query->set( 'post_type', array( 'post', 'app', 'multimedia' ) );
           }
+          $query->set( 'post_status', 'publish' );
     }
 
     return $query;
@@ -467,7 +538,8 @@ function jiali_change_posts_per_page( $query ) {
 
 add_filter( 'pre_get_posts', 'jiali_change_posts_per_page' );
 
-function jiali_get_top_post()
+// Get Most Views Posts
+function jiali_get_top_posts()
 {
   // Set params
   $params = array(

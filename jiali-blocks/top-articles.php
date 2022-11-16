@@ -1,6 +1,6 @@
 <?php
    
-    $top_articles = jiali_get_top_post();
+    $top_articles = jiali_get_top_posts();
     
     if( $top_articles && count($top_articles) > 2 ): 
         $args['thumbnail'] = true;
@@ -50,8 +50,8 @@
                 <?php if( $top_articles && count($top_articles) > 6 ): ?>
                     <div class="col-md-3">
                     <?php
-                        $args['thumbnail-size'] = 'large';
-                        $args['excerpt'] = true;
+                        $args['thumbnail-size'] = 'medium';
+                        $args['excerpt'] = false;
                         $args['post'] = get_post($top_articles[3]->id);
                         get_template_part('template-parts/card-overlayed', null, $args );
                     ?>
@@ -66,8 +66,8 @@
                     </div>
                     <div class="col-md-6">
                         <?php
-                            $args['thumbnail-size'] = 'medium';
-                            $args['excerpt'] = false;
+                            $args['thumbnail-size'] = 'large';
+                            $args['excerpt'] = true;
                             $args['post'] = get_post($top_articles[5]->id);
                             get_template_part('template-parts/card-overlayed', null, $args );
                         ?>

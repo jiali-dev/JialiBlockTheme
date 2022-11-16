@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
 							views : true,
 							tags : true,
 							linked : true,
-							// tags : true
+							tags : true
 						}
 						console.log(arr.data)
 						var newPosts = '';

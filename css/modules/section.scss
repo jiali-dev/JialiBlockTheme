@@ -15,6 +15,10 @@
     @include section(transparent, null);
 }
 
+.jiali-section-full-width-black {
+    @include section($black, null);
+}
+
 .jiali-section-full-width-gray {
     @include section($light_gray, null);
 }

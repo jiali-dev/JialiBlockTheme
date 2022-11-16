@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
         .split(' ', number) //create array of the first four words
         .join(' ');    //join the array with spaces
     }
+
     // args' keys --> linked, 
 	window.jiali_post_item_template = function( args ) 
     {
@@ -80,8 +81,8 @@ jQuery(document).ready(function ($) {
                         output += `<div class="jiali-card-tags">`;
                         tags.forEach(function(tag) {
 							output += `<span class="jiali-card-tag" style="background-color:${tag.color}">
-                            ${tag.name}
-                            <br>
+                                ${tag.name}
+                                <br>
                             </span>`
                         });
                         output += `</div>`

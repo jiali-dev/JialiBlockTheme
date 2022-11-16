@@ -7,6 +7,7 @@
         $args['views'] = true;
         $args['author'] = true;
         $args['date'] = true;
+        $args['tags'] = true;
         $args['post'] = $post;
     ?>
 
@@ -18,7 +19,7 @@
                 </div>
                 <div class="col-md-8 jiali-single-info">
                     <h1 class="jiali-single-title"><?php echo get_the_title(  ) ?></h1>
-                    <div class="breadcrumb"><?php get_breadcrumb(); ?></div>
+                    <div class="breadcrumb"><?php jiali_get_breadcrumb(); ?></div>
                 </div>
             </div>
             <div class="jiali-single-content">

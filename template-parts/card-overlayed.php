@@ -2,18 +2,17 @@
 <div class="jiali-card-item jiali-card-overlayed">
     <?php if( $args['tags'] ): ?>
         <?php 
-            $tags = wp_get_post_tags( $post->ID, array(
-                'number' => 3
-            ) );
+            $tags = jiali_custom_get_post_tags($post->ID);
 
             if( $tags ):
         ?>
             <div class="jiali-card-tags">
                 <?php foreach( $tags as $tag ): ?>
-                    <span class="jiali-card-tag" style="background-color:<?php echo ( $color = get_field('tag_color', $tag->taxonomy . '_' . $tag->term_id ) ) ? $color : "#fff"  ?>">
-                        <?php echo $tag->name ?>
-                        <br>
-                    </span>
+                    <a href="<?php echo $tag['permalink'] ?>" target="_blank" >
+                        <span class="jiali-card-tag" style="background-color:<?php echo $tag['tagColor'] ?>">
+                            <?php echo $tag['name'] ?>
+                        </span>
+                    </a>
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>

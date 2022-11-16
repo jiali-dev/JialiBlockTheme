@@ -1,14 +1,14 @@
 @mixin squre_icon($color) {
   display: flex;
-    justify-content: center;
-    min-width: 50px!important;
-    height: 50px;
-    border: 1px solid $color;
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    color: $color;
-    font-size: 24px;
+  justify-content: center;
+  min-width: 50px!important;
+  height: 50px;
+  border: 1px solid $color;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  color: $color;
+  font-size: 24px;
 }
 
 .jiali-square-icon-black {
